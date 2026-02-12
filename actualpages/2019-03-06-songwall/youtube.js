@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded",
     });
 
 function labnolThumb(id) {
-    var thumb = '<img src="placeholder.png"/>';
+    var thumb = '<img src="https://a-flyleaf.github.io/shriblets/actualpages/2019-03-06-songwall/placeholder.png"/>';
     return thumb;
 }
 

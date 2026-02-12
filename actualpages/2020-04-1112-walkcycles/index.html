@@ -1,3 +1,7 @@
+---
+layout: none
+permalink: 2020-04-1112-walkcycles
+---
 <!doctype html>
 <html>
 <head>
@@ -8,13 +12,13 @@
 		*{margin:0; padding:0; box-sizing:border-box; word-wrap:break-word;}
 		body{overflow:hidden; background:#000;}
 		
-		#frame{background:url(bg.png); width:640px; height:360px; overflow:hidden; position:absolute; left:0; right:0; margin-left:auto; margin-right:auto; margin-top:25vh;} /*https://stackoverflow.com/questions/1776915/how-to-center-absolutely-positioned-element-in-div*/
+		#frame{background:url(actualpages/2020-04-1112-walkcycles/bg.png); width:640px; height:360px; overflow:hidden; position:absolute; left:0; right:0; margin-left:auto; margin-right:auto; margin-top:25vh;} /*https://stackoverflow.com/questions/1776915/how-to-center-absolutely-positioned-element-in-div*/
 		img{display:block; position:absolute; right:0;}
 		::selection{0;}
 		
 		/*name duration iteration-count timing-function delay*/
 		#orb{margin-top:40px; animation:pan 60s infinite linear,sky 60s infinite ease-in-out;}
-		#mtn{width:640px; height:360px; position:absolute;} .mtnpan{background:url(mtn.png); width:640px; height:360px; position:absolute; animation:mtn 60s infinite linear;} #loop{animation:mtn 60s infinite linear -30s;} /*looping trick: delay = HALF the duration*/
+		#mtn{width:640px; height:360px; position:absolute;} .mtnpan{background:url(actualpages/2020-04-1112-walkcycles/mtn.png); width:640px; height:360px; position:absolute; animation:mtn 60s infinite linear;} #loop{animation:mtn 60s infinite linear -30s;} /*looping trick: delay = HALF the duration*/
 		#r{margin-top:178px; padding-right:400px;}
 		#c{margin-top:136px; padding-right:350px;}
 		#k{margin-top:158px; padding-right:310px;}
@@ -42,14 +46,14 @@
 </head>
 <body>
 <div id="frame">
-	<img src="orb.png" id="orb"/>
+	<img src="{%include actual.html%}orb.png" id="orb"/>
 	<div id="mtn"><div class="mtnpan"></div><div class="mtnpan" id="loop"></div></div>
-	<img src="r.gif" id="r"/>
-	<img src="c.gif" id="c"/>
-	<img src="k.gif" id="k"/>
-	<img src="v.gif" id="v"/>
-	<img src="fg2.png" id="fg2"/><img src="fg2.png" id="fg2-loop">
-	<img src="fg1.png" id="fg1"/>
+	<img src="{%include actual.html%}r.gif" id="r"/>
+	<img src="{%include actual.html%}c.gif" id="c"/>
+	<img src="{%include actual.html%}k.gif" id="k"/>
+	<img src="{%include actual.html%}v.gif" id="v"/>
+	<img src="{%include actual.html%}fg2.png" id="fg2"/><img src="{%include actual.html%}fg2.png" id="fg2-loop">
+	<img src="{%include actual.html%}fg1.png" id="fg1"/>
 </div>
 </body>
 </html>
