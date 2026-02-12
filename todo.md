@@ -10,4 +10,5 @@ NOTE: actual.html is an include that exists in case I want to change the "actual
 	- 2019 songwall javascript
 	- 2019 flynnwiki images
 	- 2020 walkcycles css
+	- 2021 rabbithole css
 - 2021 split is deliberately exempt bc it's fucking weird
