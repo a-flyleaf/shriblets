@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>javascript testin</title>
+		<style>
+			.box{border:1px solid #000;}
+			.none{background:0;} .red{background:red;} .green{background:green;} .blue{background:blue;}
+		</style>
+	</head>
+	
+	<body>
+		<!--
+			https://www.w3schools.com/tags/tag_select.asp
+			https://stackoverflow.com/questions/49955609/how-to-change-class-of-dropdown-when-select-an-option-dynamically
+		-->
+		<label for="colors">colors:</label>
+		<select name="colors" id="colors">
+			<option value="none">none</option>
+			<option value="red">red</option>
+			<option value="green">green</option>
+			<option value="blue">blue</option>
+		</select>
+		
+		<div class="box none">testing 123</div>
+	</body>
+	<script>
+		var selector = document.querySelector("#colors");
+		var oldClass=""; // define variable for previously selected class which is blank by default
+		//
+		selector.addEventListener("change", select);
+			 
+		function select() {
+
+		var content = document.querySelector(".box");
+
+		var newClass= this.value;
+
+		if (oldClass){ //check if oldClass exists
+		content.classList.remove(oldClass); // remove the old class selected previously if any
+		}
+
+		content.classList.add(newClass); // add the selected class
+
+		oldClass = newClass; // newClass is going to be old class for the next select change
+		}
+
+	</script>
+</html>

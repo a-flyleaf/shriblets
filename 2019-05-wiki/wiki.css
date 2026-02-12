@@ -1,0 +1,38 @@
+* {word-wrap: break-word; box-sizing: border-box; margin: 0; padding: 0;}
+body {overflow-x: hidden; font-size: 1.25rem; font-family: 'Source Sans 3','Helvetica Neue',Helvetica,sans-serif; line-height: 1.35em; color: #232323; orphans: 2;}
+::selection {background: rgba(0,104,139,.75); color: #fff;}
+blockquote,h1,h2 {font-family: 'Source Serif 4',Georgia,serif;}
+header,aside,footer,blockquote {background: #e6e6e6;}
+
+a,nav label {text-decoration: none; color: #00688b;} a:hover,nav label:hover {text-decoration: underline;} .fancybox-caption a {font-weight: bold;}
+blockquote {padding: .5em 0 .5em 1em; font-size: .9em; margin-bottom: .5em;}
+figure {text-align: center;} figcaption {padding: 0 1em; font-size: .9rem;}
+.float {margin: 1em 0 .5em 0;}
+h1 {padding: .5em 0; line-height: 1em;} h2,h3,h4,h5,h6 {padding: .5em 0;} h2 {line-height: 1.25em;} main h2 {display: block; border-bottom: 1px solid #b5b5b5; padding-bottom: 0; margin: .5em 0;} h5,h6 {font-size: .9em;} h6 {font-size: .8em;}
+img {max-width: 100%; height: auto;}
+.note {font-size: .8em; font-family: 'Source Sans 3','Helvetica Neue',Helvetica,sans-serif; line-height: 1.5em;}
+ol,ul {margin-left: 1em;}
+p {margin-bottom: .5em;}
+sup {font-size: .65em;}
+
+.wrap {padding: 1rem;}
+header,footer {font-size: 1rem; color: #5a5a5a;} header a,footer a {color: #232323;} header h2 {padding: 0; font-weight: normal;} header p {font-style: italic;} footer {margin-top: 3em;}
+
+nav {padding: .25em 0; display: inline-block;}
+nav input#dropdown {display: none;} nav label {cursor: pointer; font-style: italic; font-size: .75em;} nav input:checked ~ #toc {max-height: 100%; padding: .5em 1em; border-bottom: 1px solid #b5b5b5;}
+#toc {max-height: 0; overflow: hidden; font-size: .85em; padding: 0 1em; border-top: 1px solid #b5b5b5;} #toc ol {line-height: 1.25em;} #toc ol ol {font-size: .9em;}
+
+aside {font-size: 1rem; line-height: 1.25em; margin-bottom: 1em;} aside p {margin: .25em 0;}
+aside table {padding: .5em 1em; table-layout: fixed; width: 100%;} aside th,td {padding: .25em 0;} aside th {width: 30%; text-align: right; vertical-align: text-top; padding-right: .25em;} aside td {width: 70%; padding-left: .25em;}
+
+.fancybox-caption__body {max-width: 500px; margin: 0 auto;}
+.gallery {text-align: center;} .gallery figcaption {text-align: left; padding: 0; color: #5a5a5a;} .gallery figure {display: inline-block; margin: .5em .25em; vertical-align: top;} .gallery img {max-height: 150px; border: 1px solid #b5b5b5;}
+
+@media only screen and (min-width:575px) {
+  .wrap {padding: 1rem 1.5rem; max-width: 1000px; margin: 0 auto;}
+  .float {width: 35%; margin: 0;} .left {float: left; margin-right: 1em;} .right {float: right; margin-left: 1em;}
+  aside {float: right; width: 35%; min-width: 250px; border-left: 2em solid #fff; border-bottom: 2em solid #fff; max-width: 300px;}
+  footer {margin-top: 5em;}
+}
+
+/*800*/

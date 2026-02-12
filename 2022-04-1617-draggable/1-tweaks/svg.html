@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>draggable svg</title>
+		<style>
+			svg{margin:1em 0; border:1px solid #000;}
+			.static{cursor:not-allowed;} .draggable{cursor:ew-resize;}
+		</style>
+		<script src="draggable.js"></script>
+	</head><body>
+		<p>following <a href="https://www.petercollingridge.co.uk/tutorials/svg/interactive/dragging/">this tutorial</a> | placeholder images via <a href="https://placeholder.com/">placeholder.com</a></p>
+		
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 20" onload="makeDraggable(evt)">
+			<defs><!--https://stackoverflow.com/questions/3796025/fill-svg-path-element-with-a-background-image-->
+				<pattern id="img1" width="8" height="10"><image href="https://via.placeholder.com/80x100.png" x="0" y="0" width="8" height="10"/></pattern>
+			</defs>
+			<rect x="0" y="0" width="30" height="20" fill="#efefef"/><!--bg-->
+			<rect x="4" y="5" width="8" height="10" fill="url(#img1)" class="draggable"/><!--placeholder-->
+			<rect x="18" y="5" width="8" height="10" fill="#888" class="static"/><!--gray-->
+			<rect x="0" y="0" width="5" height="10" fill="#fff" class="draggable"/><!--random-->
+		</svg>
+	</body>
+</html>

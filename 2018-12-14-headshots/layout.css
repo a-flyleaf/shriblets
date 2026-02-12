@@ -1,0 +1,52 @@
+* {box-sizing: border-box; word-wrap: break-word; font-size: 100%; margin: 0; padding: 0;}
+body {font-family: "Noto Sans",Calibri,Helvetica,sans-serif; line-height: 125%; color: #222;}
+.wrapper {max-width: 2000px; margin: 0 auto;}
+img {max-width: 100%; height: auto;} a {text-decoration: none; color: #222;}
+h1, h2, h3 {font-size: 1.5em;} h3 {font-weight: normal;}
+::selection {background: #1d5fbb; color: #fff;}
+
+header {background: #c6c6c6; padding: 1em; line-height: 150%; font-size: .875em;} header h1 {margin-bottom: .5rem;}
+nav {padding-top: 1rem;} nav a {border-bottom: 1px dashed;}
+
+section {padding: 1em 0; text-align: center;} section span {display: block; padding: 1em 0; text-align: center; font-style: italic;}
+.sec, figcaption p {margin: 0 1em;}
+.toggle {max-height: 0; overflow: hidden;} .toggle p {margin: .5em 0; line-height: 150%; text-align: left;}
+section label {display: block; cursor: pointer; color: #888; font-style: italic; border-bottom: 1px dashed; text-align: left;}
+input#dropdown {display: none;} input:checked ~ .toggle {max-height: 100%;}
+
+figure {padding: 1em 0;} figure h3 {padding: .5rem 0;} figcaption p {font-size: .875em; margin-top: .25em;}
+
+footer {text-align: center; padding: 1rem; font-size: .875em; overflow: auto; border-top: 1px solid; color: #888;} footer a {color: #888; border-bottom: 1px dashed;}
+.copyright {float: left;} .update {float: right; font-style: italic;}
+
+p a {border-bottom: 1px dashed #888;} figcaption {display: none;} figure {padding: 0;}
+.fancybox-button--play {display: none;}
+a:hover {color: #1d5fbb;}
+
+@media only screen and (min-width: 400px) {
+	.sec {width: 75%; margin-left: 25%;} h2, .sec span, .sec p {text-align: left;}
+	.characters {overflow: auto; padding: 1em 0;}
+	.row:nth-child(last) {overflow: auto;}
+	figure {float: left; padding: 0.5em 0; width: 50%;}
+	#serena, #ava {float: none; margin: 1em auto 0;}
+}
+
+@media only screen and (min-width: 700px) {
+	.sec {width: 66.66%; margin-left: 33%; max-width: 625px; padding: 1em 1em 0 0;}
+	#serena, #ava {float: left; margin: 0;}
+	.three figure {width: 33.33%;}
+}
+
+@media only screen and (min-width: 850px) {
+	.two figure {width: 25%;}
+	.justtwo {margin: 0 auto; width: 50%;}
+	.justtwo figure {width: 50%;}
+	.three {max-width: 1500px; margin: 0 auto;}
+	h3 {font-size: 1.5em; line-height: 115%; font-weight: bold;}
+}
+
+@media only screen and (min-width: 2000px) {
+	body {font-size: 1.5em;}
+	h3 {font-size: 1.5em;}
+	.sec {margin-left: 750px; max-width: 750px;}
+}

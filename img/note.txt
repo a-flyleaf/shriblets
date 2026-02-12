@@ -1,0 +1,2 @@
+JPG quality 95
+doesn't HAVE to crop at the top of the page or fullscreen, whatever looks best for the content--but ideally it looks good on default pageload

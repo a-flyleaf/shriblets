@@ -1,0 +1,131 @@
+---
+layout: none
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>draggable svg</title>
+		<style>
+			body{background:#707070; color:#fff; font-family:verdana,sans-serif; font-size:.85em; padding:0 1em;} a{color:inherit;} a:hover,a:focus,a:active{background:rgba(0,0,0,0.25);}
+			svg{transform:scale(3); transform-origin:top left;}
+			.static{cursor:not-allowed;} .draggable{cursor:ew-resize; position:relative;}
+			image{image-rendering:pixelated; image-rendering:crisp-edges;}
+			.active{opacity:.5;}
+			#svg-margin{height:252px; /*655x84, multiply by transformation*/}
+			#labels{margin-bottom:1em;} label{margin-right:.5em;}
+			h1,h2{margin-bottom:0;} h1+p,h2+p,h2+ul{margin-top:.5em;}
+			ul{line-height:1.5em;}
+		</style>
+		<script src="draggable.js"></script>
+	</head><body>
+		<h1>height 2: the pixelening</h1>
+		<p>sort of revisiting <a href="{{site.url}}/shriblets/2018-08-heighthell/">a height chart from ~4 years ago</a>, but coded using SVGs following <a href="https://www.petercollingridge.co.uk/tutorials/svg/interactive/dragging/">this tutorial</a></p>
+		
+		<!-- cba to figure these out
+		<h2>group toggles</h2>
+		<div id="labels">
+			<label><input type="checkbox" id="tfe-check" checked><i>The Firebird Effect</i></label>
+			<label><input type="checkbox" id="cmyk-check" checked>[whoever these people are]</label>
+			<label><input type="checkbox" id="404-check" checked><i>404</i></label>
+			<label><input type="checkbox" id="ygbtdm-check" checked><i>You’re gonna be the death of me</i></label>
+		</div>
+		-->
+		
+		<div id="svg-margin"><svg xmlns="http://www.w3.org/2000/svg" width="655" height="84" onload="makeDraggable(evt)" >
+			<defs><!--https://stackoverflow.com/questions/3796025/fill-svg-path-element-with-a-background-image-->
+				<!--tfe-->
+				<pattern id="sj" width="1" height="1"><image href="img/sj.png"/></pattern>
+				<pattern id="sn" width="1" height="1"><image href="img/sn.png"/></pattern>
+				<pattern id="cc" width="1" height="1"><image href="img/cc.png"/></pattern>
+				<!--rr-->
+				<pattern id="rb" width="1" height="1"><image href="img/rb.png"/></pattern>
+				<pattern id="fs" width="1" height="1"><image href="img/fs.png"/></pattern>
+				<!--cmyk-->
+				<pattern id="ns17" width="1" height="1"><image href="img/ns17.png"/></pattern>
+				<pattern id="ir17" width="1" height="1"><image href="img/ir17.png"/></pattern>
+				<pattern id="ns12" width="1" height="1"><image href="img/ns12.png"/></pattern>
+				<pattern id="ir12" width="1" height="1"><image href="img/ir12.png"/></pattern>
+				<pattern id="af" width="1" height="1"><image href="img/af.png"/></pattern>
+				<pattern id="tc" width="1" height="1"><image href="img/tc.png"/></pattern>
+				<pattern id="vc" width="1" height="1"><image href="img/vc.png"/></pattern>
+				<pattern id="ld" width="1" height="1"><image href="img/ld.png"/></pattern>
+				<pattern id="dh" width="1" height="1"><image href="img/dh.png"/></pattern>
+				<!--404-->
+				<pattern id="vl" width="1" height="1"><image href="img/vl.png"/></pattern>
+				<pattern id="kd" width="1" height="1"><image href="img/kd.png"/></pattern>
+				<pattern id="cy" width="1" height="1"><image href="img/cy.png"/></pattern>
+				<pattern id="rd" width="1" height="1"><image href="img/rd.png"/></pattern>
+				<!--ygbtdm-->
+				<pattern id="jc" width="1" height="1"><image href="img/jc.png"/></pattern>
+				<pattern id="kl" width="1" height="1"><image href="img/kl.png"/></pattern>
+				<pattern id="ad" width="1" height="1"><image href="img/add.png"/></pattern>
+				<pattern id="cb" width="1" height="1"><image href="img/cb.png"/></pattern>
+				<pattern id="gr" width="1" height="1"><image href="img/gr.png"/></pattern>
+				<pattern id="da" width="1" height="1"><image href="img/da.png"/></pattern>
+				<pattern id="sq" width="1" height="1"><image href="img/sq.png"/></pattern>
+				<pattern id="em" width="1" height="1"><image href="img/em.png"/></pattern>
+			</defs>
+			<g id="bg">
+				<rect x="0" y="0" width="655" height="84" fill="#cfcfcf"/>
+				<rect x="0" y="12" width="655" height="12" fill="#c5c5c5"/>
+				<rect x="0" y="36" width="655" height="12" fill="#c5c5c5"/>
+				<rect x="0" y="60" width="655" height="12" fill="#c5c5c5"/>
+			</g>
+			<g id="tfe">
+				<rect x="12" y="24" width="16" height="60" fill="url(#sj)" class="draggable"/>
+				<rect x="29" y="30" width="26" height="54" fill="url(#sn)" class="draggable"/>
+				<rect x="57" y="21" width="19" height="63" fill="url(#cc)" class="draggable"/>
+			</g>
+			<g id="rr">
+				<rect x="81" y="17" width="22" height="67" fill="url(#rb)" class="draggable"/>
+				<rect x="105" y="12" width="20" height="72" fill="url(#fs)" class="draggable"/>
+			</g>
+			<g id="cmyk">
+				<rect x="125" y="19" width="19" height="65" fill="url(#ns17)" class="draggable"/>
+				<rect x="145" y="17" width="23" height="67" fill="url(#ir17)" class="draggable"/>
+				<rect x="172" y="24" width="23" height="60" fill="url(#ns12)" class="draggable"/>
+				<rect x="195" y="20" width="16" height="64" fill="url(#ir12)" class="draggable"/>
+				<rect x="213" y="30" width="31" height="54" fill="url(#af)" class="draggable"/>
+				<rect x="246" y="8" width="24" height="76" fill="url(#tc)" class="draggable"/>
+				<rect x="271" y="32" width="18" height="52" fill="url(#vc)" class="draggable"/>
+				<rect x="292" y="19" width="25" height="65" fill="url(#ld)" class="draggable"/>
+				<rect x="320" y="12" width="29" height="72" fill="url(#dh)" class="draggable"/>
+			</g>
+			<g id="404">
+				<rect x="350" y="16" width="29" height="68" fill="url(#vl)" class="draggable"/>
+				<rect x="384" y="22" width="16" height="62" fill="url(#kd)" class="draggable"/>
+				<rect x="406" y="9" width="25" height="75" fill="url(#cy)" class="draggable"/>
+				<rect x="436" y="32" width="15" height="52" fill="url(#rd)" class="draggable"/>
+			</g>
+			<g id="ygbtdm">
+				<rect x="459" y="11" width="23" height="73" fill="url(#jc)" class="draggable"/>
+				<rect x="482" y="33" width="14" height="51" fill="url(#kl)" class="draggable"/>
+				<rect x="501" y="19" width="21" height="65" fill="url(#ad)" class="draggable"/>
+				<rect x="523" y="36" width="12" height="48" fill="url(#cb)" class="draggable"/>
+				<rect x="537" y="17" width="28" height="67" fill="url(#gr)" class="draggable"/>
+				<rect x="564" y="6" width="27" height="78" fill="url(#da)" class="draggable"/>
+				<rect x="594" y="10" width="22" height="74" fill="url(#sq)" class="draggable"/>
+				<rect x="618" y="15" width="28" height="69" fill="url(#em)" class="draggable"/>
+			</g>
+			If you’re reading this, your browser isn’t compatible with <a href="https://caniuse.com/svg">inline SVGs</a>.
+		</svg></div>
+		
+		<h2>patch notes</h2>
+		<ul>
+			<li>upscaled x3 via CSS</li>
+			<li>should work on a touchscreen (at least with one pointer)</li>
+		</ul>
+		
+		<h2>possible changes</h2>
+		<ul>
+			<li><s>z-index to top onclick</s> this doesn’t work with SVGs apparently, big F</li>
+			<li><s>outline or other</s> styling when active
+				<ul><li>✔ outline looked weird, lowered opacity it is</li></ul></li>
+			<li>per-story toggles
+				<ul><li>exist in the code but non-functional, hidden</li></ul></li>
+			<li>readjust scale manually with an input</li>
+			<li>replace PNGs with SVGs??</li>
+			<li>redo from scratch with JSON data????? mostly to automate all the got dang code redundancy</li>
+		</ul>
+	</body>
+</html>

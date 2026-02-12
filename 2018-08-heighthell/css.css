@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+body {box-sizing: border-box; margin: 0; padding: 0; background: #707070; overflow: hidden; font-family: Verdana, Arial, sans-serif; font-size: 14px;}
+
+#toggles {position: fixed; margin: 0.5em 1em;}
+
+h1 {color: #f0f0f0; font-weight: normal; text-align: right; padding-right: 1em;}
+
+#box {width: 100%; height: 500px; background: url(lines-500.png) repeat; margin: 0 auto;}
+#fade {position: absolute; width: 100%; height: 500px; background: #707070; opacity: 0.5;}
+.draggable {cursor: e-resize; float: left; height: 100%;}
+.draggable img {position: absolute; bottom: 0;}
+.draggable:hover img {-webkit-filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px 1px 0 white) drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white); filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px 1px 0 white) drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);}
+.hide {position: absolute; visibility: hidden; margin-top: 500px; width: 1000px; color: #f0f0f0; font-size: 1.5em;}
+
+input {margin-right: 1em;}
+
+#sj img {height: 325px; margin-bottom: 50px;} #sj:hover #info-sj {visibility: visible !important;}
+#sn img {height: 290px; margin-bottom: 48px;} #sn:hover #info-sn {visibility: visible !important;}
+#cc img {height: 350px; margin-bottom: 45px;} #cc:hover #info-cc {visibility: visible !important;}
+#sj2 img {height: 400px; margin-bottom: 35px;} #sj2:hover #info-sj2 {visibility: visible !important;}
+#sn2 img {height: 335px; margin-bottom: 35px;} #sn2:hover #info-sn2 {visibility: visible !important;}
+#cc2 img {height: 380px; margin-bottom: 40px;} #cc2:hover #info-cc2 {visibility: visible !important;}
+
+#ns2 img {height: 355px; margin-bottom: 41px;} #ns2:hover #info-ns2 {visibility: visible !important;}
+#ir2 img {height: 375px; margin-bottom: 30px;} #ir2:hover #info-ir2 {visibility: visible !important;}
+#af2 img {height: 338px; margin-bottom: 49px;} #af2:hover #info-af2 {visibility: visible !important;}
+#dh img {height: 397px; margin-bottom: 35px;} #dh:hover #info-dh {visibility: visible !important;}
+#mg img {height: 365px; margin-bottom: 40px;} #mg:hover #info-mg {visibility: visible !important;}
+#vc img {height: 297px; margin-bottom: 40px;} #vc:hover #info-vc {visibility: visible !important;}
+#tc img {height: 430px; margin-bottom: 30px;} #tc:hover #info-tc {visibility: visible !important;}
+#ns img {height: 333px; margin-bottom: 37px;} #ns:hover #info-ns {visibility: visible !important;}
+#ir img {height: 350px; margin-bottom: 44px;} #ir:hover #info-ir {visibility: visible !important;}
+#af img {height: 295px; margin-bottom: 43px;} #af:hover #info-af {visibility: visible !important;}
+
+/*#XX img {height: 000px; margin-bottom: 00px;} #XX:hover #info-XX {visibility: visible !important;}*/
+
+footer {position: fixed; bottom: 0; text-align: center; padding: 1em; width: 100%; font-size: 0.75em;}

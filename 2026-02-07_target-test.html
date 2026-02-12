@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<style>
+		section{display:block;}
+		#container{border:2px solid; overflow:hidden;}
+		.pg{height:300px; width:400px;}
+		#one{background:cyan;} #two{background:yellow;}
+		
+		#container2{border:2px dotted;}
+		.tg{opacity:0;height:0;width:0;}
+		.tg:target{opacity:1;height:auto;width:auto;}
+	</style>
+</head>
+<body>
+	<p>noticed <a href="https://lyra.horse/slides">smthn cool</a> (hover list items → permalink!)</p>
+	
+	<div id="container" class="pg">
+		
+		<section id="intro" class="pg">
+			<p>This is an intro.</p>
+			<ul><li><a href="#one">ok</a></li>
+			<li><a href="#two">not ok</a></li></ul>
+		</section>
+
+		<section id="one" class="pg">is ok</section>
+
+		<section id="two" class="pg">is less ok</section>
+		
+	</div>
+	<a href="#intro">back to start</a>
+	
+	<hr>
+	
+	<div id="container2" class="pg">
+		<p>This is another intro. But instead of skipping around a hidden overflow, we’re gonna try a show/hide using the <a href="https://www.w3schools.com/cssref/sel_target.php"><code>:target</code></a> class.</p>
+		<ul><li><a href="#first">Show me the first thing!</a></li>
+		<li><a href="#second">No, show me the second thing!</a></li></ul>
+		
+		<div id="first" class="tg">Thing 1. Ta-da!</div>
+		<div id="second" class="tg">Thing 2. Hell yeah.</div>
+		
+		<p>holy shit i never need javascript ever again actually</p>
+		
+		<ul><li><a href="#">show me none thing with left div</a></li></ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>walkcycles</title>
+	<style>
+		*{margin:0; padding:0; box-sizing:border-box; word-wrap:break-word;}
+		body{overflow:hidden; background:#000;}
+		
+		#frame{background:url(bg.png); width:640px; height:360px; overflow:hidden; position:absolute; left:0; right:0; margin-left:auto; margin-right:auto; margin-top:25vh;} /*https://stackoverflow.com/questions/1776915/how-to-center-absolutely-positioned-element-in-div*/
+		img{display:block; position:absolute; right:0;}
+		::selection{0;}
+		
+		/*name duration iteration-count timing-function delay*/
+		#orb{margin-top:40px; animation:pan 60s infinite linear,sky 60s infinite ease-in-out;}
+		#mtn{width:640px; height:360px; position:absolute;} .mtnpan{background:url(mtn.png); width:640px; height:360px; position:absolute; animation:mtn 60s infinite linear;} #loop{animation:mtn 60s infinite linear -30s;} /*looping trick: delay = HALF the duration*/
+		#r{margin-top:178px; padding-right:400px;}
+		#c{margin-top:136px; padding-right:350px;}
+		#k{margin-top:158px; padding-right:310px;}
+		#v{margin-top:136px; padding-right:260px;}
+		#fg1{animation:fg 8s infinite ease-out -2s;} #fg2{animation:fg 10s infinite linear} #fg2-loop{animation:fg 10s infinite linear -5s;}
+		
+		@keyframes pan{
+			0% {right:115%;}
+			100% {right:-15%;}
+		}
+		@keyframes sky{
+			0% {top:15%;}
+			50% {top:0;}
+			100% {top:15%;}
+		}
+		@keyframes mtn{
+			0%{right:640px;}
+			100%{right:-640px;}
+		}
+		@keyframes fg{
+			0%{right:900px;}
+			100%{right:-900px;}
+		}
+	</style>
+</head>
+<body>
+<div id="frame">
+	<img src="orb.png" id="orb"/>
+	<div id="mtn"><div class="mtnpan"></div><div class="mtnpan" id="loop"></div></div>
+	<img src="r.gif" id="r"/>
+	<img src="c.gif" id="c"/>
+	<img src="k.gif" id="k"/>
+	<img src="v.gif" id="v"/>
+	<img src="fg2.png" id="fg2"/><img src="fg2.png" id="fg2-loop">
+	<img src="fg1.png" id="fg1"/>
+</div>
+</body>
+</html>

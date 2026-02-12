@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Height Hell</title>
+	<link href="css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div id="toggles">
+	<!--<button id="young">&lt;18</button>
+	<button id="old">&ge;18</button>
+	<button id="tfe"><i>The Firebird Effect</i></button>
+	<button id="cmyk">currently untitled story thing</button>-->
+	
+	<label>&lt;18<input type="radio" onclick="showYoung()" class="young-check" name="age"></label>
+	<label>&ge;18<input type="radio" onclick="showOld()" class="old-check" name="age"></label>
+	<label>all <input type="radio" onclick="showAll()" class="all-check" name="age" checked></label>
+	
+	<label><i>The Firebird Effect</i> <input class="tfe-check" type="checkbox" value="1" onchange="valueChanged()" checked></label>
+	<label>untitled story thing <input class="cmyk-check" type="checkbox" value="1" onchange="valueChanged()" checked></label>
+	chart opacity: <input id="contrast" type="range" value="contrast" max="1" min="0" step="0.01"/>
+</div>
+
+<h1>wow! a chart</h1>
+
+<div id="fade"></div>
+<div id="box"><img id="measure" src="numbers-500.png" alt="measurements">
+	<div id="sj" class="draggable ui-widget-content young tfe"><img src="images/sj.png" alt="Serena Johnson (2013)">
+		<div id="info-sj" class="hide">Serena Johnson (2013)<br>5'00"</div></div>
+	<div id="sn" class="draggable ui-widget-content young tfe"><img src="images/sn.png" alt="Shauna Najm (2013)">
+		<div id="info-sn" class="hide">Shauna Najm (2013)<br>4'06"</div></div>
+	<div id="cc" class="draggable ui-widget-content young tfe"><img src="images/cc.png" alt="Calem Chevalier (2013)">
+		<div id="info-cc" class="hide">Calem Chevalier (2013)<br>5'04"</div></div>
+	<div id="sj2" class="draggable ui-widget-content old tfe"><img src="images/sj2.png" alt="Serena Johnson (post-TFE)">
+		<div id="info-sj2" class="hide">Serena Johnson (post-<i>TFE</i>)<br>6'00"</div></div>
+	<div id="sn2" class="draggable ui-widget-content old tfe"><img src="images/sn2.png" alt="Shauna Najm (post-TFE)">
+		<div id="info-sn2" class="hide">Shauna Najm (post-<i>TFE</i>)<br>5'00"</div></div>
+	<div id="cc2" class="draggable ui-widget-content old tfe"><img src="images/cc2.png" alt="Calem Chevalier (post-TFE)">
+		<div id="info-cc2" class="hide">Calem Chevalier (post-<i>TFE</i>)<br>5'08"</div></div>
+	
+	<div id="ns2" class="draggable ui-widget-content old cmyk"><img src="images/ns2.png" alt="Nico Sylvester (2017)">
+		<div id="info-ns2" class="hide">Nico Sylvester (2017)<br>5'05"</div></div>
+	<div id="ir2" class="draggable ui-widget-content old cmyk"><img src="images/ir2.png" alt="“Ivy” Rodriguez (2017)">
+		<div id="info-ir2" class="hide">“Ivy” Rodriguez (2017)<br>5'07"</div></div>
+	<div id="af2" class="draggable ui-widget-content old cmyk"><img src="images/af2.png" alt="Ava Fleischer (2017)">
+		<div id="info-af2" class="hide">Ava Fleischer (2017)<br>5'03"</div></div>
+	<div id="dh" class="draggable ui-widget-content old cmyk"><img src="images/dh.png" alt="Connor “Dodder” Haus (2017)">
+		<div id="info-dh" class="hide">Connor “Dodder” Haus (2017)<br>6'00"?</div></div>
+	<div id="mg" class="draggable ui-widget-content young cmyk"><img src="images/mg.png" alt="mg d'Angelo (2017)">
+		<div id="info-mg" class="hide">[insert first name here] d'Angelo (2017)<br>5'05"?</div></div>
+	<div id="vc" class="draggable ui-widget-content young cmyk"><img src="images/vc.png" alt="“Vexus” Caine (2017)">
+		<div id="info-vc" class="hide">“Vexus” Caine (2017)<br>4'04"?</div></div>
+	<div id="tc" class="draggable ui-widget-content young cmyk"><img src="images/tc.png" alt="Tara Caine (2012)">
+		<div id="info-tc" class="hide">Tara Caine (2012)<br>6'04"</div></div>
+	<div id="ns" class="draggable ui-widget-content young cmyk"><img src="images/ns.png" alt="Nico Sylvester (2012)">
+		<div id="info-ns" class="hide">Nico Sylvester (2012)<br>5'00"</div></div>
+	<div id="ir" class="draggable ui-widget-content young cmyk"><img src="images/ir.png" alt="Ana Isabel “Ivy” Espinosa-Rosales Rodriguez (2012)">
+		<div id="info-ir" class="hide">Ana Isabel “Ivy” Espinosa-Rosales Rodriguez (2012)<br>5'04"</div></div>
+	<div id="af" class="draggable ui-widget-content young cmyk"><img src="images/af.png" alt="Ava Fleischer (2012)">
+		<div id="info-af" class="hide">Ava Fleischer (2012)<br>4'06"</div></div>
+	<!--<div id="XX" class="draggable ui-widget-content TAGS"><img src="XX.png" alt="Full Name (YYYY)">
+		<div id="info-XX" class="hide">Full Name (YYYY) / #'##"</div></div>-->
+</div>
+
+<footer><a href="http://fav.me/d917hcz">height chart</a> | <a href="http://jqueryui.com/draggable/">draggable</a> | <a href="https://stackoverflow.com/questions/32236375/set-opacity-with-range-slider">opacity</a> | <a href="https://stackoverflow.com/questions/18307323/how-to-show-hide-an-element-on-checkbox-checked-unchecked-states-using-jquery">checkbox</a> | <a href="https://codepen.io/dhanushbadge/pen/kICBu">radio</a></footer>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js.js"></script>
+</body>
+</html>

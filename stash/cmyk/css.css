@@ -1,0 +1,34 @@
+*{margin:0; padding:0; box-sizing:border-box; font-size:100%;}
+body{background:#808080; font-family:lato,verdana,sans-serif; font-size:1.25em; line-height:1.35em;}
+header,main,footer,article,section{display:block;}
+img{max-width:100%; height:auto; margin:0 auto; display:inline-block;} .char{display:block;}
+.stats,.notes,.factoids,p.design{font-size:.85em;}
+
+article{background:#999; padding:1rem; margin:2rem auto;}
+.nolist{list-style-type:none;} .nolist li{display:inline-block;}
+article h3{font-size:1.5em; line-height:1.15em;}
+.stats li:nth-child(2){margin:0 1rem;}
+p,.gallery{margin:1rem auto;}
+.notes{margin-left:1em; font-size:.85em;} .notes li{margin:.25em 0;}
+.gallery{line-height:0; white-space:nowrap; text-align:center;}
+.gallery img{width:33%; max-width:150px;}
+.design b{text-transform:uppercase;} /*make this an expandable details thing? make sure to underline it/otherwise make it clear it's a link*/
+.factoids li{display:block;}
+
+article h3,.stats,.summary,.factoids{text-align:center;}
+
+@media only screen and (min-width:600px) {
+	article h3,.stats,.summary,.factoids{text-align:left;}
+	article{overflow:auto; max-width:900px;}
+	.char,.col{float:left;} .char{width:35%;} .col{width:65%; padding-left:2rem;}
+	article h3{font-size:3em; line-height:1em;}
+	.gallery img:nth-child(2){margin:0 .25rem;}
+	.notes{margin-left:0;}
+	.factoids{text-align:right;} .factoids li{display:inline-block;} .factoids li:nth-child(2){margin-left:1em;}
+	
+	@supports (display:flex) {
+		.flex,.gallery{display:flex; flex-wrap:nowrap;}
+		.stats{margin-left:auto; /*https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf*/} .stats li{display:block; margin:0 !important;}
+		.gallery{text-align:left;} .gallery img{width:100%;}
+	}
+}

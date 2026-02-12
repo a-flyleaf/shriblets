@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>accessible carousel test</title>
+	<style>
+		.active{background:yellow;}
+	</style>
+</head>
+<body>
+	<p>following <a href="https://www.w3.org/WAI/tutorials/carousels/">this tutorial</a> more or less</p>
+	
+	<section id="carousel"><ul>
+		<li><figure>
+			<img src="https://via.placeholder.com/400x300.png" alt="1"/>
+			<figcaption><p>caption 1</p></figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="https://via.placeholder.com/400x300.png" alt="2"/>
+			<figcaption><p>caption 2<br/>
+			which is two lines</p></figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="https://via.placeholder.com/400x300.png" alt="3"/>
+			<figcaption><p>caption threeeee</p></figcaption>
+		</figure></li>
+	</ul></section>
+	
+	<script>
+		// creates buttons via javascript; they won't appear otherwise
+		var ctrls = document.createElement('ul');
+		ctrls.className = 'controls';
+		ctrls.innerHTML = '<li>' +
+				'<button type="button" class="btn-prev">' +
+					'←' +
+				'</button>' +
+			'</li>' +
+			'<li>' +
+				'<button type="button" class="btn-next">' +
+					'→' +
+				'</button>' +
+			'</li>';
+		ctrls.querySelector('.btn-prev').addEventListener('click', function(){prevSlide(true);});
+		ctrls.querySelector('.btn-next').addEventListener('click', function(){nextSlide(true);});
+		carousel.appendChild(ctrls);
+		console.log("controls appended at the end of #carousel");
+		
+		// ARIA live region
+		/* (disabling temporarily, else javascript stops at "announceItem" being undefined)
+		var liveregion = document.createElement('div');
+		liveregion.setAttribute('aria-live','polite');
+		liveregion.setAttribute('aria-atomic','true');
+		liveregion.setAttribute('class','liveregion visuallyhidden');
+		carousel.appendChild(liveregion);
+			//side note: you can see how to append and style divs with raw javascript between this and the code above, hmmm. could be useful for height stuff or other "don't make something appear unless JS is enabled" functionality...
+		if (announceItem){
+			carousel.querySelector('.liveregion').textContent = 'Item' + (new_current + 1) + ' of ' + slides.length;
+		}
+		*/
+		
+		// visible nav
+		// oh hey now I get to test JS-appending right now immediately
+		var slnv = document.createElement('ul');
+		slnv.className = 'slidenav';
+		slnv.innerHTML = '<li>' +
+				'<button class="current" data-slide="0">' +
+					'<span class="visuallyhidden">test</span> 1' +
+					'<span class="visuallyhidden">(current slide)</span>' +
+				'</button>' +
+			'</li>' +
+			'<li>' +
+				'<button data-slide="1">' +
+					'<span class="visuallyhidden">test</span> 2' +
+				'</button>' +
+			'</li>' +
+			'<li>' +
+				'<button data-slide="2">' +
+					'<span class="visuallyhidden">test</span> 3' +
+				'</button>' +
+			'</li>';
+		carousel.appendChild(slnv);
+		console.log("slidenav appended at the end of #carousel");
+	</script>
+	
+	<p>>tfw no clue how to style the box or change slide classes</p>
+</body>
+</html>

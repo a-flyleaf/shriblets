@@ -1,0 +1,35 @@
+.red{color:red;} .blue{color:blue;}
+.dlg{margin:1em 0;}
+
+.face{height:100px;width:100px;overflow:hidden;background:#efefef; position:relative;} .face span{opacity:0;}
+
+.fc{height:100px;width:100px;overflow:hidden; position:absolute;}
+	.blue .face{background-image:url(img/0blue.png);}
+	.red .face{background-image:url(img/0red.png);}
+.blue .b1{background:url(img/b-b1.png);}
+.blue .b2{background:url(img/b-b2.png);}
+.blue .e1{background:url(img/b-e1.png);}
+.blue .e2{background:url(img/b-e2.png);}
+.blue .m1{background:url(img/b-m1.png);}
+.blue .m2{background:url(img/b-m2.png);}
+.red .b1{background:url(img/r-b1.png);}
+.red .b2{background:url(img/r-b2.png);}
+.red .e1{background:url(img/r-e1.png);}
+.red .e2{background:url(img/r-e2.png);}
+.red .m1{background:url(img/r-m1.png);}
+.red .m2{background:url(img/r-m2.png);}
+
+.green{color:#0DB05D;} .orange{color:#CC7F32;}
+	.green .face{background-image:url(img/spritesheet.png); background-position:-1px -1px;} .orange .face{background-image:url(img/spritesheet.png); background-position:-1px -405px;}
+.green .b1{background:url(img/spritesheet.png); background-position:-1px -102px;}
+.green .b2{background:url(img/spritesheet.png); background-position:-102px -102px;}
+.green .e1{background:url(img/spritesheet.png); background-position:-1px -203px;}
+.green .e2{background:url(img/spritesheet.png); background-position:-102px -203px;}
+.green .m1{background:url(img/spritesheet.png); background-position:-1px -304px;}
+.green .m2{background:url(img/spritesheet.png); background-position:-102px -304px;}
+.orange .b1{background:url(img/spritesheet.png); background-position:-1px -506px;}
+.orange .b2{background:url(img/spritesheet.png); background-position:-102px -506px;}
+.orange .e1{background:url(img/spritesheet.png); background-position:-1px -607px;}
+.orange .e2{background:url(img/spritesheet.png); background-position:-102px -607px;}
+.orange .m1{background:url(img/spritesheet.png); background-position:-1px -708px;}
+.orange .m2{background:url(img/spritesheet.png); background-position:-102px -708px;}

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+	<title>2019-09-19</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Oswald&display=swap" rel="stylesheet">
+	<style>
+		* {margin: 0; padding: 0; word-wrap: break-word;}
+		body {overflow-x: hidden; font-family: "Libre Baskerville",Georgia,serif;}
+		i,b {font-family: "Oswald","Lucida Sans Unicode","Lucida Grande",sans-serif; font-style: normal; font-weight: 400; color: #41c3dd; text-transform: uppercase; font-size: 10vw; line-height: 100%; margin-bottom: 1vh; display: block;}
+		#grid {display: grid; grid-template-columns: auto auto; grid-gap: 7vh 2vw; background: #e6e7e9; padding: 10vh 5vw; width: 50vw; margin: 0 auto;}
+		.wide {grid-column: 1 / span 2;}
+		
+		h1,sub,h3,h4 {font-size: 1.15vw; text-transform: uppercase; font-weight: normal;}
+		h1,h3,h4 {border-bottom: 2px dotted; padding-bottom: .5vh;}
+		h2 {font-size: 10vw; margin-top: 2vw; line-height: 100%;}
+		sub {padding-top: 1.5vh; display: block; border-top: 2px solid;}
+		
+		li span {transform: rotate(-90deg); display: inline-block; transform-origin: center center;}
+		ul {width: 100%; display: grid; list-style-type: none; grid-template-columns: 41% 16.5% 28.7% 7.14% 6.66%; text-align: center; font-family: "Oswald","Lucida Sans Unicode","Lucida Grande",sans-serif; text-transform: uppercase;}
+		li:nth-child(odd) {background: #41c3dd;}
+		li {height: 100%; display: grid; align-items: center;}
+		li:first-child {font-size: 10vw;}
+		li:nth-child(2) {font-size: 3vw;} li:nth-child(2) span {transform: rotate(-90deg) translateY(-.75vw);}
+		li:nth-child(3) {font-size: 4vw;}
+		li:nth-child(4), li:nth-child(5) {font-size: 1.25vw;} li:nth-child(4) span {transform: rotate(-90deg) translateY(-1.375em);}
+		
+		#marks {display: grid; grid-template-columns: repeat(5,20%); text-align: center; border-left: .25vh solid; border-right: .25vh solid; border-top: 2px dashed; font-size: 1vw;} #marks span {padding-top: 1vh; border-left: .25vh solid; border-right: .25vh solid; box-sizing: border-box;}
+		
+		@media only screen and (orientation:portrait) {
+			#grid {width: 100%; box-sizing: border-box; grid-gap: 5vh 3vw;}
+			h1,sub,h3,h4 {font-size: 2vw;}
+			h2 {font-size: 17vw;}
+			i,b {font-size: 17vw;}
+			li:nth-child(2) span {transform: rotate(-90deg);}
+			li:nth-child(4), li:nth-child(5) {font-size: 2vw;}
+			li:nth-child(4) span {transform: rotate(-90deg) translateY(-2.375vw);}
+			#marks {font-size: 2vw;}
+		}
+		
+		a {color: inherit; text-decoration: none;}
+		a:hover {color: #41c3dd;}
+		::selection {color: #fff; background: #41c3dd;}
+	</style>
+	
+	<body>
+		<div id="grid">
+			<h1 class="wide"><a href="http://feltron.com/FAR07.html" target="_blank">An accounting of the year in</a></h1>
+			<header class="wide">
+				<h2>Theater</h2>
+				<p><sub>cinema & netflix</sub></p>
+			</header>
+			<div class="wide">
+				<h3>Best movie:</h3>
+				<i>No Country for Old Men</i>
+				<p><sub>December 29, Sausalito, California</sub></p>
+			</div>
+			<div>
+				<h4>Cinema movies viewed:</h4>
+				<b>18</b>
+				<p><sub>down 14% from 2006</sub></p>
+			</div>
+			<div>
+				<h4>Netflix movies viewed:</h4>
+				<b>30</b>
+				<p><sub>down 6% from 2006</sub></p>
+			</div>
+			<div class="wide">
+				<h3>Category distribution of Netflix rentals:</h3>
+				<ul>
+					<li>TV</li>
+					<li><span>Comedy</span></li>
+					<li>Drama</li>
+					<li><span>Documentary</span></li>
+					<li><span>Action</span></li>
+				</ul>
+				<div id="marks"><span>20%</span><span>40%</span><span>60%</span><span>80%</span><span>100%</span></div>
+			</div>
+			<div class="wide">
+				<h3>Best play:</h3>
+				<i>Tings Dey Happen</i>
+				<p><sub>November 3, Cultureproject, Soho</sub></p>
+			</div>
+		</div>
+	</body>
+</html>

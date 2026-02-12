@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>shriblets by a-flyleaf</title>
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&display=swap" rel="stylesheet">
+		<style>
+			*{margin:0;padding:0; font-size:100%; box-sizing:border-box;}
+			body{background:#262626; color:#d9d9d9; font-family:'fira mono',consolas,monospace; font-size:1.15em; padding:.85rem 1.5rem; line-height:1.35em;}
+			header,main,section,article{display:block;}
+			a{color:#fff;} a:hover,a:active,a:focus{font-weight:bold; background:#000;}
+			::selection{background:rgba(0,0,0,.5);}
+			.x{position:absolute; left:-999px; width:1px; height:1px; top:auto; overflow:hidden;}
+			p{margin:.5rem 0;}
+			.comment{font-size:.85em; color:#808080;}
+			hr{border:0; height:1em;}
+
+			header{font-size:1.15em;} /*can probably just use the default font size everywhere but here*/
+			h1::before{content:"# ";}
+			
+			#desc{font-size:.85em;}
+			blockquote::before{content:"> ";} blockquote{margin-left:1.25em; text-indent:-1.15em; margin-bottom:1em;}
+			
+			article{background:#404040; border:1px solid #808080;margin:1rem 0;}
+			figure{font-size:0;}
+			img{max-width:100%; height:auto;}
+			.info{padding:.5em 1em; line-height:1.5em;}
+			h2{display:inline;}
+			.date{font-size:.85em;}
+			aside{font-size:.85em;} aside ul{list-style-type:none; margin-top:1em;} aside li:first-child{margin:.5em 0;}
+			
+			#wrap{max-width:45em; margin:0 auto;}
+			
+			@media only screen and (min-width:490px){
+				header,#desc{margin-left:1.75rem;}
+				h1{display:inline;}
+			
+				article{overflow:auto; padding:.5em;}
+				figure{width:25%; padding-top:3rem; padding-left:.5rem;} .info{width:75%;}
+				figure,.info{float:left;}
+			}
+			
+			@media only screen and (min-width:55.7em){
+				article{padding:.5em 1.75em;} figure{padding-left:0;} .info{padding-left:1.75em;}
+			}
+		</style>
+	</head>
+		<!--based on my site directory page from web design, but recoded/redesigned from memory-->
+		<!--screenshot | *pagetitle* date / short description / language(s) in focus | works on mobile Y/N -->
+	<body><div id="wrap">
+		<p class="comment">&lt;--pageinfo--&gt;</p>
+		<header>
+			<h1>shriblets</h1>
+			<span>by <a href="../">a-flyleaf</a></span>
+		</header>
+		<hr/>
+		<main>
+			<section id="desc">
+				<blockquote>shriblet <i>(noun)</i>: 1) a tiny, stray scrap of paper; 2) a made-up word</blockquote>
+				<p>Random little pages. Ordered chronologically.</p>
+			</section>
+			<p class="comment">&lt;--/pageinfo--&gt;</p>
+			<hr/>
+			<section>
+			<p class="comment">&lt;--screenshot | pagetitle, date, description, language(s) in focus | additional notes--&gt;</p>
+				<!--use includes-->
+				<article>
+					<figure><a href="PAGELINK"><img src="https://via.placeholder.com/426x240.jpg" alt=""/></a></figure><!--16:9 resolution-->
+					<div class="info">
+						<h2><a href="PAGELINK">pagetitle</a></h2> <span class="date">2021-05-13</span>
+						<p>short description. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						<aside><ul>
+							<li>lang = #html #css #javascript #etc</li>
+							<li>isMobileFriendly = true; blogPost = true;</li>
+						</ul></aside>
+					</div>
+				</article>
+				<article>
+					<figure><a href="PAGELINK"><img src="https://via.placeholder.com/426x240.jpg" alt=""/></a></figure><!--16:9 resolution-->
+					<div class="info">
+						<h2>pagetitle</h2> <span class="date">2021-05-13</span>
+						<p>short description.</p>
+						<aside><ul>
+							<li>lang = #html #css #javascript #etc</li>
+							<li>isMobileFriendly = true; blogPost = true;</li>
+						</ul></aside>
+					</div>
+				</article>
+			</section>
+		</main>
+		<hr/>
+		<footer><p class="comment">&lt;--/shriblets--&gt;</p></footer>
+	</div></body>
+</html>

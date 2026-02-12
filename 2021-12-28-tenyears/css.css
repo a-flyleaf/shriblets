@@ -1,0 +1,48 @@
+/*main styling*/
+*{margin:0; padding:0; box-sizing:border-box; font-size:100%; word-wrap:break-word;}
+body{overflow-x:hidden; font-family:verdana,sans-serif; background:#ccd9c8; color:#2b3432;}
+header,main,section,footer{display:block;}
+::selection{background:#dfe8dd;}
+a{color:inherit; text-decoration-color:#8c9b8c;} a:hover,a:active,a:focus{color:#8c9b8c;}
+section{background:#dfe8dd; margin:1rem auto; padding:1rem 0; max-width:85em;} section ::selection{background:#ccd9c8;}
+img{max-width:100%; height:auto;}
+
+/*general layout+typography*/
+.wrap{padding:0 1.5rem; max-width:35em; margin:0 auto;}
+.wide,footer ul{max-width:85em; margin:0 auto;}
+
+header{padding:2rem 0;}
+
+h1,h2{text-align:center;}
+h1 a,h2 a{text-decoration:none;}
+h1{font-size:1.5em; margin:1rem 0;}
+h2{font-size:2em;}
+
+.desc{font-size:.85em; line-height:1.5em;}
+p{margin:.5em 0;}
+span{display:inline-block;}
+.count{margin-top:1.5em; text-align:center;}
+
+footer{font-size:.75em; line-height:1.5em; text-align:center; padding:.5rem 1.5em 1.5rem;}
+footer ul{list-style-type:none;} footer li{margin:1em 0;}
+
+/*gallery*/
+.gallery{background:#506256; padding:1.5rem 0; margin-top:1.5rem; font-size:0; text-align:center;}
+.gallery img{width:22.5%; margin:0 1%;}
+.gallery a:hover,.gallery a:active{opacity:.5;}
+
+.fancybox-infobar,.fancybox-button--play{display:none;}
+.fancybox-caption a{color:inherit !important; text-decoration:underline !important; text-decoration-color:#808080;} .fancybox-caption ::selection{background:#2b3432;}
+.fancybox-caption__body{max-width:25em; margin:0 auto;}
+.da{font-weight:bold;} .fancybox-caption a.da{text-decoration:none !important;} .fancybox-caption a.da:hover,.fancybox-caption a.fancybox-caption a.da:active,.da-focus{text-decoration:underline !important;}
+.fancybox-caption a:hover,.fancybox-caption a:active,.fancybox-caption a:focus{text-decoration:none !important;}
+
+/*widescreen*/
+@media only screen and (min-width:65em){
+	h2{text-align:left; margin-left:1.5rem; font-size:3em;}
+	section,footer{overflow:auto;}
+	section .desc{width:35%; float:left; padding-right:2.5rem;}
+	.gallery{width:65%; height:100%; float:right; margin:0; margin-right:1rem; margin-left:-1rem;}
+	
+	footer li:first-child{float:left;} footer li:last-child{float:right;}
+}

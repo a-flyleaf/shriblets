@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>type.html | a-flyleaf</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {word-wrap: break-word; box-sizing: border-box; margin: 0; padding: 0;}
+      body {overflow-x: hidden; background: #000; color: #fff; font-family: Consolas,monospace; letter-spacing: .1em; padding: 1em;}
+      
+      p {
+        overflow: hidden;
+        animation: type 5s steps(5,start);
+        white-space: nowrap;
+        background: grey;
+      }
+      
+      @keyframes type {
+        from {width: 0;}
+        to {width: 100%;}
+      }
+      
+      h1 {
+        overflow: hidden;
+        white-space: nowrap; 
+        animation: type 2s steps(4,end);
+        background: darkgrey;
+      }
+      
+      div {
+        width: 50%;
+      }
+      
+      #delay {
+        overflow: hidden;
+        white-space: nowrap;
+        animation: type 2s steps(30,end);
+        background: red;
+        animation-delay: 1s;
+        width: 0;
+        animation-fill-mode: forwards;
+      }
+      
+      /*timing*/
+      p,h1,#delay {background: 0; width: 0;}
+      h1 {animation: type 1s steps(30,end); animation-fill-mode: forwards;}
+      p {animation: type 1s steps(30,end); animation-delay: 1s; animation-fill-mode: forwards;}
+      #delay {animation-delay: 2s;}
+      
+      a {color: yellow; text-decoration: none;}
+      
+      span {display: block; margin-top: 3em;} li {margin: .25em 0 .25em 1em;} ul {margin-left: 1em}
+    </style>
+  </head>
+  
+  <body><div>
+    <h1>hello world</h1>
+    <p>The quick brown fox<br/>jumped over the lazy dog.</p>
+    <div id="delay">it was cool.</div>
+  </div>
+  
+  <span>reflinks</span>
+    <ul><li><a href="//css-tricks.com/snippets/css/typewriter-effect/">Typewriter Effect @ CSS Tricks</a></li><li><a href="//www.w3schools.com/css/css3_animations.asp">CSS Animations @ W3schools</a></li><li><a href="//designmodo.com/steps-css-animations/">How to Use steps() in CSS Animations @ designmodo</a></li><li><a href="//blog.teamtreehouse.com/css-sprite-sheet-animations-steps">CSS Sprite Sheet Animations with Steps @ treehouse</a></li><li><a href="//stackoverflow.com/questions/19504330/css3-keyframe-animations-end-and-stay-on-the-last-frame#19520558">CSS3 Keyframe Animations: End and stay on the last frame @ stackoverflow</a></li></ul></body>
+</html>

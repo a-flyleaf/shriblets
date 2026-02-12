@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>draggable svg</title>
+		<style>
+			body{background:#707070;}
+			svg{margin:1em 0; <!--transform:scale(6); transform-origin:top left; this works but is laggy-->}
+			.static{cursor:not-allowed;} .draggable{cursor:ew-resize;}
+		</style>
+		<script src="draggable.js"></script>
+	</head><body>
+		<p>following <a href="https://www.petercollingridge.co.uk/tutorials/svg/interactive/dragging/">this tutorial</a> | placeholder images via <a href="https://placeholder.com/">placeholder.com</a></p>
+		
+		<svg xmlns="http://www.w3.org/2000/svg" width="700" height="84" onload="makeDraggable(evt)" >
+			<defs><!--https://stackoverflow.com/questions/3796025/fill-svg-path-element-with-a-background-image-->
+				<pattern id="img1" width="8" height="10"><image href="https://via.placeholder.com/80x100.png" x="0" y="0" width="8" height="10"/></pattern>
+				<pattern id="sj" width="16" height="60"><image href="test.svg" x="0" y="0" width="16" height="60"/></pattern>
+			</defs>
+			<g id="bg">
+				<rect x="0" y="0" width="700" height="84" fill="#cfcfcf"/>
+				<rect x="0" y="12" width="700" height="12" fill="#c5c5c5"/>
+				<rect x="0" y="38" width="700" height="12" fill="#c5c5c5"/>
+				<rect x="0" y="62" width="700" height="12" fill="#c5c5c5"/>
+			</g>
+			<rect x="12" y="24" width="16" height="60" fill="url(#sj)" class="draggable"/>
+		</svg>
+	</body>
+</html>

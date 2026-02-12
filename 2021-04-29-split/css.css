@@ -1,0 +1,11 @@
+*{margin:0; padding:0; box-sizing:border-box;}
+body{background:#000; color:#fff; font-family:sans-serif; font-size:2em;}
+p{margin:1em 0;}
+::selection{background:0;color:0;}
+a{color:inherit;} a:hover,a:active,a:focus{text-decoration:none;}
+span{display:inline-block;}
+
+.shutup{background:#fff; color:blueviolet; font-weight:bold; font-family:sans-serif; text-align:center; font-style:italic;}
+.shutup ::selection{background:0; color:#fff;}
+.loud{color:#fff; background:blueviolet; font-style:normal; font-weight:normal; padding:1em 0; font-size:1em; text-align:justify; text-transform:uppercase; letter-spacing:-.125em;}
+.loud p{margin:0;}

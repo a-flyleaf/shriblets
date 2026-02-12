@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>draggable svg</title>
+		<style>
+			svg{margin:1em 0; border:1px solid #000;}
+			.static{cursor:not-allowed;} .draggable{cursor:move;}
+		</style>
+		<script src="draggable.js"></script>
+	</head><body>
+		<a href="https://www.petercollingridge.co.uk/tutorials/svg/interactive/dragging/">https://www.petercollingridge.co.uk/tutorials/svg/interactive/dragging/</a>
+		
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 20" onload="makeDraggable(evt)">
+			<rect x="0" y="0" width="30" height="20" fill="#efefef"/><!--bg-->
+			<rect x="4" y="5" width="8" height="10" fill="#007bff" class="draggable"/><!--blue-->
+			<rect x="18" y="5" width="8" height="10" fill="#888" class="static"/><!--gray-->
+			<rect x="0" y="0" width="5" height="10" fill="#fff" class="draggable"/><!--random-->
+		</svg>
+	</body>
+</html>

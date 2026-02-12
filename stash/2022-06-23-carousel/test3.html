@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>accessible carousel test</title>
+</head>
+<body>
+	<p>but from scratch via iframe abuse</p>
+	
+	<iframe title="carousel" style="height:300px; width:400px; border:1px solid #000;" name="crsl" src="test3a.html"></iframe>
+	
+	<p><a href="about:blank" target="crsl">wipes the carousel</a></p>
+	
+	<hr/>
+	
+	<div id="counter">counter: <span id="count">if you're reading this JS isn't working</span></div>
+	<button onclick="add()">+</button> <button onclick="sub()">-</button>
+	
+	<div id="img"></div>
+	
+	<script>		
+		//just the number
+		var num = 1;
+		console.log("num = " + num);
+		document.getElementById("count").innerHTML = num;
+		
+		//append image
+		var imgs = document.createElement('figure');
+		imgs.innerHTML = '<img src="' + num + '.png" alt=""/>';
+		img.appendChild(imgs);
+		
+		function add(){
+			num = num + 1;
+			console.log("num = " + num);
+			document.getElementById("count").innerHTML = num;
+			imgs.innerHTML = '<img src="' + num + '.png" alt=""/>';
+			img.appendChild(imgs);
+		}
+		
+		function sub(){
+			num = num - 1;
+			console.log("num = " + num);
+			document.getElementById("count").innerHTML = num;
+			imgs.innerHTML = '<img src="' + num + '.png" alt=""/>';
+			img.appendChild(imgs);
+		}
+		
+		//https://sebhastian.com/display-javascript-variable-html/
+		//https://stackoverflow.com/questions/15305527/javascript-user-input-through-html-input-tag-to-set-a-javascript-variable < is why this is put in the add/subtract functions
+		//document.getElementById("count").innerHTML = num;
+	</script>
+</body>
+</html>
