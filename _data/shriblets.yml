@@ -45,6 +45,20 @@
 - title: feltron
   date: "2019-09-19"
   desc: |-
-    A page of <a href="http://feltron.com/FAR07.html'"Nicholas Feltron’s 2007 Annual Report</a>, but as a HTML page. Experimenting with CSS grid.
+    A page of <a href="http://feltron.com/FAR07.html">Nicholas Feltron’s 2007 Annual Report</a>, but as a HTML page. Experimenting with CSS grid.
   lang: [html,css]
   mobile: true
+
+- title: 404.mp3
+  date: "2019-12-05"
+  desc: |-
+    Esoteric character song page.
+  lang: [html,css]
+  mobile: true
+
+- title: walkcycles
+  date: "2020-04-11+12"
+  desc: |-
+    Fiddling with CSS animations.
+  lang: [html,css]
+  mobile: false

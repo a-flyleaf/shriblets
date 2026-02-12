@@ -78,10 +78,11 @@ layout: none
 				<p class="comment">&lt;--"lang" denotes which coding language(s) were being actively played with--&gt;</p>
 				<p class="comment">&lt;--if isResponsive=false then mobileBrowsing=notIdeal; else mobileBrowsing=OK--&gt;</p>
 				<!--CONTENT-->
-				{%for s in site.data.shriblets%}<article>
-					<figure><a href="{{site.url}}/{{s.date}}-{{s.title}}"><img src="{{site.url}}/img/{{s.date}}-{{s.title}}.jpg" alt=""/></a></figure>
+				{%for s in site.data.shriblets%}{%capture sd%}{{s.date|remove:"+"}}{%endcapture%}
+				<article>
+					<figure><a href="{{site.url}}/{{sd}}-{{s.title|remove:'.'}}"><img src="{{site.url}}/img/{{sd}}-{{s.title|remove:'.'}}.jpg" alt=""/></a></figure>
 					<div class="info">
-						<h2><a href="{{site.url}}/{{s.date}}-{{s.title}}">{{s.title}}</a></h2> <span class="date">{{s.date}}</span>
+						<h2><a href="{{site.url}}/{{s.date}}-{{s.title|remove:'.'|remove:'+'}}">{{s.title}}</a></h2> <span class="date">{{s.date}}</span>
 						<p>{{s.desc}}</p>
 						<aside><ul>
 							<li>lang ={%for l in s.lang%} #{{l}}{%endfor%};</li>
@@ -92,25 +93,7 @@ layout: none
 				
 				<hr>
 				
-				<article><!--tfw I gotta use the raw code for that one (1) "."-->
-					<figure><a href="{{site.url}}/shriblets/2019-12-05-404mp3"><img src="{{site.url}}/shriblets/img/2019-12-05-404mp3.jpg" alt=""/></a></figure>
-					<div class="info">
-						<h2><a href="{{site.url}}/shriblets/2019-12-05-404mp3">404.mp3</a></h2> <span class="date">2019-12-05</span>
-						<p>Esoteric character song page.</p>
-						<aside><ul>
-							<li>lang = #html #css</li>
-							<li>isResponsive = true;</li>
-						</ul></aside>
-				</div></article><article><!--also here, for the "+"-->
-					<figure><a href="{{site.url}}/shriblets/2020-04-1112-walkcycles"><img src="{{site.url}}/shriblets/img/2020-04-1112-walkcycles.jpg" alt=""/></a></figure>
-					<div class="info">
-						<h2><a href="{{site.url}}/shriblets/2020-04-1112-walkcycles">walkcycles</a></h2> <span class="date">2020-04-11+12</span>
-						<p>Fiddling with CSS animations.</p>
-						<aside><ul>
-							<li>lang = #html #css;</li>
-							<li>isResponsive = false;</li>
-						</ul></aside>
-				</div></article>{%include shriblet.html
+				{%include shriblet.html
 					title="art"
 					date="2020-06-07"
 					desc="Something of a portfolio page. Unfinished-ish; layout looks best single-column but widescreen doesn’t break."
