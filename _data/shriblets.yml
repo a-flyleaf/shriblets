@@ -1,0 +1,50 @@
+#
+#- title: 
+#  date: ""
+#  desc: |-
+#    ///
+#  lang: [1,2]
+#  mobile: true,false,other
+#
+
+- title: heighthell
+  date: "2018-08"
+  desc: |-
+    Interactive character height chart, heavily inspired by <a href="http://mxedk.com/pokechamp/">a version with Pokémon player characters</a>, and one of my first experiments with Javascript. (Could not figure out how to make the characters stand separately on pageload without altering the draggable area, and the toggles are buggy.)
+  lang: [js,jquery]
+  mobile: false
+
+- title: headshots
+  date: "2018-12-14"
+  desc: |-
+    Assorted characters and an overview of the stories they’re from. (There are names and one-sentence descriptions in the code, but I never figured out how to make the varying line lengths not break the layout.)
+  lang: [html,css]
+  mobile: true
+
+- title: songwall
+  date: "2019-03-06"
+  desc: |-
+    Character song page; art and mobile layout are unfinished but code is functional.
+  lang: [html,css]
+  mobile: true
+
+- title: wiki
+  date: "2019-05"
+  desc: |-
+    Pseudo-wiki page that doubles as a character bio-infodump-gallery.
+  lang: [html,css]
+  mobile: true
+
+- title: type
+  date: "2019-05-29"
+  desc: |-
+    Attempt at creating a typewriter-esque effect with pure HTML/CSS.
+  lang: [html,css]
+  mobile: true
+
+- title: feltron
+  date: "2019-09-19"
+  desc: |-
+    A page of <a href="http://feltron.com/FAR07.html'"Nicholas Feltron’s 2007 Annual Report</a>, but as a HTML page. Experimenting with CSS grid.
+  lang: [html,css]
+  mobile: true
