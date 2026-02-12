@@ -1,0 +1,11 @@
+<article>
+	<figure><a href="{{site.url}}/shriblets/{{include.date}}-{{include.title}}"><img src="{{site.url}}/shriblets/img/{{include.date}}-{{include.title}}.jpg" alt=""/></a></figure>
+	<div class="info">
+		<h2><a href="{{site.url}}/shriblets/{{include.date}}-{{include.title}}">{{include.title}}</a></h2> <span class="date">{{include.date}}</span>
+		<p>{{include.desc}}</p>
+		<aside><ul>
+			{%if include.lang%}<li>lang = {{include.lang}};</li>{%endif%}
+			{%if include.mobile%}<li>isResponsive = {{include.mobile}};</li>{%endif%}
+		</ul></aside>
+</div>
+</article>

@@ -1,0 +1,30 @@
+<article id="{{include.nm}}">
+	<img src="img/{{include.nm}}.png" alt="" class="char"/>
+	<div class="col">
+		<div class="flex">
+			<h3>{{include.fullname}}</h3>
+			<ul class="stats nolist">
+				<li>{{include.age}}</li>
+				<li>{{include.hem}}</li>
+				<li>{{include.height}}</li>
+			</ul>
+		</div>
+		<p class="summary">{{include.summary}}</p>
+		<ul class="notes">
+			<li>{{include.note1}}</li>
+			<li>{{include.note2}}</li>
+			<li>{{include.note3}}</li>
+			<li>{{include.note4}}</li>
+		</ul>
+		<section class="gallery"><!--use fancybox here-->
+			<img src="img/{{include.nm}}-1.png" alt=""/>
+			<img src="img/{{include.nm}}-2.png" alt=""/>
+			<img src="img/{{include.nm}}-3.png" alt=""/>
+		</section>
+		<p class="design"><b>design notes:</b> {{include.design}}</p>
+		<ul class="factoids nolist">
+			<li>𝅘𝅥𝅮 {{include.song}}</li>
+			<li>🗨 {{include.voice}}</li>
+		</ul>
+	</div><!--/col-->
+</article>
