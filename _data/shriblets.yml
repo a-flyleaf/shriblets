@@ -6,6 +6,7 @@
 #  lang: [1,2]
 #  mobile: true,false,other
 #
+# title & date will be automatically swept of "." & "+" characters, respectively
 
 - title: heighthell
   date: "2018-08"
@@ -62,3 +63,67 @@
     Fiddling with CSS animations.
   lang: [html,css]
   mobile: false
+
+- title: art
+  date: "2020-06-07"
+  desc: |-
+    Something of a portfolio page. Unfinished-ish; layout looks best single-column but widescreen doesn’t break.
+  lang: [html,css]
+  mobile: true
+
+- title: split
+  date: "2021-04-29"
+  desc: |-
+    An <a href="https://a-flyleaf.github.io/blog/addition-update">exploration</a> of parallel dysfunction, in the format of divided HTML frames; based on <a href="https://anthology.rhizome.org/my-boyfriend-came-back-from-the-war"><i>My Boyfriend Came Back from the War</i></a>
+  lang: [2]
+  mobile: false
+
+- title: shriblets2
+  date: "2021-05-13"
+  desc: |-
+    A recode of this page, since I thought it deserved its own layout; implemented same day. Images via <a href="https://placeholder.com">placeholder.com</a>.
+  lang: [html,css]
+  mobile: true
+
+- title: tracklist
+  date: "2021-10-03+04"
+  desc: |-
+    Character song page; doubles as an attempt to use dynamic/responsive text over an image. Probably looks weird on old browsers.
+  lang: [html,css]
+  mobile: true
+
+- title: rabbithole
+  date: "2021-12-24"
+  desc: |-
+    Self-explanatory, as far as it can be explained.
+  lang: afterEffects??
+  mobile: iGuess
+
+- title: tenyears
+  date: "2021-12-28"
+  desc: |-
+    Ten years of (deviant)Art, plus copious rambling.
+  lang: [html,css]
+  mobile: true
+
+- title: draggable
+  date: "2022-04-16+17"
+  desc: |-
+    Revisiting the 2018 height chart (see above), now with lots more people and entirely different base code. (Functionally much simpler, but characters don’t overlap on pageload.) Image rescaling might be weird on some browsers.
+  lang: [html-svg,js]
+  mobile: questionable
+
+- title: sawfaceRedeux.blend
+  date: "2022-09-19+20"
+  url: 3d
+  desc: |-
+    Made a 3D model, rambled about it.
+  lang: [html,css]
+  mobile: true
+
+- title: talksprites
+  date: "2024-09-10"
+  desc: |-
+    Plain-’n-simple attempt to use page-specific data to generate talksprites. The meat is in the backend; didn’t bother prettying up the results.
+  lang: [jekyll]
+  mobile: true

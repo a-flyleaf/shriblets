@@ -69,7 +69,7 @@ layout: none
 				<blockquote>shriblet <i>(noun)</i>: 1) a tiny, stray scrap of paper; 2) a made-up word</blockquote>
 				<p>Random little pages.</p>
 				<p>Ordered chronologically. All code and art is mine unless otherwise noted.</p>
-				<p id="note">(<a href="/oldpages">Old versions of major pages have been moved</a>.)</p>
+				<p id="note">(<a href="https://a-flyleaf.github.io/oldpages">Old versions of major pages have been moved</a>.)</p>
 			</section>
 			<p class="comment">&lt;--/pageinfo--&gt;</p>
 			<hr/>
@@ -78,85 +78,21 @@ layout: none
 				<p class="comment">&lt;--"lang" denotes which coding language(s) were being actively played with--&gt;</p>
 				<p class="comment">&lt;--if isResponsive=false then mobileBrowsing=notIdeal; else mobileBrowsing=OK--&gt;</p>
 				<!--CONTENT-->
-				{%for s in site.data.shriblets%}{%capture sd%}{{s.date|remove:"+"}}{%endcapture%}
+				{%for s in site.data.shriblets%}
+					{%capture sd%}{{s.date|remove:"+"}}{%endcapture%}
+					{%capture st%}{%if s.url%}{{s.url}}{%else%}{{s.title|remove:'.'}}{%endif%}{%endcapture%}
 				<article>
-					<figure><a href="{{site.url}}/{{sd}}-{{s.title|remove:'.'}}"><img src="{{site.url}}/img/{{sd}}-{{s.title|remove:'.'}}.jpg" alt=""/></a></figure>
+					<figure><a href="{{site.url}}/{{sd}}-{{st}}"><img src="{{site.url}}/img/{{sd}}-{{st}}.jpg" alt=""/></a></figure>
 					<div class="info">
-						<h2><a href="{{site.url}}/{{s.date}}-{{s.title|remove:'.'|remove:'+'}}">{{s.title}}</a></h2> <span class="date">{{s.date}}</span>
+						<h2><a href="{{site.url}}/{{sd}}-{{st}}">{{s.title}}</a></h2> <span class="date">{{s.date}}</span>
 						<p>{{s.desc}}</p>
 						<aside><ul>
 							<li>lang ={%for l in s.lang%} #{{l}}{%endfor%};</li>
 							<li>isResponsive = {{s.mobile}};</li>
 						</ul></aside>
 					</div>
-				</article>{%endfor%}
-				
-				<hr>
-				
-				{%include shriblet.html
-					title="art"
-					date="2020-06-07"
-					desc="Something of a portfolio page. Unfinished-ish; layout looks best single-column but widescreen doesn’t break."
-					lang="#html #css"
-					mobile="true"
-				%}{%include shriblet.html
-					title="split"
-					date="2021-04-29"
-					desc="An <a href='../blog/addition-update'>exploration</a> of parallel dysfunction, in the format of divided HTML frames; based on <a href='https://anthology.rhizome.org/my-boyfriend-came-back-from-the-war'><i>My Boyfriend Came Back from the War</i></a>."
-					lang="#html #css"
-					mobile="false"
-				%}{%include shriblet.html
-					title="shriblets2"
-					date="2021-05-13"
-					desc="A recode of this page, since I thought it deserved its own layout; implemented same day. Images via <a href='https://placeholder.com'>placeholder.com</a>."
-					lang="#html #css"
-					mobile="true"
-				%}<article><!--plus sign strikes again-->
-					<figure><a href="{{site.url}}/shriblets/2021-10-0304-tracklist"><img src="{{site.url}}/shriblets/img/2021-10-0304-tracklist.jpg" alt=""></a></figure>
-					<div class="info">
-						<h2><a href="{{site.url}}/shriblets/2021-10-0304-tracklist">tracklist</a></h2> <span class="date">2021-10-03+04</span>
-						<p>Character song page; doubles as an attempt to use dynamic/responsive text over an image. Probably looks weird on old browsers.</p>
-						<aside><ul>
-							<li>lang = #html #css;</li>
-							<li>isResponsive = true;</li>
-						</ul></aside>
-				</div></article>{%include shriblet.html
-					title="rabbithole"
-					date="2021-12-24"
-					desc="Self-explanatory, as far as it can be explained."
-					lang="aftereffects??"
-					mobile="iGuess"
-				%}{%include shriblet.html
-					title="tenyears"
-					date="2021-12-28"
-					desc="Ten years of (deviant)Art, plus copious rambling."
-					lang="#html #css"
-					mobile="true"
-				%}<article><!--plus-->
-					<figure><a href="{{site.url}}/shriblets/2022-04-1617-draggable"><img src="{{site.url}}/shriblets/img/2022-04-1617-draggable.jpg" alt=""></a></figure>
-					<div class="info">
-						<h2><a href="{{site.url}}/shriblets/2022-04-1617-draggable">draggable</a></h2> <span class="date">2022-04-16+17</span>
-						<p>Revisiting the 2018 height chart (see above), now with lots more people and entirely different base code. (Functionally much simpler, but characters don’t overlap on pageload.) Image rescaling might be weird on some browsers.</p>
-						<aside><ul>
-							<li>lang = #html-svg #js;</li>
-							<li>isResponsive = questionable;</li>
-						</ul></aside>
-				</div></article><article><!--plus-->
-					<figure><a href="{{site.url}}/shriblets/2022-09-1920-3d"><img src="{{site.url}}/shriblets/img/2022-09-1920-3d.jpg" alt=""></a></figure>
-					<div class="info">
-						<h2><a href="{{site.url}}/shriblets/2022-09-1920-3d">sawfaceRedeux.blend</a></h2> <span class="date">2022-09-19+20</span>
-						<p>Made a 3D model, rambled about it.</p>
-						<aside><ul>
-							<li>lang = #html #css;</li>
-							<li>isResponsive = true;</li>
-						</ul></aside>
-				</div></article><!--THERE IS OTHER RANDOM CRAP sporadically in my files; recently it's been rp-related and will probably not be uploaded, but like check the ygbtdm and omori folders. there's test stuff around there somewhere-->{%include shriblet.html
-					title="talksprites"
-					date="2024-09-10"
-					desc="Plain-’n-simple attempt to use page-specific data to generate talksprites. The meat is in the backend; didn’t bother prettying up the results."
-					lang="#jekyll"
-					mobile="true"
-				%}
+				</article>
+				{%endfor%}
 				<!--/CONTENT-->
 			</section>
 		</main>
