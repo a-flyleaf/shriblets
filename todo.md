@@ -1,7 +1,6 @@
 2026-02-12
 - google fonts begone
-- folder reorganization (use permalinks to preserve urls)
-	- moved, need to update links
+	- lato is on a-flyleaf already; noto sans could be added
 - scrounge other repos for pages to move/link here
 	- dwrp stuff included if you're feeling adventurous
 

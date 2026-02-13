@@ -82,7 +82,7 @@ layout: none
 					{%capture sd%}{{s.date|remove:"+"}}{%endcapture%}
 					{%capture st%}{%if s.url%}{{s.url}}{%else%}{{s.title|remove:'.'}}{%endif%}{%endcapture%}
 				<article>
-					<figure><a href="{%include url.html%}/{{sd}}{%unless s.date contains '2026'%}-{%else%}_{%endunless%}{{st}}"><img src="{%include url.html%}/img/{{sd}}-{{st}}.jpg" alt=""/></a></figure>
+					<figure><a href="{%include url.html%}/{{sd}}{%unless s.date contains '2026'%}-{%else%}_{%endunless%}{{st}}"><img src="{%include url.html%}/img/{{sd}}{%unless s.date contains '2026'%}-{%else%}_{%endunless%}{{st}}.jpg" alt=""/></a></figure>
 					<div class="info">
 						<h2><a href="{%include url.html%}/{{sd}}{%unless s.date contains '2026'%}-{%else%}_{%endunless%}{{st}}">{{s.title}}</a></h2> <span class="date">{{s.date}}</span>
 						<p>{{s.desc}}</p>
