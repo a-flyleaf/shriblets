@@ -120,17 +120,3 @@
     Made a 3D model, rambled about it.
   lang: [html,css]
   mobile: true
-
-- title: talksprites
-  date: "2024-09-10"
-  desc: |-
-    Plain-’n-simple attempt to use page-specific data to generate talksprites. The meat is in the backend; didn’t bother prettying up the results.
-  lang: [jekyll]
-  mobile: true
-
-- title: target-test
-  date: "2026-02-07"
-  desc: |-
-    Testing multiple ways of making only certain sections of a page show, using only CSS.
-  lang: [css]
-  mobile: false
