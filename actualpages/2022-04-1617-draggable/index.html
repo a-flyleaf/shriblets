@@ -1,5 +1,6 @@
 ---
 layout: none
+permalink: 2022-04-1617-draggable
 ---
 <!doctype html>
 <html lang="en">
@@ -16,10 +17,10 @@ layout: none
 			h1,h2{margin-bottom:0;} h1+p,h2+p,h2+ul{margin-top:.5em;}
 			ul{line-height:1.5em;}
 		</style>
-		<script src="draggable.js"></script>
+		<script src="{%include actual.html%}draggable.js"></script>
 	</head><body>
 		<h1>height 2: the pixelening</h1>
-		<p>sort of revisiting <a href="{{site.url}}/shriblets/2018-08-heighthell/">a height chart from ~4 years ago</a>, but coded using SVGs following <a href="https://www.petercollingridge.co.uk/tutorials/svg/interactive/dragging/">this tutorial</a></p>
+		<p>sort of revisiting <a href="{%include url.html%}/2018-08-heighthell/">a height chart from ~4 years ago</a>, but coded using SVGs following <a href="https://www.petercollingridge.co.uk/tutorials/svg/interactive/dragging/">this tutorial</a></p>
 		
 		<!-- cba to figure these out
 		<h2>group toggles</h2>
@@ -34,36 +35,36 @@ layout: none
 		<div id="svg-margin"><svg xmlns="http://www.w3.org/2000/svg" width="655" height="84" onload="makeDraggable(evt)" >
 			<defs><!--https://stackoverflow.com/questions/3796025/fill-svg-path-element-with-a-background-image-->
 				<!--tfe-->
-				<pattern id="sj" width="1" height="1"><image href="img/sj.png"/></pattern>
-				<pattern id="sn" width="1" height="1"><image href="img/sn.png"/></pattern>
-				<pattern id="cc" width="1" height="1"><image href="img/cc.png"/></pattern>
+				<pattern id="sj" width="1" height="1"><image href="{%include actual.html%}img/sj.png"/></pattern>
+				<pattern id="sn" width="1" height="1"><image href="{%include actual.html%}img/sn.png"/></pattern>
+				<pattern id="cc" width="1" height="1"><image href="{%include actual.html%}img/cc.png"/></pattern>
 				<!--rr-->
-				<pattern id="rb" width="1" height="1"><image href="img/rb.png"/></pattern>
-				<pattern id="fs" width="1" height="1"><image href="img/fs.png"/></pattern>
+				<pattern id="rb" width="1" height="1"><image href="{%include actual.html%}img/rb.png"/></pattern>
+				<pattern id="fs" width="1" height="1"><image href="{%include actual.html%}img/fs.png"/></pattern>
 				<!--cmyk-->
-				<pattern id="ns17" width="1" height="1"><image href="img/ns17.png"/></pattern>
-				<pattern id="ir17" width="1" height="1"><image href="img/ir17.png"/></pattern>
-				<pattern id="ns12" width="1" height="1"><image href="img/ns12.png"/></pattern>
-				<pattern id="ir12" width="1" height="1"><image href="img/ir12.png"/></pattern>
-				<pattern id="af" width="1" height="1"><image href="img/af.png"/></pattern>
-				<pattern id="tc" width="1" height="1"><image href="img/tc.png"/></pattern>
-				<pattern id="vc" width="1" height="1"><image href="img/vc.png"/></pattern>
-				<pattern id="ld" width="1" height="1"><image href="img/ld.png"/></pattern>
-				<pattern id="dh" width="1" height="1"><image href="img/dh.png"/></pattern>
+				<pattern id="ns17" width="1" height="1"><image href="{%include actual.html%}img/ns17.png"/></pattern>
+				<pattern id="ir17" width="1" height="1"><image href="{%include actual.html%}img/ir17.png"/></pattern>
+				<pattern id="ns12" width="1" height="1"><image href="{%include actual.html%}img/ns12.png"/></pattern>
+				<pattern id="ir12" width="1" height="1"><image href="{%include actual.html%}img/ir12.png"/></pattern>
+				<pattern id="af" width="1" height="1"><image href="{%include actual.html%}img/af.png"/></pattern>
+				<pattern id="tc" width="1" height="1"><image href="{%include actual.html%}img/tc.png"/></pattern>
+				<pattern id="vc" width="1" height="1"><image href="{%include actual.html%}img/vc.png"/></pattern>
+				<pattern id="ld" width="1" height="1"><image href="{%include actual.html%}img/ld.png"/></pattern>
+				<pattern id="dh" width="1" height="1"><image href="{%include actual.html%}img/dh.png"/></pattern>
 				<!--404-->
-				<pattern id="vl" width="1" height="1"><image href="img/vl.png"/></pattern>
-				<pattern id="kd" width="1" height="1"><image href="img/kd.png"/></pattern>
-				<pattern id="cy" width="1" height="1"><image href="img/cy.png"/></pattern>
-				<pattern id="rd" width="1" height="1"><image href="img/rd.png"/></pattern>
+				<pattern id="vl" width="1" height="1"><image href="{%include actual.html%}img/vl.png"/></pattern>
+				<pattern id="kd" width="1" height="1"><image href="{%include actual.html%}img/kd.png"/></pattern>
+				<pattern id="cy" width="1" height="1"><image href="{%include actual.html%}img/cy.png"/></pattern>
+				<pattern id="rd" width="1" height="1"><image href="{%include actual.html%}img/rd.png"/></pattern>
 				<!--ygbtdm-->
-				<pattern id="jc" width="1" height="1"><image href="img/jc.png"/></pattern>
-				<pattern id="kl" width="1" height="1"><image href="img/kl.png"/></pattern>
-				<pattern id="ad" width="1" height="1"><image href="img/add.png"/></pattern>
-				<pattern id="cb" width="1" height="1"><image href="img/cb.png"/></pattern>
-				<pattern id="gr" width="1" height="1"><image href="img/gr.png"/></pattern>
-				<pattern id="da" width="1" height="1"><image href="img/da.png"/></pattern>
-				<pattern id="sq" width="1" height="1"><image href="img/sq.png"/></pattern>
-				<pattern id="em" width="1" height="1"><image href="img/em.png"/></pattern>
+				<pattern id="jc" width="1" height="1"><image href="{%include actual.html%}img/jc.png"/></pattern>
+				<pattern id="kl" width="1" height="1"><image href="{%include actual.html%}img/kl.png"/></pattern>
+				<pattern id="ad" width="1" height="1"><image href="{%include actual.html%}img/add.png"/></pattern>
+				<pattern id="cb" width="1" height="1"><image href="{%include actual.html%}img/cb.png"/></pattern>
+				<pattern id="gr" width="1" height="1"><image href="{%include actual.html%}img/gr.png"/></pattern>
+				<pattern id="da" width="1" height="1"><image href="{%include actual.html%}img/da.png"/></pattern>
+				<pattern id="sq" width="1" height="1"><image href="{%include actual.html%}img/sq.png"/></pattern>
+				<pattern id="em" width="1" height="1"><image href="{%include actual.html%}img/em.png"/></pattern>
 			</defs>
 			<g id="bg">
 				<rect x="0" y="0" width="655" height="84" fill="#cfcfcf"/>

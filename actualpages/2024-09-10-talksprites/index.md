@@ -1,5 +1,6 @@
 ---
 layout: none
+permalink: 2024-09-10-talksprites
 
 lines: #who face dialogue
   - w: r
@@ -37,7 +38,7 @@ lines2:
 <html>
 <head>
 	<title>talksprite test thign</title>
-	<link rel="stylesheet" href="css.css">
+	<link rel="stylesheet" href="{%include actual.html%}css.css">
 	<style>
 		code{display:block; margin-top:.25em;}
 		hr{margin:2em 0;}
