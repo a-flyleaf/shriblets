@@ -11,3 +11,7 @@ NOTE: actual.html is an include that exists in case I want to change the "actual
 	- 2020 walkcycles css
 	- 2021 rabbithole css
 - 2021 split is deliberately exempt bc it's fucking weird
+
+
+2026-02-13
+- backups > a-flyleaf > alternate walkcycle shriblets from 2020-04-12 (uses a gif)
