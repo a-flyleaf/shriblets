@@ -10,35 +10,39 @@ title: blockydob.blend
 		
 		<title>{{page.title}}</title>
 		<style>
-			*{margin:0; padding:0; box-sizing:border-box; font-size:100%;}
+			*{margin:0; padding:0; box-sizing:border-box; font-size:100%; word-wrap:break-word;}
 			.x{position:absolute; left:-999px; width:1px; height:1px; top:auto; overflow:hidden;}
 			header,main,footer{display:block;}
 			
 			body{overflow-x:hidden; background:#303030; background:linear-gradient(#1d1d1d,#303030); background-attachment:fixed; color:#e6e6e6; font-family:verdana,sans-serif; font-size:1.15em; line-height:1.65;}
 			::selection{background:#1d1d1d; background:rgba(0,0,0,.35); color:#808080;}
 			
-			a{color:inherit; text-decoration-style:dashed; text-underline-offset:.2em;} a:hover,a:active,a:focus{color:#fff; text-decoration:none;}
+			a{color:inherit; text-decoration-style:dashed; text-underline-offset:.2em; text-decoration-color:#9f9f9f;} a:hover,a:active,a:focus{color:#fff; text-decoration:underline;}
 			.br{font-family:monospace; font-weight:bold;}
 			figcaption,small{font-size:.75em;}
-				figcaption small{font-size:inherit; color:#bfbfbf;}
+				figcaption small{font-size:inherit; color:#9f9f9f;}
 			.up{text-transform:uppercase;} .noi{font-style:normal;}
 			
-			.f-wrap{text-align:center;}
+			.ct{text-align:center;}
 			figure{background:#3d3d3d; background:rgba(128,128,128,.25); border:1px solid #4a4a4a; border-radius:.5rem; padding:.5rem; display:inline-block;}
 			figcaption{text-align:left;}
+			hr{border:0;} hr:after{content:"\25C8"; display:block; text-align:center; font-size:2em;}
 			img{max-width:100%; height:auto;}
 			summary{cursor:pointer;}
 			
-			.wrap,main p,figcaption,ol,main ul,#faq{margin:1em auto; max-width:50rem;}
-				figcaption{padding:0 .5em; margin-bottom:-.5rem;}
+			.wrap,main p,figcaption,ol,main ul,#faq{margin:1.25em auto; max-width:50rem;}
+				figcaption{padding:0 .5em; margin:0;} figcaption p{margin:.5em 0;}
 			
-			h2{font-size:2em; line-height:1;}
-			h3{font-size:1.5em; line-height:1.25;}
+			main{padding:0 1em 1em;}
+			h2{font-size:2em; line-height:1; text-align:center;}
+			h3{font-size:1.5em; line-height:1.25; text-align:center; color:#9f9f9f;} h3:before{content:"\25C7\25C6\25C7"; display:block; font-size:.5em; margin:3em 0 2em;}
 			
-			header,footer{padding:1em;}
-			footer{background:#1d1d1d; color:#808080;}
+			header{text-align:center; padding:1em 1em 0;}
+			h1{font-size:3em; line-height:1;}
+			header ul{list-style-type:none; margin:1em 0 0;} header li{font-size:.85em;}
+			footer{padding:1em; background:#1d1d1d; color:#808080;}
 			
-			#done{text-align:center;}
+			{text-align:center;}
 		</style>
 	</head>
 <body>
@@ -47,43 +51,45 @@ title: blockydob.blend
 		<i>or: another glorified blog post</i>
 		<ul>
 			<li>model: March 3–10, 2026</li>
-			<li>this page: March 11</li>
+			<li>this page: March 11+14</li>
 		</ul>
 	</header>
 	<main>
-		<div class="f-wrap"><figure>
-			[IMG: the final gif; maybe a turnaround also]
-			<figcaption>
-				<p>whatever. dobermanns your kiramman</p>
-				<p><small>[All images are clickable & open the highres in a new tab.]</small></p>
-			</figcaption>
-		</figure></div>
+		<section class="ct">
+			<div class="ct"><figure>
+				<a href="{%include actual.html%}img/31.gif" target="_blank"><img src="{%include actual.html%}img/31.gif" alt="" style="max-height:95vh;"></a>
+				<figcaption>
+					<p>whatever. dobermanns your kiramman</p>
+					<p><small>[All images are clickable & open the highres in a new tab.]</small></p>
+				</figcaption>
+			</figure></div>
 
-		<p>Woof.</p>
+			<p>Woof.</p>
+		</section>
 		
 		<hr>
 		
 		<div class="wrap"><h2 class="br">prelude</h2></div>
-		<p>Late February. You are sick for the second time in the calendar year, an unusual frequency for you, which makes the whole thing just a little more bullshit than usual. Whilst languishing melodramatically, you recall that, having spent much of the previous month on [a 3D video game](https://a-flyleaf.github.io/blog/hillboosted-runmaxing), you’ve been wanting to get back into the medium yourself. (The, uh, 3D part. You know fuckall about game-making.)</p>
+		<p>Late February. You are sick for the second time in the calendar year, which you think is bullshit. Whilst languishing melodramatically, you recall that, having spent much of the previous month on <a href="https://a-flyleaf.github.io/blog/hillboosted-runmaxing">a 3D video game</a>, you’ve been wanting to get back into the medium yourself. (The, uh, 3D part. You know fuckall about game-making.)</p>
 		
-		<p>As you have nothing better to do than zone out to [social media](https://xcancel.com/chloeworthyart/status/2011501176404009349) and YouTube videos, you stumble upon [an entire low-poly character modeling course](https://www.youtube.com/playlist?list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1).</p>
+		<p>As you have nothing better to do than zone out to <a href="https://xcancel.com/chloeworthyart/status/2011501176404009349">social media</a> and YouTube videos, you stumble upon <a href="https://www.youtube.com/playlist?list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1">an entire low-poly character modeling course</a>.</p>
 		
 		<p>Your fate is sealed.</p>
 		
 		<div class="wrap"><h3 class="br">cursory attempts</h3></div>
-		<div class="f-wrap"><figure>[IMG: serenatest]</figure></div>
+		<div class="ct"><figure>[IMG: serenatest]</figure></div>
 		
 		<p>Your first venture is of course [your own character](https://a-flyleaf.github.io/projects/tfe/). (You *could* follow the tutorial piece-for-piece, but you’ve [done this before](https://a-flyleaf.github.io/ygbtdm/gallery/spin), and would rather wing it.) It is a good re-introduction to the program and how pixel-pushing in three dimensions works. You have no particular ambitions with it, but already passively-absorbed knowledge from tutorial-binging is making your workflow much, *much* faster than the first time around.</p>
 		
 		<p>Then you get lost in clothing confusion modifier hell, and set the file aside for a while.</p>
 		
-		<div class="f-wrap"><figure>[IMG: kiradob (OG sketch)]</figure></div>
+		<div class="ct"><figure>[IMG: kiradob (OG sketch)]</figure></div>
 		
 		<p>For your next attempt you consider jumping off the deep end. Your actual character fixation <i lang="fr">du jour</i> is [some nerd with blue hair and war crimes](https://wiki.leagueoflegends.com/en-us/File:Caitlyn_Arcane_13_Render.png), and for some convoluted reasons you will not be elaborating upon, you have taken to likening her to a dog; specifically, [this](https://old.reddit.com/r/arcane/comments/12o33ej/no_spoilers_holy_shit_i_never_noticed_the/jggqpzh/) [dog](https://en.wikipedia.org/wiki/Choking_Doberman).</p>
 		
 		<p>So, fuck it. Furry beam.</p>
 		
-		<div class="f-wrap"><figure id="kiradob">[IMG: kiradob (model)]</figure></div>
+		<div class="ct"><figure id="kiradob">[IMG: kiradob (model)]</figure></div>
 		
 		<p>You get about this far before realizing
 		<ol>
@@ -97,7 +103,7 @@ title: blockydob.blend
 		<hr>
 		
 		<div class="wrap"><h2 class="br">the actual thign</h2></div>
-		<div class="f-wrap"><figure id="eyes">
+		<div class="ct"><figure id="eyes">
 			[IMG: blockydob concepts]
 			<figcaption>
 				<p>You (the reader) might notice the eyes are only vaguely planned, and then absent from the turnaround altogether. Stick a pin in that.</p>
@@ -110,7 +116,7 @@ title: blockydob.blend
 		
 		<p>And it was, in fact, simpler! By the end of the day I had the whole thing fully made and done, all cubular.</p>
 		
-		<div class="f-wrap"><figure>
+		<div class="ct"><figure>
 			[IMG: 00]
 			<figcaption>
 				<p>Tbh, I probably could’ve done it all even faster, if not for one teeny tiny minute detail that is ultimately unnoticeable to anyone who is not me: No right angles! In keeping with <i>Arcane</i>’s hand-crafted "no straight lines, no perfect circles, subtle asymmetry everywhere"\* design philosphy, I deliberately freehanded most of the vertices. Or I’d snap them to the grid, then intentionally shove them around a little. Make the box model infinitesimally more organic, sure.</p>
@@ -120,24 +126,24 @@ title: blockydob.blend
 		
 		<p>The markings weren’t particularly planned, but I thought a Minecraft-esque pixel style would fit the simplification nicely. So I did some quick automatic UV unwraps, scribbled on a texture to get a feel for it, and called it a night.</p>
 		
-		<div class="f-wrap"><figure>[IMG: 00_texturetest]</figure></div>
+		<div class="ct"><figure>[IMG: 00_texturetest]</figure></div>
 		
 		<div class="wrap"><h3 class="br">model tweaks & clothing get</h3></div>
 		<p>Theoretically, the mouth was supposed to open. Some face and edge futzing later, that got done. And then I was extra-possessed and decided to make the entire model one (1) continuous object.</p>
 		
-		<div class="f-wrap"><figure>[IMG: 01/02, maybe a before/after?]</figure></div>
+		<div class="ct"><figure>[IMG: 01/02, maybe a before/after?]</figure></div>
 		
 		<p>No, the shoulder/upper arm region would not be visible with the separately-modeled top. Oh well. It was irking me that the legs were continuous with the body and nothing else was; and, rather than split those off, I figured I’d just connect everything.</p>
 		
 		<p>Anyway.</p>
 		
-		<div class="f-wrap"><figure>[IMG: 02, 03]</figure></div>
+		<div class="ct"><figure>[IMG: 02, 03]</figure></div>
 		
 		<p>90% of the base model has the exact same solid color. ([Gradient textures](https://www.youtube.com/watch?v=9ITJgW9hVrE) might be neat to mess with some time, but not this time.) Did I *need* to line up almost every pixel on almost every side, ensuring all the while that the sides are distinct & the UV maps don’t overlap? No.</p>
 		
 		<p>And yet!</p>
 		
-		<div class="f-wrap"><figure>
+		<div class="ct"><figure>
 			[IMG: 04]
 			<figcaption>
 				<p>I also didn’t need to color-mark the front/back/outer side/inner side faces. Whatever. #hashtagEnrichment. I definitely know more about how UVs work now than I did before, having not touched UVs basically at all before this.</p>
@@ -148,7 +154,7 @@ title: blockydob.blend
 		
 		<p>Clothes got modeled along the way, to the extent that they’re modeled separately at all. The turtleneck & pants, give or take the belt and shoes, were always planned to be part of the base texture ([the overall design](https://www.artstation.com/artwork/XJW1n3) is fairly easy to simplify) but the top and the shoe cuffs are noticeably separate.</p>
 		
-		<div class="f-wrap"><figure>
+		<div class="ct"><figure>
 			[IMG: 06]
 			<figcaption>
 				<p>The belt clasp-things, at this stage, I figured could be part of the texture; they got split off later for extra shine.</p>
@@ -159,13 +165,13 @@ title: blockydob.blend
 		<p>These, I *did* keep snapped to the grid, all right-angled and front-back overlapping. The shoulder area especially got simplified, compared to the confused tri-quad fuckery of the base model. I knew, from [some](https://sfmlab.com/tutorials/view/8c70e8ef-5a74-4a47-b368-9d2db6b3b725/) [other](https://www.youtube.com/watch?v=_StljmlDmEQ) [tutorials](https://www.youtube.com/watch?v=IkfgHp_eDdE), that it should be possible to move both clothes and base model together seamlessly..ish. I probably could’ve gone back and simplified the base shoulders, too, but *w/e* I had to call it #GoodEnough and move on.</p>
 		
 		<div class="wrap"><h3 class="br">no one nodes</h3></div>
-		<div class="f-wrap"><figure>[IMG: 07]</figure></div>
+		<div class="ct"><figure>[IMG: 07]</figure></div>
 		
 		<p>There was, at this point, a small dilemma. I hadn’t decided on exact base colors, and thought it might be fun if I could edit those directly in Blender. I also knew the not-separately-modeled clothing would be on an overlapping layer, 2D-art-wise, and while I had (and still have) no real plans to swap it out, it’d be neat if that’s a thing that *could* be done. *And,* I wanted certain details like the metallic trim to use a different texture entirely, react a little differently to light. (The tutorial uses a flat, shadeless look, but I’m a sucker for mood lighting.)</p>
 		
 		<p>In other words: want texture to Have Layer.</p>
 		
-		<div class="f-wrap"><figure>
+		<div class="ct"><figure>
 			[IMG: 07 nodetest]
 			<figcaption>
 				This got… more complicated, later, but this is the base of the thing.
@@ -174,7 +180,7 @@ title: blockydob.blend
 					<summary>For those curious (and my own future reference): <small><i>[click for dropdown]</i></small></summary>
 					
 					<ol>
-						<li>A single image texture can get plugged directly into the shader (in this case, Pricipled BSDF), <span class="br">Color</span> to <span cass="br">Base Color</span>.</li>
+						<li>A single image texture can get plugged directly into the shader (in this case, Pricipled BSDF), <span class="br">Color</span> to <span class="br">Base Color</span>.</li>
 						<li>Multiple images can be combined with the <span class="br">Mix Color</span> node. The base image gets plugged into A; the overlapping layer connects to B, with the <span class="br">Alpha</span> to the <span class="br">Mix</span> <span class="br">Factor</span> (ensures transparency).</li>
 						<li>For this use case, the marking image uses fully white (``#FFFFFF``) silhouettes; the color is added with a Multiply node (<span class="br">Mix Color</span> with the second dropdown set to <span class="br">Multiply</span>), with A as the desired color & B connecting the image itself.</li>
 					</ol>
@@ -188,7 +194,7 @@ title: blockydob.blend
 		
 		<p>I did not figure this out all by myself, but sadly did not save links to whichever specific tutorials or stackexchange threads helped me out. RIP. In any case, this ↑ is what I landed on for a preliminary run…</p>
 		
-		<div class="f-wrap"><figure>[IMG: 08, 09, 10]</figure></div>
+		<div class="ct"><figure>[IMG: 08, 09, 10]</figure></div>
 		
 		<p>…aaand we landed here! The ear polygons got simplified & the belt-metal split off along the way. An unintended side effect of how I set up the textures is that the clothing, particularly on the ankle, shines very blue in the light. The tint is not supposed to be that strong. *Oh well.*</p>
 		
@@ -210,13 +216,13 @@ title: blockydob.blend
 		<div class="wrap"><h3 class="br">making the sucker move</h3></div>
 		<p>Not that I’ve been consistent with my file version breakpoints ever, but about 11 of the 32 .blend files constructing this thing were devoted entirely to rigging. And bugtesting the rig. And fixing the rig. And tweaking the rig. And—</p>
 		
-		<div class="f-wrap"><figure>[IMG: idk some Part up to 17ish]</figure></div>
+		<div class="ct"><figure>[IMG: idk some Part up to 17ish]</figure></div>
 		
 		<p>An annoying thing with rigging is that it’s A Lot Of Tedium and not the fun kind. (Er, *I* think certain kinds of tedium are fun, anyway. Coding, for instance. Creative problem-solving. Mindless pixel-pushing, even. Rigging is, in my experience so far, mostly just clicking points in ways that should make them do the thing and then trying to reverse-engineer why they are not doing the thing.) It’s also not super amenable to being shown visually.</p>
 		
 		<p>Look, uhh, here’s [the Crashsune tutorial weight painting part](https://www.youtube.com/watch?v=Xooago2F8h8&list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1&index=11). That’s the bit I’m complaining about, mostly. I *am* extremely glad that this tutorial introduced me to Rigify, which auto-generates all the fancy bone movement bits and eliminates that entire chunk of tedium—although it *does* introduce its own overwhelm, such as, uh…</p>
 		
-		<div class="f-wrap"><figure>
+		<div class="ct"><figure>
 			[IMG: screenshot of like. DEF-spine-006 you know what it is]
 			<figcaption>
 				<p><em>I’m not advanced enough for this help</em></p>
@@ -232,13 +238,13 @@ title: blockydob.blend
 		
 		<p>You see, the OG tutorial series uses flat textures for the entire face. This is simple and easy to accomplish, because the character’s face is mostly a single flat plane, anime-style. There’s a [later addendum](https://www.youtube.com/watch?v=GAoaBfMqSBo&list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1&index=13) in which the irises are made moveable, which is (relatively) simple and easy to edit because the entirety of the eyes fit onto one (1) face.</p>
 		
-		<div class="f-wrap"><figure>[IMG: 17]</figure></div>
+		<div class="ct"><figure>[IMG: 17]</figure></div>
 		
 		<p>This is not the case for me.</p>
 		
 		<p>I *did,* demonstrating some stray crumbs of forethought, make the eye area of the base texture transparent, and use a separate object underneath for the sclerae (eye-whites). Did I account for the multi-planar nature of the thing *no*. Did it take one simple easy try to get it right *no*. Did I manage to make the irises moveable, in a way that made sense from both front and side views, with nice smooth animation and everything *oh. Surely you jest.*</p>
 		
-		<div class="f-wrap"><figure>
+		<div class="ct"><figure>
 			[IMG: 21? and/or the existing 26]
 			<figcaption>
 				<p>An upright plane of teeth got added along the way. As a break from the (eye) horrors.</p>
@@ -247,11 +253,11 @@ title: blockydob.blend
 		
 		<p>Eventually. *Eventually.* Several false starts and glitched-to-all-hell attempts later. I settled on making the entire (inner! the brows are another thing!) eye area a flat, swappable texture, and basically following the tutorial’s [face-swap techinque](https://www.youtube.com/watch?v=3fHeWqKpBTc&list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1&index=11) but *just* for the irises. I didn’t love the node redundancy, though, so after scavenging [elsewhere](https://www.youtube.com/watch?v=Rfc5eGHC8Ro) and the tutorial’s comments, I found this stupid simple method from @[gibbhartin643](https://www.youtube.com/watch?v=3fHeWqKpBTc&lc=UgwXs7KePK-LRfNV0AB4AaABAg.ARqLWmRByT5ATXd87Z8FKZ):</p>
 		
-		<div class="f-wrap"><figure>[IMG: the fuckign nodes]</figure></div>
+		<div class="ct"><figure>[IMG: the fuckign nodes]</figure></div>
 		
 		<p>Now I have to redraw the texture every time I want the eyes to do something different, but. <em class="up noi">but.</em> it does “work.”</p>
 		
-		<div class="f-wrap"><figure>[IMG: "_arewedoneyet.blend"]</figure></div>
+		<div class="ct"><figure>[IMG: "_arewedoneyet.blend"]</figure></div>
 		
 		<p>Also I never applied the Mirror modifier so I’d have to re-wrangle everythign to make the eyes not exactly the same on both sides lol <em class="up">anyway—</em></p>
 		
@@ -260,7 +266,7 @@ title: blockydob.blend
 		<div class="wrap"><h2 class="br">“final” render</h2></div>
 		<p>Step one: Make boat.</p>
 		
-		<div class="f-wrap"><figure>
+		<div class="ct"><figure>
 			[IMG: OG model, ft. references]
 			<figcaption>
 				<p>“did you use a reference compilation like this for the actual character” no lol.</p>
@@ -270,14 +276,14 @@ title: blockydob.blend
 		
 		<p>Step two: Make the rest of the fuckign render.</p>
 		
-		<div class="f-wrap"><figure>[IMG: 31]</figure></div>
+		<div class="ct"><figure>[IMG: 31]</figure></div>
 		
 		<p>There were a couple scrapped attempts at different lighting setups & some slight movement (since, y’know, it’s a fully-rigged model that *can* animate), but I truly was nearing the Sick Of Looking At This point and didn’t want to end on a bitter note. Ultimately I settled on lighting that attempts to mimic the 3D Viewport’s material view, threw in a slight side-shifting camera movement (which, hey, is the exact effect I talked about (but didn’t know how to implement) [last time](https://a-flyleaf.github.io/shriblets/2022-09-1920-3d ADD ID TO "make the camera move")…!), aaaand…</p>
 		
-		<div class="f-wrap"><figure>[IMG: if we tweak the gif v31 goes here. if not then 31 again, maybe viewport in the camera & static side-by-side. scrapped lighting also perhaps?]</figure></div>
+		<div class="ct"><figure>[IMG: if we tweak the gif v31 goes here. if not then 31 again, maybe viewport in the camera & static side-by-side. scrapped lighting also perhaps?]</figure></div>
 		
 		
-		<div id="done">
+		<div id="done" class="ct">
 			<big>~\*~*Done~\*~</big>
 			<br>
 			<small>(for now.)</small>
@@ -303,7 +309,7 @@ title: blockydob.blend
 		
 		<p>Current-me *out*.</p>
 		
-		<div class="f-wrap"><figure>[IMG: idk silly render. long neck maybe. draw me like one of your french dobs]</figure></div>
+		<div class="ct"><figure>[IMG: idk silly render. long neck maybe. draw me like one of your french dobs]</figure></div>
 		
 		<p>Thanks for reading~</p>
 	</main>
