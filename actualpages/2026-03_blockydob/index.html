@@ -17,21 +17,24 @@ title: blockydob.blend
 			body{overflow-x:hidden; background:#303030; background:linear-gradient(#1d1d1d,#303030); background-attachment:fixed; color:#e6e6e6; font-family:verdana,sans-serif; font-size:1.15em; line-height:1.65;}
 			::selection{background:#1d1d1d; background:rgba(0,0,0,.35); color:#808080;}
 			
-			a{color:inherit; text-decoration-style:dashed; text-underline-offset:.2em; text-decoration-color:#9f9f9f;} a:hover,a:active,a:focus{color:#fff; text-decoration:underline;}
-			.br{font-family:monospace; font-weight:bold;}
+			a{color:inherit; text-decoration-style:dashed; text-underline-offset:.2em; text-decoration-color:#9f9f9f;} a:hover,a:active,a:focus{color:#ff7900; text-decoration:underline;}
+			.br,code{font-family:monospace; font-weight:bold;}
 			figcaption,small{font-size:.75em;}
 				figcaption small{font-size:inherit; color:#9f9f9f;}
 			.up{text-transform:uppercase;} .noi{font-style:normal;}
 			
 			.ct{text-align:center;}
-			figure{background:#3d3d3d; background:rgba(128,128,128,.25); border:1px solid #4a4a4a; border-radius:.5rem; padding:.5rem; display:inline-block;}
-			figcaption{text-align:left;}
+			figure, #faq{background:#3d3d3d; background:rgba(128,128,128,.25); border:1px solid #4a4a4a; border-radius:.5rem; padding:.5rem; display:inline-block;}
+			figure{line-height:0;}
+			figure>a{display:inline-block; border:1px solid #000;} figure>a:hover,figure>a:focus,figure>a:active{opacity:.65; border-color:#ff7900;}
+			figcaption{text-align:left; line-height:1.65;}
 			hr{border:0;} hr:after{content:"\25C8"; display:block; text-align:center; font-size:2em;}
 			img{max-width:100%; height:auto;}
 			summary{cursor:pointer;}
 			
 			.wrap,main p,figcaption,ol,main ul,#faq{margin:1.25em auto; max-width:50rem;}
-				figcaption{padding:0 .5em; margin:0;} figcaption p{margin:.5em 0;}
+				figcaption{padding:0 .5em; margin:0;} figcaption p{margin:.5em 0;} figcaption p+p{margin-top:.75em;}
+				.hd+p{margin-top:-1em;}
 			
 			main{padding:0 1em 1em;}
 			h2{font-size:2em; line-height:1; text-align:center;}
@@ -39,10 +42,27 @@ title: blockydob.blend
 			
 			header{text-align:center; padding:1em 1em 0;}
 			h1{font-size:3em; line-height:1;}
-			header ul{list-style-type:none; margin:1em 0 0;} header li{font-size:.85em;}
+			header ul,footer ul{list-style-type:none;} header li,footer li{font-size:.85em;}
 			footer{padding:1em; background:#1d1d1d; color:#808080;}
+			footer ul{margin:0 auto !important;}
 			
-			{text-align:center;}
+			#ol{margin-bottom:0;} ol{margin-top:0;} main li{margin-left:1.25em;}
+			details{margin-top:.5em;}
+				#dt{border:1px dashed #9f9f9f; margin:.25em 0 0; padding:.5em 1em 0;}
+				#dt li{padding:.25em 0;}
+				#dt .br,#dt code{font-size:1.25em; font-weight:normal;}
+				#dt .br{background:#303030; padding:0 .35em;}
+				#dt code{letter-spacing:.025em; padding:0 .25em;}
+				#wh{background:#fff; color:#000;} #bl{background:#000; color:#fff;}
+			#faq{max-width:25em; background:0; border-style:dashed; padding:.5em 1em;}
+				#faq .br{font-size:1.25em; font-weight:normal; color:#9f9f9f;}
+				#faq p{text-align:left; margin:.5em 0;}
+			#done{margin:2em auto; line-height:1.15;}
+				#done big{font-size:5em;}
+			#nhd{margin:.5em auto 0;}
+				#ps{margin-top:0;}
+				#ps li{padding:.25em 0;}
+				#ps li ul{margin:0;} #ps li ul li{padding:.25em 0 0; font-size:.85em;}
 		</style>
 	</head>
 <body>
@@ -59,6 +79,7 @@ title: blockydob.blend
 			<div class="ct"><figure>
 				<a href="{%include actual.html%}img/31.gif" target="_blank"><img src="{%include actual.html%}img/31.gif" alt="" style="max-height:95vh;"></a>
 				<figcaption>
+					<p class="x">[image description: A gif of the model being shown off, a low-poly 3D model of an anthropomorphic Dobermann pinscher. The palette & outfit are modeled after /Arcane/ character Caitlyn Kiramman.]</p>
 					<p>whatever. dobermanns your kiramman</p>
 					<p><small>[All images are clickable & open the highres in a new tab.]</small></p>
 				</figcaption>
@@ -69,40 +90,40 @@ title: blockydob.blend
 		
 		<hr>
 		
-		<div class="wrap"><h2 class="br">prelude</h2></div>
+		<div class="wrap hd"><h2 class="br">prelude</h2></div>
 		<p>Late February. You are sick for the second time in the calendar year, which you think is bullshit. Whilst languishing melodramatically, you recall that, having spent much of the previous month on <a href="https://a-flyleaf.github.io/blog/hillboosted-runmaxing">a 3D video game</a>, you’ve been wanting to get back into the medium yourself. (The, uh, 3D part. You know fuckall about game-making.)</p>
 		
 		<p>As you have nothing better to do than zone out to <a href="https://xcancel.com/chloeworthyart/status/2011501176404009349">social media</a> and YouTube videos, you stumble upon <a href="https://www.youtube.com/playlist?list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1">an entire low-poly character modeling course</a>.</p>
 		
 		<p>Your fate is sealed.</p>
 		
-		<div class="wrap"><h3 class="br">cursory attempts</h3></div>
+		<div class="wrap hd"><h3 class="br">cursory attempts</h3></div>
 		<div class="ct"><figure>[IMG: serenatest]</figure></div>
 		
-		<p>Your first venture is of course [your own character](https://a-flyleaf.github.io/projects/tfe/). (You *could* follow the tutorial piece-for-piece, but you’ve [done this before](https://a-flyleaf.github.io/ygbtdm/gallery/spin), and would rather wing it.) It is a good re-introduction to the program and how pixel-pushing in three dimensions works. You have no particular ambitions with it, but already passively-absorbed knowledge from tutorial-binging is making your workflow much, *much* faster than the first time around.</p>
+		<p>Your first venture is of course <a href="https://a-flyleaf.github.io/projects/tfe/">your own character</a>. (You <em>could</em> follow the tutorial piece-for-piece, but you’ve <a href="https://a-flyleaf.github.io/ygbtdm/gallery/spin">done this before</a>, and would rather wing it.) It is a good re-introduction to the program and how pixel-pushing in three dimensions works. You have no particular ambitions with it, but shiny new know-how that you absorbed from sicktime tutorial binging is already making your workflow much, <em>much</em> faster than the first time around.</p>
 		
-		<p>Then you get lost in clothing confusion modifier hell, and set the file aside for a while.</p>
+		<p>Then you get lost in clothing confusion modifier hell, and set the file aside.</p>
 		
 		<div class="ct"><figure>[IMG: kiradob (OG sketch)]</figure></div>
 		
-		<p>For your next attempt you consider jumping off the deep end. Your actual character fixation <i lang="fr">du jour</i> is [some nerd with blue hair and war crimes](https://wiki.leagueoflegends.com/en-us/File:Caitlyn_Arcane_13_Render.png), and for some convoluted reasons you will not be elaborating upon, you have taken to likening her to a dog; specifically, [this](https://old.reddit.com/r/arcane/comments/12o33ej/no_spoilers_holy_shit_i_never_noticed_the/jggqpzh/) [dog](https://en.wikipedia.org/wiki/Choking_Doberman).</p>
+		<p>For your next attempt you consider jumping off the deep end. Your actual character fixation <i lang="fr">du jour</i> is <a href="https://wiki.leagueoflegends.com/en-us/File:Caitlyn_Arcane_13_Render.png">some nerd with blue hair and war crimes</a>, and for some convoluted reasons you will not be elaborating upon, you have taken to likening her to a dog. Specifically, <a href="https://old.reddit.com/r/arcane/comments/12o33ej/no_spoilers_holy_shit_i_never_noticed_the/jggqpzh/">this</a> <a href="https://en.wikipedia.org/wiki/Choking_Doberman">dog</a>.</p>
 		
 		<p>So, fuck it. Furry beam.</p>
 		
 		<div class="ct"><figure id="kiradob">[IMG: kiradob (model)]</figure></div>
 		
-		<p>You get about this far before realizing
+		<p id="ol">You get about this far before realizing
 		<ol>
 			<li>you have no idea how the face edge loops work,</li>
 			<li>you have no idea how the hand/paw edge loops work, and</li>
-			<li>you’ve toyed with this high-poly nonsense before, to a [limited degree](https://a-flyleaf.github.io/ygbtdm/gallery/roundups/2022-09), and… well, you didn’t *hate* it or anything. But you also remember it taking forever, and that was only a head. You don’t really want to take forever on this.</li>
+			<li>you’ve toyed with this high-poly nonsense before, to a <a href="https://a-flyleaf.github.io/ygbtdm/gallery/roundups/2022-09">limited degree</a>, and… well, you didn’t <em>hate</em> it or anything. But you also remember it taking forever, and that was only a head. You don’t really want to take forever on this.</li>
 		</ol>
 		
 		<p>You’re also done typing in second-person, now.</p>
 		
 		<hr>
 		
-		<div class="wrap"><h2 class="br">the actual thign</h2></div>
+		<div class="wrap hd"><h2 class="br">the actual thign</h2></div>
 		<div class="ct"><figure id="eyes">
 			[IMG: blockydob concepts]
 			<figcaption>
@@ -112,82 +133,86 @@ title: blockydob.blend
 		
 		<p>Get blockified, idiot.</p>
 		
-		<p>The anatomy immediately & deliberately changed from “dog standing on hind legs”-type anthro to “human with dog head & extremities”-style structure, mostly because I figured it’d be simpler to model. (The legs. I’m talking about the legs. That high-heel bend was a pain in the ass to position right, and I have yet to mess with bending limbs that way in 3D motion.)</p>
+		<p>The anatomy immediately & deliberately changed from “dog standing on hind legs”-type anthro to “human with dog head & extremities”-style structure, mostly because I thought the latter would be simpler to model. (The legs. I’m talking about the legs. That seemingly-backwards bend in the dog-type legs was a pain in the ass to position right, and I have yet to mess with moving limbs that way in 3D.)</p>
 		
 		<p>And it was, in fact, simpler! By the end of the day I had the whole thing fully made and done, all cubular.</p>
 		
 		<div class="ct"><figure>
 			[IMG: 00]
 			<figcaption>
-				<p>Tbh, I probably could’ve done it all even faster, if not for one teeny tiny minute detail that is ultimately unnoticeable to anyone who is not me: No right angles! In keeping with <i>Arcane</i>’s hand-crafted "no straight lines, no perfect circles, subtle asymmetry everywhere"\* design philosphy, I deliberately freehanded most of the vertices. Or I’d snap them to the grid, then intentionally shove them around a little. Make the box model infinitesimally more organic, sure.</p>
-				<p><small>\*Paraphrashing; citation needed. I can’t remember the exact quote, but this principle got highlighted in either the official artbook or somewhere in [the season&nbsp;1 behind-the-scenes](https://www.youtube.com/playlist?list=PLbAFXJC0J5GYEkfxnGTWnvgcEypgBeAb5). It’s been a while.</small></p>
+				<p>Tbh, I probably could’ve done it all even faster, if not for one teeny tiny minute detail that is ultimately unnoticeable to anyone who is not me: No right angles! In keeping with <i>Arcane</i>’s hand-crafted “no straight lines, no perfect circles, subtle asymmetry everywhere”* design philosphy, I deliberately freehanded most of the vertices. Or I’d snap them to the grid, then intentionally shove them around a little. Make the box model infinitesimally more organic, sure.</p>
+				<p><small>*Paraphrashing; citation needed. I can’t remember the exact quote, but this principle got highlighted in either the official artbook or somewhere in <a href="https://www.youtube.com/playlist?list=PLbAFXJC0J5GYEkfxnGTWnvgcEypgBeAb5">the season&nbsp;1 behind-the-scenes</a>. It’s been a while.</small></p>
 			</figcaption>
 		</figure></div>
 		
-		<p>The markings weren’t particularly planned, but I thought a Minecraft-esque pixel style would fit the simplification nicely. So I did some quick automatic UV unwraps, scribbled on a texture to get a feel for it, and called it a night.</p>
+		<p>The markings weren’t particularly planned, but I thought a Minecraft-esque pixel style would fit the simplification nicely. So I did some quick automatic UV unwraps, scribbled on a texture to get a feel for how it might look, and called it a night.</p>
 		
-		<div class="ct"><figure>[IMG: 00_texturetest]</figure></div>
+		<div class="ct"><figure>
+			<a href="{%include actual.html%}img/00_texturetest.jpg" target="_blank"><img src="{%include actual.html%}img/00_texturetest.png" alt=""></a>
+			<figcaption>
+				<p class="x">[image description: ////]</p>
+			</figcaption>
+		</figure></div>
 		
-		<div class="wrap"><h3 class="br">model tweaks & clothing get</h3></div>
+		<div class="wrap hd"><h3 class="br">model tweaks & clothing get</h3></div>
 		<p>Theoretically, the mouth was supposed to open. Some face and edge futzing later, that got done. And then I was extra-possessed and decided to make the entire model one (1) continuous object.</p>
 		
 		<div class="ct"><figure>[IMG: 01/02, maybe a before/after?]</figure></div>
 		
 		<p>No, the shoulder/upper arm region would not be visible with the separately-modeled top. Oh well. It was irking me that the legs were continuous with the body and nothing else was; and, rather than split those off, I figured I’d just connect everything.</p>
 		
-		<p>Anyway.</p>
-		
 		<div class="ct"><figure>[IMG: 02, 03]</figure></div>
 		
-		<p>90% of the base model has the exact same solid color. ([Gradient textures](https://www.youtube.com/watch?v=9ITJgW9hVrE) might be neat to mess with some time, but not this time.) Did I *need* to line up almost every pixel on almost every side, ensuring all the while that the sides are distinct & the UV maps don’t overlap? No.</p>
+		<p>90% of the base model has the exact same solid color. (<a href="https://www.youtube.com/watch?v=9ITJgW9hVrE">Gradient textures</a> might be neat to mess with some time, but not this time.) Did I <em>need</em> to line up almost every pixel on almost every side, ensuring all the while that the sides are distinct & the UV maps don’t overlap? No.</p>
 		
 		<p>And yet!</p>
 		
 		<div class="ct"><figure>
 			[IMG: 04]
 			<figcaption>
-				<p>I also didn’t need to color-mark the front/back/outer side/inner side faces. Whatever. #hashtagEnrichment. I definitely know more about how UVs work now than I did before, having not touched UVs basically at all before this.</p>
+				<p>I also didn’t need to color-mark the front/back/outer side/inner side faces. Whatever. #hashtagEnrichment. I definitely know more about how UVs work now than I did before…!</p>
 			</figcaption>
 		</figure></div>
 		
-		<p>There was a lot of back-and-forth nonsense between Blender and FireAlpaca ([art program](https://firealpaca.com/)) here, btw. I thought it’d be clever to keep each part on its own layer, even if this meant re-exporting the PNG a billion times. At some point later in I gave up on this entirely, but an attempt was made.</p>
+		<p>There was a lot of back-and-forth nonsense between Blender and FireAlpaca (<a href="https://firealpaca.com/">art program</a>) here, btw. I thought it’d be clever to keep each part on its own layer, even if this meant re-exporting the PNG a billion times. At some point later in I gave up on this entirely, but an attempt was made.</p>
 		
-		<p>Clothes got modeled along the way, to the extent that they’re modeled separately at all. The turtleneck & pants, give or take the belt and shoes, were always planned to be part of the base texture ([the overall design](https://www.artstation.com/artwork/XJW1n3) is fairly easy to simplify) but the top and the shoe cuffs are noticeably separate.</p>
+		<p>Clothes got modeled along the way, to the extent that they’re modeled separately at all. Simplification from <a href="https://www.artstation.com/artwork/XJW1n3">the original design</a> was simple enough: separate top & shoe cuffs, and everything else is part of the base texture</p>
 		
 		<div class="ct"><figure>
 			[IMG: 06]
 			<figcaption>
-				<p>The belt clasp-things, at this stage, I figured could be part of the texture; they got split off later for extra shine.</p>
-				<p>Heels, uh, I did not bother with at all. Wasn’t sure what the logistics of lifting the armature-shoe would be, and how that might affect movement, if that part of the model was visible.</p>
+				<p>The belt clasp-things got split off at a later stage, for extra shine.</p>
+				<p>Heels, meanwhile, I did not bother with at all. I modeled flat feet and wasn’t sure what the logistics would be for lifting & moving the armature with some distance from the ground.</p>
 			</figcaption>
 		</figure></div>
 		
-		<p>These, I *did* keep snapped to the grid, all right-angled and front-back overlapping. The shoulder area especially got simplified, compared to the confused tri-quad fuckery of the base model. I knew, from [some](https://sfmlab.com/tutorials/view/8c70e8ef-5a74-4a47-b368-9d2db6b3b725/) [other](https://www.youtube.com/watch?v=_StljmlDmEQ) [tutorials](https://www.youtube.com/watch?v=IkfgHp_eDdE), that it should be possible to move both clothes and base model together seamlessly..ish. I probably could’ve gone back and simplified the base shoulders, too, but *w/e* I had to call it #GoodEnough and move on.</p>
+		<p>These, I <em>did</em> keep snapped to the grid, all right-angled and front-back vertices overlapping. The shoulder area especially got simplified, compared to the confused tri-quad fuckery of the base model. I knew, from <a href="https://sfmlab.com/tutorials/view/8c70e8ef-5a74-4a47-b368-9d2db6b3b725/">some</a> <a href="https://www.youtube.com/watch?v=_StljmlDmEQ">other</a> <a href="https://www.youtube.com/watch?v=IkfgHp_eDdE">tutorials</a>, that it should be possible to move both clothes and base model together seamlessly..ish. I probably could’ve gone back and simplified the base shoulders, too, but <em>w/e</em> I had to call it #GoodEnough and move on.</p>
 		
-		<div class="wrap"><h3 class="br">no one nodes</h3></div>
+		<div class="wrap hd"><h3 class="br">no one nodes</h3></div>
 		<div class="ct"><figure>[IMG: 07]</figure></div>
 		
-		<p>There was, at this point, a small dilemma. I hadn’t decided on exact base colors, and thought it might be fun if I could edit those directly in Blender. I also knew the not-separately-modeled clothing would be on an overlapping layer, 2D-art-wise, and while I had (and still have) no real plans to swap it out, it’d be neat if that’s a thing that *could* be done. *And,* I wanted certain details like the metallic trim to use a different texture entirely, react a little differently to light. (The tutorial uses a flat, shadeless look, but I’m a sucker for mood lighting.)</p>
+		<p>There was, at this point, a small dilemma. I hadn’t decided on exact base colors, and thought it might be fun if I could edit those directly in Blender. I also knew the not-separately-modeled clothing would be on an overlapping 2D-layer, and although I had (and still have) no real plans to swap it out, it’d be neat if that’s a thing that <em>could</em> be done. <em>And,</em> I wanted certain details like the metallic trim to use a different texture entirely, react a little differently to light. (The tutorial uses a flat, shadeless look, but I’m a sucker for mood lighting.)</p>
 		
 		<p>In other words: want texture to Have Layer.</p>
 		
 		<div class="ct"><figure>
-			[IMG: 07 nodetest]
+			[IMG: 07 nodetest]<!--make this width:100% by default if the images don't do it-->
 			<figcaption>
 				This got… more complicated, later, but this is the base of the thing.
 				
 				<details>
 					<summary>For those curious (and my own future reference): <small><i>[click for dropdown]</i></small></summary>
-					
-					<ol>
-						<li>A single image texture can get plugged directly into the shader (in this case, Pricipled BSDF), <span class="br">Color</span> to <span class="br">Base Color</span>.</li>
-						<li>Multiple images can be combined with the <span class="br">Mix Color</span> node. The base image gets plugged into A; the overlapping layer connects to B, with the <span class="br">Alpha</span> to the <span class="br">Mix</span> <span class="br">Factor</span> (ensures transparency).</li>
-						<li>For this use case, the marking image uses fully white (``#FFFFFF``) silhouettes; the color is added with a Multiply node (<span class="br">Mix Color</span> with the second dropdown set to <span class="br">Multiply</span>), with A as the desired color & B connecting the image itself.</li>
-					</ol>
-					<ul>
-						<li>You can also accomplish this using black ``#000000`` silhouettes with an Add/Screen node, and probably other color blending modes. It’s more or less the same as any image editing program.</li>
-						<li><strong class="up">Important</strong>: The UVs are *exactly the same* for both images. If you try to, say, move the overlap 1 pixel to the side, this will *also* shift the *base* 1 pixel to the side. If there’s a way to separate them without creating an entirely separate overlapping object, idk! <small>(Might be possible with something like I ended up using for the eyes? Test at your own peril.)</small></li>
-					</ul>
+					<div id="dt">
+						<ol>
+							<li>A single image texture can get plugged directly into the shader (in this case, Pricipled BSDF), <span class="br">Color</span> to <span class="br">Base Color</span>.</li>
+							<li>Multiple images can be combined with the <span class="br">Mix Color</span> node. The base image gets plugged into <span class="br">A</span>; the overlapping layer connects to <span class="br">B</span>, with the <span class="br">Alpha</span> to the <span class="br">Mix</span> <span class="br">Factor</span> (ensures transparency).</li>
+							<li>For this use case, the marking image uses fully white (<code id="wh">#FFFFFF</code>) silhouettes; the color is added with a Multiply node (<span class="br">Mix Color</span> with the second dropdown set to <span class="br">Multiply</span>), with A as the desired color & B connecting the image itself.</li>
+						</ol>
+						<ul>
+							<li>You can also accomplish this using black <code id="bl">#000000</code> silhouettes with an Add/Screen node, and probably other color blending modes. It’s more or less the same as any image editing program.</li>
+							<li><strong class="up">Important</strong>: The UVs are <em>exactly the same</em> for both images. If you try to, say, move the overlap 1 pixel to the side, this will <em>also</em> shift the <em>base</em> 1 pixel to the side. If there’s a way to separate them without creating an entirely separate overlapping object, idk! <small>(Might be possible with something like I ended up using for the eyes? Test at your own peril.)</small></li>
+						</ul>
+					</div>
 				</details>
 			</figcaption>
 		</figure></div>
@@ -196,31 +221,31 @@ title: blockydob.blend
 		
 		<div class="ct"><figure>[IMG: 08, 09, 10]</figure></div>
 		
-		<p>…aaand we landed here! The ear polygons got simplified & the belt-metal split off along the way. An unintended side effect of how I set up the textures is that the clothing, particularly on the ankle, shines very blue in the light. The tint is not supposed to be that strong. *Oh well.*</p>
+		<p>…aaand we landed here! The ear polygons got simplified & the belt-metal split off along the way. An unintended side effect of how I set up the textures is that the clothing, particularly on the ankle, shines very blue in the light. The tint is not supposed to be that strong. <em>Oh well.</em></p>
 		
-		<p>I also considered throwing in some subtle [anti-aliasing](https://pixelparmesan.com/blog/anti-aliasing-fundamentals-for-pixel-artists) to round out the markings and buttons, but quickly realized that if I wanted that to look consistent I’d need to anti-aliasing, and I wanted to start making this sucker move.</p>
+		<p>I also considered throwing in some subtle <a href="https://pixelparmesan.com/blog/anti-aliasing-fundamentals-for-pixel-artists">anti-aliasing</a> to round out the markings and buttons, but quickly realized that if I wanted that to look consistent I’d need to anti-aliasing, and I wanted to start making this sucker move.</p>
 		
-		<p>It’d been a week, at this point, of doing basically nothing else with my spare waking hours. As with any novel pursuit, the earliest attempts are always going to be the "worst"; why be perfectionsitic when (hopefully) I can look back on this someday and redo it all in half the time?</p>
+		<p>It’d been a week, at this point, of doing basically nothing else with my spare waking hours. Perfectionism gnawed. It is good to remember, with any novel pursuit, that one’s first forays into the thing are always going to be the “worst.” It does not need to be Super Shiny Professional Polished 64. It only has to be done.</p>
 		
-		<p>[Finished, not perfect.](https://www.youtube.com/watch?v=lRtV-ugIT0k) *Aaaaaaaaaaaa.*</p>
+		<p><a href="https://www.youtube.com/watch?v=lRtV-ugIT0k">Finished, not perfect.</a> <em>Aaaaaaaaaaaa.</em></p>
 		
-		<div id="faq">
+		<div class="ct"><div id="faq">
 			<b class="br up">&lt;mini FAQ&gt;</b>
 			<p>
 				<b>Why not take a break?</b><br>
-				I don’t do breaks I hyperfocus and die. <small>(or: I know myself and prolonged "breaks" tend to be a death knell.)</small> Next question.
+				I don’t do breaks I hyperfocus and die. <small>(or: I know myself and prolonged “breaks” tend to be a death knell.)</small> Next question.
 			</p>
 			<b class="br up">&lt;/mini FAQ&gt;</b>
-		</div>
+		</div></div>
 
-		<div class="wrap"><h3 class="br">making the sucker move</h3></div>
-		<p>Not that I’ve been consistent with my file version breakpoints ever, but about 11 of the 32 .blend files constructing this thing were devoted entirely to rigging. And bugtesting the rig. And fixing the rig. And tweaking the rig. And—</p>
+		<div class="wrap hd"><h3 class="br">making the sucker move</h3></div>
+		<p>Not that I’ve been consistent with my file version breakpoints ever, but about 11 of the 32 .blend files constructing this thing were devoted entirely to rigging. Y’know, the model inside the model that actually animates. The rig. The process of rigging. Making the rig. And bugtesting the rig. And fixing the rig. And tweaking the rig. And—</p>
 		
 		<div class="ct"><figure>[IMG: idk some Part up to 17ish]</figure></div>
 		
-		<p>An annoying thing with rigging is that it’s A Lot Of Tedium and not the fun kind. (Er, *I* think certain kinds of tedium are fun, anyway. Coding, for instance. Creative problem-solving. Mindless pixel-pushing, even. Rigging is, in my experience so far, mostly just clicking points in ways that should make them do the thing and then trying to reverse-engineer why they are not doing the thing.) It’s also not super amenable to being shown visually.</p>
+		<p>An annoying thing with rigging is that it’s A Lot Of Tedium and not the fun kind. (Er, <em>I</em> think certain kinds of tedium are fun, anyway. Coding, for instance. Creative problem-solving. Mindless pixel-pushing, even. Rigging is, in my experience so far, mostly just clicking points in ways that should make them do the thing, and then trying to reverse-engineer why they are not doing the thing.) It’s also not super amenable to being shown visually.</p>
 		
-		<p>Look, uhh, here’s [the Crashsune tutorial weight painting part](https://www.youtube.com/watch?v=Xooago2F8h8&list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1&index=11). That’s the bit I’m complaining about, mostly. I *am* extremely glad that this tutorial introduced me to Rigify, which auto-generates all the fancy bone movement bits and eliminates that entire chunk of tedium—although it *does* introduce its own overwhelm, such as, uh…</p>
+		<p>Look, uhh, here’s <a href="https://www.youtube.com/watch?v=Xooago2F8h8&list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1&index=11">the Crashsune tutorial segment on weight painting</a>. That’s the bit I’m complaining about, mostly. I <em>am</em> extremely glad that this tutorial introduced me to Rigify, which auto-generates all the fancy bone movement bits and eliminates that entire chunk of tedium—even though it introduces its own overwhelm, such as, uh…</p>
 		
 		<div class="ct"><figure>
 			[IMG: screenshot of like. DEF-spine-006 you know what it is]
@@ -229,29 +254,30 @@ title: blockydob.blend
 			</figcaption>
 		</figure></div>
 		
-		<p>I do feel a bit like this is the equivalent of using Bootstrap and a CMS for a static two-page site—sorry, in plain less-nerdy English, it’s a bit like going “I would like to play piano,” being directed to a piano, and you *can* start plinking away but in the process of learning how to play *well* you also need to know exactly how each string is tuned, the wood the piano was crafted from, how the angle of the thingamabob affects the doohickey, and also if you want to play one or two specific notes you need to carve them out from scratch by ripping the material from a tree raw with your bare hands.</p>
+		<p>I do feel a bit like this is the equivalent of using Bootstrap and a CMS for a static two-page site—sorry, in plain less-nerdy English, it’s a bit like going “I would like to play piano,” being directed to a piano, and you <em>can</em> start plinking away but in the process of learning how to play <em>well</em> you also need to know exactly how each string is tuned, the wood the piano was crafted from, how the angle of the thingamabob affects the doohickey, and also if you want to play one or two specific notes you need to carve them out from scratch by ripping the material from a tree raw with your bare hands.</p>
 		
-		<p>I did the equivalent of duct-taping sticks to a pre-built sandcastle and moved along, satisfied with my efforts and ready to make the silly little animations of my dreams *oh wait no I didn’t*</p>
+		<p>I did the equivalent of duct-taping sticks to a pre-built sandcastle and moved along, satisfied with my efforts and ready to make the silly little animations of my dreams <em>oh wait no I didn’t</em></p>
 		
-		<div class="wrap"><h3 class="br">the eyes.</h3></div>
-		<p>Remember how I drew attention to the eyes (lack thereof) in [the planning phase](#eyes)? This is the part where it comes back to haunt me.</p>
+		<div class="wrap hd"><h3 class="br">the eyes.</h3></div>
+		<p>Remember how I drew attention to the eyes (lack thereof) in <a href="#eyes">the planning phase</a>? This is the part where it comes back to haunt me.</p>
 		
-		<p>You see, the OG tutorial series uses flat textures for the entire face. This is simple and easy to accomplish, because the character’s face is mostly a single flat plane, anime-style. There’s a [later addendum](https://www.youtube.com/watch?v=GAoaBfMqSBo&list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1&index=13) in which the irises are made moveable, which is (relatively) simple and easy to edit because the entirety of the eyes fit onto one (1) face.</p>
+		<p>You see, the OG tutorial series uses flat textures for the entire face. This is simple and easy to accomplish, because the character’s face is mostly a single flat plane, anime-style. There’s a <a href="https://www.youtube.com/watch?v=GAoaBfMqSBo&list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1&index=13">later addendum</a> in which the irises are made moveable, which is also (relatively) simple and easy to modify, because the entirety of the eyes fit onto one (1) plane.</p>
 		
 		<div class="ct"><figure>[IMG: 17]</figure></div>
 		
 		<p>This is not the case for me.</p>
 		
-		<p>I *did,* demonstrating some stray crumbs of forethought, make the eye area of the base texture transparent, and use a separate object underneath for the sclerae (eye-whites). Did I account for the multi-planar nature of the thing *no*. Did it take one simple easy try to get it right *no*. Did I manage to make the irises moveable, in a way that made sense from both front and side views, with nice smooth animation and everything *oh. Surely you jest.*</p>
+		<p>I <em>did,</em> demonstrating some stray crumbs of forethought, make the eye area of the base texture transparent, and use a separate object underneath for the <a href="https://en.wikipedia.org/wiki/Sclera">sclerae</a>. Did I account for the multi-planar nature of the thing <em>no</em>. Did it take one simple easy try to get it right <em>no</em>. Did I manage to make the irises moveable, in a way that made sense from both front and side views, with nice smooth animation and everything <em>oh. Surely you jest.</em></p>
 		
 		<div class="ct"><figure>
 			[IMG: 21? and/or the existing 26]
+			<a href="{%include actual.html%}img/26.jpg" target="_blank"><img src="{%include actual.html%}img/26.png" alt=""></a>
 			<figcaption>
 				<p>An upright plane of teeth got added along the way. As a break from the (eye) horrors.</p>
 			</figcaption>
 		</figure></div>
 		
-		<p>Eventually. *Eventually.* Several false starts and glitched-to-all-hell attempts later. I settled on making the entire (inner! the brows are another thing!) eye area a flat, swappable texture, and basically following the tutorial’s [face-swap techinque](https://www.youtube.com/watch?v=3fHeWqKpBTc&list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1&index=11) but *just* for the irises. I didn’t love the node redundancy, though, so after scavenging [elsewhere](https://www.youtube.com/watch?v=Rfc5eGHC8Ro) and the tutorial’s comments, I found this stupid simple method from @[gibbhartin643](https://www.youtube.com/watch?v=3fHeWqKpBTc&lc=UgwXs7KePK-LRfNV0AB4AaABAg.ARqLWmRByT5ATXd87Z8FKZ):</p>
+		<p>Eventually. <em>Eventually.</em> Several false starts and glitched-to-all-hell attempts later. I settled on making the entire* eye area <small>(*inner! the brows are a different part!!)</small> a flat, swappable texture. It basically follows the tutorial’s <a href="https://www.youtube.com/watch?v=3fHeWqKpBTc&list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1&index=11">face-swap techinque</a> but <em>just</em> for the irises. I didn’t love the node redundancy, though, so after scavenging <a href="https://www.youtube.com/watch?v=Rfc5eGHC8Ro">elsewhere</a> and the tutorial’s comments, I found this stupid simple method from @<a href="https://www.youtube.com/watch?v=3fHeWqKpBTc&lc=UgwXs7KePK-LRfNV0AB4AaABAg.ARqLWmRByT5ATXd87Z8FKZ">gibbhartin643</a>:</p>
 		
 		<div class="ct"><figure>[IMG: the fuckign nodes]</figure></div>
 		
@@ -263,58 +289,60 @@ title: blockydob.blend
 		
 		<hr>
 		
-		<div class="wrap"><h2 class="br">“final” render</h2></div>
+		<div class="wrap hd"><h2 class="br">“final” render</h2></div>
 		<p>Step one: Make boat.</p>
 		
 		<div class="ct"><figure>
 			[IMG: OG model, ft. references]
 			<figcaption>
-				<p>“did you use a reference compilation like this for the actual character” no lol.</p>
-				<p><small>(I skimmed a handful of image search results for the [high-poly dobermann](#kiradob), have drawn the (human) character a good handful of times, and the rest was between me and 32 <span class="br">.blend</span> files.)</small></p>
+				<p>“did you use a reference compilation like this for the actual character” no.</p>
+				<p><small>(I skimmed a handful of image search results for the <a href="#kiradob">high-poly dobermann</a>, have drawn the (human) character a good handful of times, and the rest was between me and 32 <span class="br">.blend</span> files.)</small></p>
 			</figcaption>
 		</figure></div>
 		
 		<p>Step two: Make the rest of the fuckign render.</p>
 		
-		<div class="ct"><figure>[IMG: 31]</figure></div>
+		<div class="ct"><figure>[IMG: 31, the file]</figure></div>
 		
-		<p>There were a couple scrapped attempts at different lighting setups & some slight movement (since, y’know, it’s a fully-rigged model that *can* animate), but I truly was nearing the Sick Of Looking At This point and didn’t want to end on a bitter note. Ultimately I settled on lighting that attempts to mimic the 3D Viewport’s material view, threw in a slight side-shifting camera movement (which, hey, is the exact effect I talked about (but didn’t know how to implement) [last time](https://a-flyleaf.github.io/shriblets/2022-09-1920-3d ADD ID TO "make the camera move")…!), aaaand…</p>
+		<p>There were a couple scrapped attempts at different lighting setups & some slight movement (since, y’know, it’s a fully-rigged model that <em>can</em> animate), but I truly was nearing the Sick&nbsp;Of Looking At&nbsp;This point and didn’t want to end on a bitter note. Ultimately I settled on lighting that attempts to mimic the 3D Viewport’s material view, threw in a slight side-shifting camera movement (which, hey, is the exact effect I talked about (but didn’t know how to implement) <a href="https://a-flyleaf.github.io/shriblets/2022-09-1920-3d#camera">last time</a>…!), aaaand…</p>
 		
 		<div class="ct"><figure>[IMG: if we tweak the gif v31 goes here. if not then 31 again, maybe viewport in the camera & static side-by-side. scrapped lighting also perhaps?]</figure></div>
 		
 		
 		<div id="done" class="ct">
-			<big>~\*~*Done~\*~</big>
+			<big>~*~<b><i>Done</i></b>~*~</big>
 			<br>
 			<small>(for now.)</small>
 		</div>
 		
 		<hr>
 		
-		<div class="wrap"><h2 class="br">postscript</h2></div>
-		<p>Good fucking *lord* I learned a lot with this. Have some notes-to-self.</p>
+		<div class="wrap hd"><h2 class="br">postscript</h2></div>
+		<p id="nhd">Good fucking <em>lord</em> I learned a lot with this. Have some notes-to-self.</p>
 		
-		<ul>
-			<li>*Plan. the face. in advance.*</li>
-			<li>Palette would also be nice to have down in advance. It is much, *much* easier to tweak the colors in a 2D program & re-export the texture than to modify them in the node editor on the fly—although I’m glad I learned how!</li>
-			<li>I did not need to go that hard on making the model vertices imprecise. I like the theory of it, though I don’t have a trained enough eye to know if it makes a difference in the final not-Perspective-view result. Could maybe be accomplished in future renders by doing everything ~pixel-perfect, then applying some kind of vertex deformation on top of everything else?</li>
+		<ul id="ps">
+			<li><em>Plan. the face. in advance.</em></li>
+			<li>Palette would also be nice to have down in advance. It is much, <em>much</em> easier to tweak the colors in a 2D program & re-export the texture than to modify them in the node editor on the fly—although I’m glad I learned how!</li>
+			<li>I did not need to go that hard on making the model vertices imprecise. I like the idea of it, but I don’t have a trained enough eye to know if it makes a difference in the final not-Perspective-view result. Could maybe be accomplished in future renders by doing everything ~pixel-perfect, then applying some kind of vertex deformation on top of everything else?</li>
 			<li>Low-poly joints are weird. Mess with and/or research corner edge loops more to get a feel for how different edges deform.</li>
-			<li>*If it’s not visible don’t Fuckign worry too much about it.* Applies to, say, UV pixel alignment where there will not actually be pixel edges; overlapping UVs in general; possibly even modeling entire body parts where clothes will cover them later.
-				<ul><li>untested thought: Use a texture for covered body parts (limbs, namely) & make it transparent when clothes are on. There will still *technically* be clipping, but you won’t see it!</li></ul></li>
-			<li>The entire model *can* be rigged (and moved asymmetrically!) without applying the Mirror modifier, but consider applying it for the eyes (independent! movement!! e.g. both looking leftward) & clothing (shape keys apply to both sides otherwise).</li>
+			<li><em>If it’s not visible don’t Fuckign worry too much about it.</em> Applies to, say, UV pixel alignment where there will not actually be pixel edges; overlapping UVs in general; possibly even modeling entire body parts where clothes will cover them later.
+				<ul><li>untested thought: Use a texture for covered body parts (limbs, namely) & make it transparent when clothes are on. There will still <em>technically</em> be clipping, but you won’t see it!</li></ul></li>
+			<li>The entire model <em>can</em> be rigged (and moved asymmetrically!) without applying the Mirror modifier, but you need to apply it to the eyes (independent! movement!! e.g. both looking leftward) & clothing (necessary for proper shape keys) or they’ll look weird.</li>
 			<li>Save yourself a headache and screenshot where all the rigify bones go once they’re positioned, both on the metarig and result. And/or try making an armature from scratch again. Homebrewing it is more tedious, but you’ll have a better idea of what goes where.</li>
 		</ul>
 		
-		<p>I am not *not* tempted to go back and redo some parts that are irking me here (face. but also smaller details around the joints, maybe add that antialiasing; the textures ended up a *nightmare* with multiple semi-overlapping images, and can absolutely be simplified) <em class="up noi">but.</em> but but but. All of that would involve non-small & possibly-destructive changes to the model that I Don’t Want To Do Right Now. They are things that I am filing squarely under Learning Experience, will keep in mind moving forward, and whether I revisit this with improvements or (if enough time has passed & I’m substantially better at 3D by then) from scratch is up to future me.</p>
+		<p>I am not <em>not</em> tempted to go back and redo some parts that are irking me here (face. but also smaller details around the joints, maybe add that antialiasing; the textures ended up a <em>nightmare</em> with multiple semi-overlapping images, and can absolutely be simplified) <em class="up noi">but.</em> but but but. All of that would involve non-small & possibly-destructive changes to the model that I Don’t Want To Do Right&nbsp;Now. They are things that I am filing squarely under Learning Experience, will keep in mind moving forward, and whether I revisit this with improvements or (if enough time has passed & I’m substantially better at 3D by then) from scratch is up to future me.</p>
 		
-		<p>Current-me *out*.</p>
+		<p>Current-me <em>out</em>.</p>
 		
-		<div class="ct"><figure>[IMG: idk silly render. long neck maybe. draw me like one of your french dobs]</figure></div>
+		<div class="ct"><figure>[IMG: idk silly render. long neck maybe. draw me like one of your french dobs. screenshots that didn't get used above]</figure></div>
+		
+		<!--ADD A TIME TAKEN (this page not included)-->
 		
 		<p>Thanks for reading~</p>
 	</main>
 	<footer>
-		<ul>
+		<ul class="wrap">
 			<li><a href="https://a-flyleaf.github.io">a-flyleaf</a></li>
 			<li>2026</li>
 		</ul>
