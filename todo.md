@@ -1,4 +1,4 @@
-2026-02-12
+# 2026-02-12
 - google fonts begone
 	- lato is on a-flyleaf already; noto sans could be added
 - scrounge other repos for pages to move/link here
@@ -13,5 +13,13 @@ NOTE: actual.html is an include that exists in case I want to change the "actual
 - 2021 split is deliberately exempt bc it's fucking weird
 
 
-2026-02-13
+# 2026-02-13
 - backups > a-flyleaf > alternate walkcycle shriblets from 2020-04-12 (uses a gif)
+
+# 2026-03-15 via discord
+## 2/17
+> /shriblets needs a 404!!
+> also some li (not “lil”, li) margins on the /stash wouldn’t hurt. plus, like, a Link to the /stash in the first place
+
+## 2/27
+> https://a-flyleaf.github.io/shriblets/2021-12-24-rabbithole image broke…
