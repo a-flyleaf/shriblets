@@ -5,6 +5,7 @@
 #    ///
 #  lang: [1,2]
 #  mobile: true,false,other
+#  story: [all,tfe,cmyk,404,ygbtdm]
 #
 # title & date will be automatically swept of "." & "+" characters, respectively
 
@@ -14,6 +15,7 @@
     Interactive character height chart, heavily inspired by <a href="http://mxedk.com/pokechamp/">a version with Pokémon player characters</a>, and one of my first experiments with Javascript. (Could not figure out how to make the characters stand separately on pageload without altering the draggable area, and the toggles are buggy.)
   lang: [js,jquery]
   mobile: false
+  story: [all]
 
 - title: headshots
   date: "2018-12-14"
@@ -21,6 +23,7 @@
     Assorted characters and an overview of the stories they’re from. (There are names and one-sentence descriptions in the code, but I never figured out how to make the varying line lengths not break the layout.)
   lang: [html,css]
   mobile: true
+  story: [all]
 
 - title: songwall
   date: "2019-03-06"
@@ -28,6 +31,7 @@
     Character song page; art and mobile layout are unfinished but code is functional.
   lang: [html,css]
   mobile: true
+  story: [404]
 
 - title: wiki
   date: "2019-05"
@@ -35,6 +39,7 @@
     Pseudo-wiki page that doubles as a character bio-infodump-gallery.
   lang: [html,css]
   mobile: true
+  story: [tfe]
 
 - title: type
   date: "2019-05-29"
@@ -56,6 +61,7 @@
     Esoteric character song page.
   lang: [html,css]
   mobile: true
+  story: [404]
 
 - title: walkcycles
   date: "2020-04-11+12"
@@ -63,6 +69,7 @@
     Fiddling with CSS animations.
   lang: [html,css]
   mobile: false
+  story: [404]
 
 - title: art
   date: "2020-06-07"
@@ -75,8 +82,9 @@
   date: "2021-04-29"
   desc: |-
     An <a href="https://a-flyleaf.github.io/blog/addition-update">exploration</a> of parallel dysfunction, in the format of divided HTML frames; based on <a href="https://anthology.rhizome.org/my-boyfriend-came-back-from-the-war"><i>My Boyfriend Came Back from the War</i></a>
-  lang: [2]
+  lang: [html,css]
   mobile: false
+  story: [cmyk]
 
 - title: shriblets2
   date: "2021-05-13"
@@ -91,6 +99,7 @@
     Character song page; doubles as an attempt to use dynamic/responsive text over an image. Probably looks weird on old browsers.
   lang: [html,css]
   mobile: true
+  story: [ygbtdm]
 
 - title: rabbithole
   date: "2021-12-24"
@@ -98,6 +107,7 @@
     Self-explanatory, as far as it can be explained.
   lang: afterEffects??
   mobile: iGuess
+  story: [ygbtdm]
 
 - title: tenyears
   date: "2021-12-28"
@@ -112,6 +122,7 @@
     Revisiting the 2018 height chart (see above), now with lots more people and entirely different base code. (Functionally much simpler, but characters don’t overlap on pageload.) Image rescaling might be weird on some browsers.
   lang: [html-svg,js]
   mobile: questionable
+  story: [all]
 
 - title: sawfaceRedeux.blend
   date: "2022-09-19+20"
