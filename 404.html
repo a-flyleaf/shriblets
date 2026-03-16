@@ -1,0 +1,33 @@
+---
+layout: none
+permalink: /404.html
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>not a shriblet</title>
+		<link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+		<style>
+			*{margin:0;padding:0; font-size:100%; box-sizing:border-box;}
+			body{background:#000; color:#d9d9d9; font-family:'fira mono',consolas,monospace; font-size:1.15em; padding:2rem 1rem; line-height:1.35em;}
+			::selection{background:rgba(128,128,128,.5); color:#fff;}
+			#wrap{max-width:45em; margin:0 auto;}
+			
+			h1{margin:1em 0;}
+			#back{margin-top:1em;}
+			#back a{color:inherit; text-decoration-color:#404040;} #back a:hover,#back a:focus,#back a:active{color:#fff; text-decoration:none;}
+			#back b:before{content:'< ';} #back b:after{content:' >';}
+		</style>
+	</head>
+	
+	<body><div id="wrap">
+		<h1><b style="text-transform:uppercase; font-weight:inherit;">error</b> `&lbrace;{current-address}}' not found.</h1>
+		<p>The file you are looking for may have been renamed or moved.</p>
+		<p>Sorry about that.</p>
+		<p id="back"><a href="{%include url.html%}">Click <b>here</b> to return to the index.</a></p>
+	</div></body>
+</html>

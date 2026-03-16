@@ -18,7 +18,6 @@ NOTE: actual.html is an include that exists in case I want to change the "actual
 
 # 2026-03-15 via discord
 ## 2/17
-> /shriblets needs a 404!!
 > also some li (not “lil”, li) margins on the /stash wouldn’t hurt. plus, like, a Link to the /stash in the first place
 
 ## 2/27
