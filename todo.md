@@ -18,7 +18,7 @@ NOTE: actual.html is an include that exists in case I want to change the "actual
 
 # 2026-03-15 via discord
 ## 2/17
-> also some li (not “lil”, li) margins on the /stash wouldn’t hurt. plus, like, a Link to the /stash in the first place
+link /stash somewhere
 
 ## 2/27
 > https://a-flyleaf.github.io/shriblets/2021-12-24-rabbithole image broke…
