@@ -16,9 +16,5 @@ NOTE: actual.html is an include that exists in case I want to change the "actual
 # 2026-02-13
 - backups > a-flyleaf > alternate walkcycle shriblets from 2020-04-12 (uses a gif)
 
-# 2026-03-15 via discord
-## 2/17
+# 2026-02-17
 link /stash somewhere
-
-## 2/27
-> https://a-flyleaf.github.io/shriblets/2021-12-24-rabbithole image broke…
