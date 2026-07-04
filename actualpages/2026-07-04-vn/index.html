@@ -57,7 +57,7 @@ footer: |-
 				<div class="who"><b class="ui">{%if p.chr=="luc"%}Lucien{%endif%}</b><span class="x">:</span></div>
 				{{p.dlg|markdownify|replace:"<p>","<p><span class='ui'>"|replace:"</p>","</span></p>"}}
 			</div></div>{%endif%}{%if p.alt!=""%}<span class="x">{{p.alt|prepend:"["|append:"]"}}</span>{%endif%}{%if p.chr%}
-			<div class="chr"><img src="{%include actual.html%}img/base.png" alt=""></div>{%endif%}{%if p.opt%}
+			<div class="chr"><img src="{%include actual.html%}img/base.png" alt=""><img src="{%include actual.html%}img/test.png" alt=""></div>{%endif%}{%if p.opt%}
 			<ul class="opt txt"><div class="wrap">{%for o in p.opt%}<li><a href="#p{{o.to}}">{{o.dlg|markdownify}}</a></li>{%endfor%}</div></ul>{%endif%}</section>
 	{%unless forloop.last%}<hr class="x">{%endunless%}{%endfor%}</main>
 	

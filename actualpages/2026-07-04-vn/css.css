@@ -17,8 +17,7 @@ section>*{position:absolute; width:100%; text-align:center;}
 .who b,.dlg .ui{display:inline-block; margin:.25em;}
 
 .chr{line-height:0; z-index:0; pointer-events:none; background:yellow; height:100%;} .chr ::selection{background:0;}
-.chr img{background:#efefef; max-height:100vh; max-width:initial;}
-@media only screen and (orientation:portrait){.chr img{margin:0 -50%;}}
+.chr img{background:rgba(255,255,255,.5); max-height:100vh; max-width:initial; position:absolute; margin:0 -50vh;}
 
 .opt{list-style-type:none; bottom:0;}
 .opt li{padding:0; margin:1em 0;} .opt li:last-of-type{margin-bottom:.5em;} .opt li a{display:block; text-decoration:none; padding:.5em;}
