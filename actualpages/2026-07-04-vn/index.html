@@ -9,7 +9,7 @@ script:
   - id: 1
     chr: luc
     face: [m1]
-    pose: [bl1,br1]
+    pose: [b1]
     alt: "Lucien is unamused. Slightly baffled."
     dlg: |-
       damn.
@@ -23,6 +23,7 @@ script:
   - id: 2
     chr: luc
     face: [m2]
+    pose: [b1]
     alt: ""
     dlg: |-
       ...
@@ -50,13 +51,13 @@ footer: |-
 	
 	<hr class="x">
 	
-	<main style="background-image:url({%include actual.html%}{{page.bg}}.jpg);">{%for p in page.script%}
+	<main style="background-image:url({%include actual.html%}img/{{page.bg}}.jpg);">{%for p in page.script%}
 		<section id="p{{p.id}}">{%if p.dlg%}
 			<div class="dlg txt"><div class="wrap">
 				<div class="who"><b class="ui">{%if p.chr=="luc"%}Lucien{%endif%}</b><span class="x">:</span></div>
 				{{p.dlg|markdownify|replace:"<p>","<p><span class='ui'>"|replace:"</p>","</span></p>"}}
-			</div></div>{%endif%}<span class="x">{{p.alt|prepend:"["|append:"]"}}</span>{%if p.chr%}
-			<div class="chr"><img src="https://placehold.co/1080x1080/transparent/fff" alt=""></div>{%endif%}{%if p.opt%}
+			</div></div>{%endif%}{%if p.alt!=""%}<span class="x">{{p.alt|prepend:"["|append:"]"}}</span>{%endif%}{%if p.chr%}
+			<div class="chr"><img src="{%include actual.html%}img/base.png" alt=""></div>{%endif%}{%if p.opt%}
 			<ul class="opt txt"><div class="wrap">{%for o in p.opt%}<li><a href="#p{{o.to}}">{{o.dlg|markdownify}}</a></li>{%endfor%}</div></ul>{%endif%}</section>
 	{%unless forloop.last%}<hr class="x">{%endunless%}{%endfor%}</main>
 	
