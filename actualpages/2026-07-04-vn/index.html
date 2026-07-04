@@ -46,16 +46,18 @@ footer: |-
 </head><body>
 	<header class="x"><h1>{{page.title}}</h1></header>
 	
+	<div id="notice">If you’re seeing this, your browser does <b>not</b> support <a href="https://caniuse.com/viewport-units">viewport units</a>. Everything should still work, but may appear strange.</div>
+	
 	<hr class="x">
 	
 	<main style="background-image:url({%include actual.html%}{{page.bg}}.jpg);">{%for p in page.script%}
 		<section id="p{{p.id}}">{%if p.dlg%}
-			<div class="dlg txt">
+			<div class="dlg txt"><div class="wrap">
 				<div class="who"><b class="ui">{%if p.chr=="luc"%}Lucien{%endif%}</b><span class="x">:</span></div>
 				{{p.dlg|markdownify|replace:"<p>","<p><span class='ui'>"|replace:"</p>","</span></p>"}}
-			</div>{%endif%}<span class="x">{{p.alt|prepend:"["|append:"]"}}</span>{%if p.chr%}
+			</div></div>{%endif%}<span class="x">{{p.alt|prepend:"["|append:"]"}}</span>{%if p.chr%}
 			<div class="chr"><img src="https://placehold.co/1080x1080/transparent/fff" alt=""></div>{%endif%}{%if p.opt%}
-			<ul class="opt txt">{%for o in p.opt%}<li><a href="#p{{o.to}}">{{o.dlg|markdownify}}</a></li>{%endfor%}</ul>{%endif%}</section>
+			<ul class="opt txt"><div class="wrap">{%for o in p.opt%}<li><a href="#p{{o.to}}">{{o.dlg|markdownify}}</a></li>{%endfor%}</div></ul>{%endif%}</section>
 	{%unless forloop.last%}<hr class="x">{%endunless%}{%endfor%}</main>
 	
 	<hr class="x">
