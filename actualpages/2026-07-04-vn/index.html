@@ -44,15 +44,18 @@ footer: |-
 	<title>{{page.title}}</title>
 	<link rel="stylesheet" type="text/css" href="{%include actual.html%}css.css">
 </head><body>
-	<header><h1>{{page.title}}</h1></head>
+	<header class="x"><h1>{{page.title}}</h1></header>
 	
 	<hr class="x">
 	
 	<main style="background-image:url({%include actual.html%}{{page.bg}}.jpg);">{%for p in page.script%}
 		<section id="p{{p.id}}">{%if p.dlg%}
-			<div class="dlg"><b class="who">{%if p.chr=="luc"%}Lucien{%endif%}<span class="x">:</span></b>{{p.dlg|markdownify}}</div>{%endif%}<span class="x">{{p.alt|prepend:"["|append:"]"}}</span>{%if p.chr%}
-			<div class="chr"><img src="https://placehold.co/1080x1080/fff/000" alt=""></div>{%endif%}{%if p.opt%}
-			<ul class="opt">{%for o in p.opt%}<li><a href="#p{{o.to}}">{{o.dlg|markdownify}}</a></li>{%endfor%}</ul>{%endif%}</section>
+			<div class="dlg txt">
+				<div class="who"><b class="ui">{%if p.chr=="luc"%}Lucien{%endif%}</b><span class="x">:</span></div>
+				{{p.dlg|markdownify|replace:"<p>","<p><span class='ui'>"|replace:"</p>","</span></p>"}}
+			</div>{%endif%}<span class="x">{{p.alt|prepend:"["|append:"]"}}</span>{%if p.chr%}
+			<div class="chr"><img src="https://placehold.co/1080x1080/transparent/fff" alt=""></div>{%endif%}{%if p.opt%}
+			<ul class="opt txt">{%for o in p.opt%}<li><a href="#p{{o.to}}">{{o.dlg|markdownify}}</a></li>{%endfor%}</ul>{%endif%}</section>
 	{%unless forloop.last%}<hr class="x">{%endunless%}{%endfor%}</main>
 	
 	<hr class="x">

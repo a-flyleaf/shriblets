@@ -1,4 +1,17 @@
 *{margin:0; padding:0; box-sizing:border-box; font-size:100%;}
-body{overflow-x:hidden; word-wrap:break-word;}
+body{overflow-x:hidden; word-wrap:break-word; background:#000;}
 header,main,section,footer{display:block;}
 .x{position:absolute; left:-999px; width:1px; height:1px; top:auto; overflow:hidden;}
+img{max-width:100%; height:auto;}
+
+main{position:absolute; height:1080px; max-height:100vh; overflow:hidden; width:100%; background-size:cover; background-position:center; text-align:center; font-family:sans-serif;}
+main ::selection{background:#000; color:#fff;}
+section{margin-bottom:1080px; height:1080px; max-height:100vh;}
+section>*{position:absolute; width:100%; text-align:center;}
+.txt{padding:1em; z-index:1;}
+.ui,.opt li{background:#fff; color:#202020; border-radius:.25rem; padding:.25em; .5em;}
+.who b,.dlg .ui{display:inline-block; margin:.25em;}
+.chr{line-height:0; bottom:0; z-index:0;} .chr ::selection{background:0;}
+.chr img{max-height:100vh;}
+.opt{list-style-type:none; bottom:0;}
+.opt li{padding:0; margin:1em 0;} .opt li:last-of-type{margin-bottom:.5em;} .opt li a{display:block; text-decoration:none; padding:.5em;}
