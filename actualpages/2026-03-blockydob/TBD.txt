@@ -1,0 +1,13 @@
+<a href="{%include actual.html%}img/rrrrr.png" target="_blank" class="img"><img src="{%include actual.html%}img/rrrrr.jpg" alt=""></a>
+
+<figcaption>
+				<p class="x">[image description: ////]</p>
+			</figcaption>
+
+
+UNUSED:
+09-head
+13-jaw
+16-jaw
+17-jaw
+24_aaaaa

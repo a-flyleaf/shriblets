@@ -19,20 +19,7 @@ NOTE: actual.html is an include that exists in case I want to change the "actual
 # 2026-02-17
 link /stash somewhere
 
-# 3/18 via discord
-> if I wanted that to look consistent I’d need to anti-aliasing
-eta: also! a link roundup wouldn’t hurt!! inspirations & guides, mostly already linked but a couple (blender docs) that aren’t
-
-> Then you get lost in clothing confusion modifier hell, and set the file aside.
-=>
-> hell. The file is set aside.
-
-“less Minecraft-y” -> “the connected look, though”
-
-some **loser** with blue hair war crimes. we use nerdy for Me later
-
-“techinque”
-
-multiply is *1* divided by! not 0!!
-
-also bring back the max vh it looks better that way on widescreen
+# 2026-03-18 blockydob
+a link roundup wouldn’t hurt!! inspirations & guides, mostly already linked but a couple (blender docs, see elsewhere in the note files & discord) that aren’t
+## 3/30
++add the pawb showoff from March 30
