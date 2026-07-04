@@ -1,0 +1,54 @@
+---
+layout: none
+permalink: 2026-07-04-vn
+title: web-based visual novel proof of concept thign
+
+bg: testbg20
+
+script:
+  - id: 1
+    ch: luc
+    face: [m1]
+    pose: [bl1,br1]
+    alt: "Lucien is unamused. Slightly baffled."
+    dlg: |-
+      damn.
+      
+      you live like this?
+    opt:
+      - [Um...](#2)
+      - [So do you!](#3)
+  - id: 2
+    ch: luc
+    face: [m2]
+    alt: ""
+    dlg: |-
+      ...
+  - id: 3
+    ch: luc
+    face: [m1]
+    pose: [bl1,br1]
+    alt: "Lucien looks taken aback."
+
+footer: |-
+  - background cobbled together from the following photos: [destroyed room in building](https://www.pexels.com/photo/destroyed-room-in-building-9681769/), [abandoned house old](https://pixabay.com/photos/abandoned-house-old-broken-vintage-1932189/), [abandoned workplace](https://www.pexels.com/photo/photo-of-an-abandoned-workspace-3359003/), [old damaged house with stack of dirty bags](https://www.pexels.com/photo/old-damaged-house-with-stack-of-dirty-bags-5686506/)
+  - art & code by [a-flyleaf](https://a-flyleaf.github.io/)
+
+---
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>{{page.title}}</title>
+	<link rel="stylesheet" type="text/css" href="{%include actual.html%}css.css">
+</head><body>
+	<header><h1>{{page.title}}</h1></head>
+	<main style="background-image:url({{page.bg}}.jpg);">{%for p in page.script%}
+		<section id="p{{p.id}}">{%if p.dlg%}
+			<div class="dlg">{{p.dlg|markdownify}}</div>{%endif%}{%if p.chr%}
+			<div class="chr"></div>{%endif%}{%if p.opt%}
+			<ul class="opt">{%for o in p.opt%}<li>{{o|markdownify|replace:"#","#p"}}</li>{%endfor%}</ul>{%endif%}</section>
+	{%unless forloop.last%}<hr>{%endunless%}{%endfor%}</main>
+	<footer>{{page.footer|markdownify}}</footer>
+</body>
+</html>
