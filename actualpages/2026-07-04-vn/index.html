@@ -3,6 +3,13 @@ layout: none
 permalink: 2026-07-04-vn
 title: web-based visual novel proof of concept thign
 
+desc: |-
+  An attempt to mimic the layout and behavior of a visual novel, but with some UI adjustments. It is literally just two (2) options and the results thereof.
+  
+  <p id="notice">If you’re seeing this, your browser does <b>not</b> support <a href="https://caniuse.com/viewport-units">viewport units</a>. Everything should still work, but may appear strange.</p>
+  
+  Sprites use separate images, so it may take a while to load. Coded entirely in HTML+CSS; close & reopen the page to try the other option.
+
 bg: testbg20
 
 script:
@@ -30,9 +37,10 @@ script:
     sprite: [e-wtf,m-frown,al-hip,ar-down]
     alt: "Lucien looks taken aback."
 
-footer: |-
-  - background cobbled together from the following photos: [destroyed room in building](https://www.pexels.com/photo/destroyed-room-in-building-9681769/), [abandoned house old](https://pixabay.com/photos/abandoned-house-old-broken-vintage-1932189/), [abandoned workplace](https://www.pexels.com/photo/photo-of-an-abandoned-workspace-3359003/), [old damaged house with stack of dirty bags](https://www.pexels.com/photo/old-damaged-house-with-stack-of-dirty-bags-5686506/)
-  - art & code by [a-flyleaf](https://a-flyleaf.github.io/)
+
+credits: |-
+  - background cobbled together from the following photos: [destroyed room in building](https://www.pexels.com/photo/destroyed-room-in-building-9681769/), [old abandoned house](https://pixabay.com/photos/abandoned-house-old-broken-vintage-1932189/), [abandoned workplace](https://www.pexels.com/photo/photo-of-an-abandoned-workspace-3359003/), [old damaged house with stack of dirty bags](https://www.pexels.com/photo/old-damaged-house-with-stack-of-dirty-bags-5686506/)
+  - art & code by <a href="https://a-flyleaf.github.io/" id="me">a-flyleaf</a>
 
 ---
 <!doctype html>
@@ -42,16 +50,22 @@ footer: |-
 	<title>{{page.title}}</title>
 	<link rel="stylesheet" type="text/css" href="{%include actual.html%}css.css">
 </head><body>
-	<header class="x"><h1>{{page.title}}</h1></header>
-	
-	<div id="notice">If you’re seeing this, your browser does <b>not</b> support <a href="https://caniuse.com/viewport-units">viewport units</a>. Everything should still work, but may appear strange.</div>
+	<details id="intro" open>
+		<summary class="mono"><span class="x">intro </span><div class="wrap">X</div></summary>
+		<div class="wrap">
+			<header class="x"><h1>{{page.title}}</h1></header>
+			{{page.desc|markdownify}}
+			<hr>
+			{{page.credits|markdownify}}
+		</div>
+	</details>
 	
 	<hr class="x">
 	
 	<main style="background-image:url({%include actual.html%}img/{{page.bg}}.jpg);">{%for p in page.script%}
 		<section id="p{{p.id}}">{%if p.dlg%}
 			<div class="dlg txt {{p.chr}}"><div class="wrap">
-				<div class="who"><b class="ui">{%if p.chr=="luc"%}Lucien{%endif%}</b><span class="x">:</span></div>
+				<div class="who mono"><b class="ui">{%if p.chr=="luc"%}Lucien{%endif%}</b><span class="x">:</span></div>
 				{{p.dlg|markdownify|replace:"<p>","<p><span class='ui'>"|replace:"</p>","</span></p>"}}
 			</div></div>{%endif%}{%if p.alt!=""%}<span class="x">{{p.alt|prepend:"["|append:"]"}}</span>{%endif%}{%if p.chr%}
 			<div class="chr"><!--All That Bullshit and i can just use the fuckin sprite base without sticking an actual image in. rip || <img src="{%include actual.html%}img/spr/base.png" alt="">--><div class="spr" style="background-image:url({%include actual.html%}img/spr/base.png);"></div><!--<div class="spr" style="background-image:url({%include actual.html%}img/test.png);"></div>-->{%for s in p.sprite%}<div class="spr" style="background-image:url({%include actual.html%}img/spr/{{s}}.png);"></div>{%endfor%}</div>{%endif%}{%if p.opt%}
@@ -60,6 +74,6 @@ footer: |-
 	
 	<hr class="x">
 	
-	<footer>{{page.footer|markdownify}}</footer>
+	<footer><a href="#">back to top</a></footer>
 </body>
 </html>

@@ -23,3 +23,6 @@ link /stash somewhere
 a link roundup wouldn’t hurt!! inspirations & guides, mostly already linked but a couple (blender docs, see elsewhere in the note files & discord) that aren’t
 ## 3/30
 +add the pawb showoff from March 30
+
+# 2026-07-04
+- thumbnails for ^blockydob & new vn test

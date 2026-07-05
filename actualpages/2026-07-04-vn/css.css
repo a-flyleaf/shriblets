@@ -3,8 +3,21 @@ body{overflow-x:hidden; word-wrap:break-word; background:#000;}
 header,main,section,footer{display:block;}
 .x{position:absolute; left:-999px; width:1px; height:1px; top:auto; overflow:hidden;}
 img{max-width:100%; height:auto;}
+.mono{font-family:'courier',monospace;}
 
-#notice{font-family:consolas,monospace; color:#fff;} #notice a{color:#ff0000;} #notice a:hover,#notice a:focus,#notice a:active{color:inherit; text-decoration:none;} @supports (height:1vh){#notice{display:none;}}
+details{display:none;} details[open]{display:block;} summary{cursor:pointer;}
+/*copypasted from my main homepage lol*/ details>summary{list-style:none;} details>summary::marker,details>summary::-webkit-details-marker{display:none;}
+#intro{position:absolute; z-index:100; color:#efefef; background:#000; background:rgba(0,0,0,.5); width:100%; height:100%; font-size:1.25em; font-family:serif; line-height:1.375; backdrop-filter:blur(.25em);}
+#intro ::selection{background:#000; color:#808080;}
+summary{font-weight:bold; color:#9f9f9f; margin-top:1em; text-align:right;} summary .wrap:hover,summary .wrap:focus,summary .wrap:active{background:#202020; color:#fff;}
+details .wrap{background:#000; background:rgba(0,0,0,.75); padding:1em; margin:0 auto; max-width:720px;}
+summary .wrap{padding:.25em 1em;}
+#intro p{padding:0 .5em .5em;}
+#intro hr{margin:.25em 0 .5em;}
+#intro ul{margin-left:.75em; font-size:.75em; line-height:1.5;} #intro a{color:inherit; text-decoration-style:dashed;} #intro a:hover,#intro a:focus,#intro a:active{text-decoration:none; color:#9f9f9f;}
+#me{text-decoration:none; font-weight:bold;}
+
+#notice{font-family:consolas,monospace; color:#fff; border:1px dashed red; padding:.25em .5em .5em; margin:1em 0; font-size:.85em;} #notice a{color:#ff0000;} #notice a:hover,#notice a:focus,#notice a:active{color:inherit;} @supports (height:1vh){#notice{display:none;}}
 
 
 main{position:absolute; height:1080px; max-height:100vh; overflow:hidden; width:100%; background-size:cover; background-position:center; text-align:center; font-family:sans-serif;}
@@ -15,7 +28,7 @@ section>*{position:absolute; width:100%; text-align:center;}
 
 .ui,.opt li a{background:#fff; color:#202020; border-radius:.25rem; padding:.25em .5em;}
 .who b,.dlg .ui{display:inline-block; margin:.25em;}
-.who{font-family:'courier',monospace; text-transform:uppercase;} .who b{font-weight:normal;}
+.who{text-transform:uppercase;} .who b{font-weight:normal;}
 /*lucien*/ .luc p{font-style:italic;} .luc .ui{color:#efefef; background:#000;}
 
 .chr{line-height:0; z-index:0; pointer-events:none; height:100%;} .chr ::selection{background:0;}
