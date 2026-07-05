@@ -8,8 +8,7 @@ bg: testbg20
 script:
   - id: 1
     chr: luc
-    face: [m1]
-    pose: [b1]
+    sprite: [e-huh,m-sideopen,al-out,ar-fold]
     alt: "Lucien is unamused. Slightly baffled."
     dlg: |-
       damn.
@@ -22,15 +21,13 @@ script:
         dlg: So do you!
   - id: 2
     chr: luc
-    face: [m2]
-    pose: [b1]
+    sprite: [e-huh,m-frown,al-out,ar-fold]
     alt: ""
     dlg: |-
       ...
   - id: 3
     chr: luc
-    face: [m1]
-    pose: [bl1,br1]
+    sprite: [e-wtf,m-frown,al-hip,ar-down]
     alt: "Lucien looks taken aback."
 
 footer: |-
@@ -57,7 +54,7 @@ footer: |-
 				<div class="who"><b class="ui">{%if p.chr=="luc"%}Lucien{%endif%}</b><span class="x">:</span></div>
 				{{p.dlg|markdownify|replace:"<p>","<p><span class='ui'>"|replace:"</p>","</span></p>"}}
 			</div></div>{%endif%}{%if p.alt!=""%}<span class="x">{{p.alt|prepend:"["|append:"]"}}</span>{%endif%}{%if p.chr%}
-			<div class="chr"><img src="{%include actual.html%}img/base.png" alt=""><div class="spr" style="background-image:url({%include actual.html%}img/test.png);"></div></div>{%endif%}{%if p.opt%}
+			<div class="chr"><img src="{%include actual.html%}img/spr/base.png" alt=""><!--<div class="spr" style="background-image:url({%include actual.html%}img/test.png);"></div>-->{%for s in p.sprite%}<div class="spr" style="background-image:url({%include actual.html%}img/spr/{{s}}.png);"></div>{%endfor%}</div>{%endif%}{%if p.opt%}
 			<ul class="opt txt"><div class="wrap">{%for o in p.opt%}<li><a href="#p{{o.to}}">{{o.dlg|markdownify}}</a></li>{%endfor%}</div></ul>{%endif%}</section>
 	{%unless forloop.last%}<hr class="x">{%endunless%}{%endfor%}</main>
 	

@@ -18,10 +18,8 @@ section>*{position:absolute; width:100%; text-align:center;}
 
 .chr{line-height:0; z-index:0; pointer-events:none; height:100%;} .chr ::selection{background:0;}
 .chr img{max-height:100vh; max-width:initial; position:absolute; margin:0 -50vh; z-index:-1;}
-.spr{width:100%; height:100%; background-position:center; background-repeat:no-repeat; background-size:contain; z-index:1;}
-@media only screen and (orientation:portrait){
-	.spr{background-size:cover;}
-}
+.spr{width:100%; height:100%; background-position:center; background-repeat:no-repeat; background-size:contain; z-index:1; position:absolute;}
+@media only screen and (orientation:portrait){.spr{background-size:cover;}}
 
 .opt{list-style-type:none; bottom:0;}
 .opt li{padding:0; margin:1em 0;} .opt li:last-of-type{margin-bottom:.5em;} .opt li a{display:block; text-decoration:none; padding:.5em;}
