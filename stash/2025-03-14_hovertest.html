@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>girl help</title>
+    <style>
+      #a{
+        display:block;
+        height: 200px;
+        background: linear-gradient(135deg,red,red 50%,yellow 50%,yellow);
+        transition:3s;
+      }
+      
+      #a:hover,#a:active,#a:focus{
+        background:blue;
+        background:linear-gradient(135deg,red,red 100%,yellow 0%,yellow);
+        transition:3s;
+      }
+      
+      #aa{
+        height:50px; display:block;
+        position:relative;
+        z-index:1;
+        background:blue;
+        max-width:300px;
+      }
+      #aa::before{
+        position:absolute; top:0;bottom:0;right:0;left:0;
+        z-index:2;
+        background:cyan;
+        content:"";
+        right:100%;
+        transition:2s;
+        z-index:-1;
+      }
+      #aa:hover::before{right:0; transition:2s;}
+      
+      #aaa,#b{list-style-type:none; max-width:300px; margin:0;padding:0;}
+      li{background:#0080ff; margin:.25em 0; padding:0;}
+      li a{color:#fff; font-weight:bold; display:block; background:rgba(0,0,0,.15); padding:.25em .5em;}
+      
+      /*actual hover thing*/
+      /*just to make sure I'm not putting the thing on the wrong element:*/ li{background:red;} li a{background:#000;}
+      li a{position:relative; z-index:1;}
+      li a::before{position:absolute; top:0;bottom:0;left:0; content:""; background:#0040ff; z-index:-1; transition:.5s linear; right:100%;}
+      li a:hover::before{right:0; transition:1s linear;}
+      
+      #b{max-width:20em;}
+      #b li a{
+        background:linear-gradient(120deg,rgba(255,255,255,0) 0,rgba(255,255,255,0) 1em,green 1em,green 100%) /*no real rhyme or reason to the percentage measurements; ems seem slightly more consistent than a percentage. changed ul's max-width to an em accordingly*/;
+        /*left:-.1em; --WAIT NO ACTUALLY.*/
+        
+        /* aaaaand then I remembered I wanted the *hover* to come in diagonally on a *regular* rectangle. lol
+        clip-path:polygon(5% 0,100% 0,95% 100%,0 100%);
+        background:orange;
+        padding-left:5%;*/
+        background:purple;
+      }
+      #b li a::before{
+        clip-path:polygon(0 0, 100% 0, 95% 100%, 0 100%);
+        background:magenta;
+        right:100%; /*trying this instead of percentages bc it seems to affect the clip-path angle, and specifying the transition to "right" doesn't fix that*/
+        /*slow it down just to be sure*/ transition:3s linear;
+      }
+      #b li a:hover::before{right:0; transition:4s linear;
+      /*clip-path:polygon(0 0, 100% 0, 95% 100%, 0 100%); < does nothing*/}
+      
+      /*HM.
+      #b li a::before{clip-path:polygon(0 0, 20em 0, 18em 100%, 0 100%);}
+      …nvm Fs in chat*/
+    </style>
+  </head>
+  <body>
+    
+    <p>https://www.w3schools.com/css/css3_gradients.asp > riffed off <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_ltr">this example</a></p>
+    
+    <a id="a">?</a>
+    
+    <p>ok so no luck there; annoyingly, CSS gradient transitions are apparently not a thing!<br>
+    BUT i did find this <a href="https://keithjgrant.com/posts/2017/07/transitioning-gradients/">this</a>, and it works on hover so I <em>should</em> be able to test it here. hmm</p>
+    
+    <a id="aa">??</a>
+    
+    <p>^NICE.</p>
+    
+    <p>ok now to test it with an actual linkset:</p>
+    
+    <ul id="aaa">
+      <li><a href="about:blank" target="_blank">link#</a></li>
+      <li><a href="about:blank" target="_blank">link#</a></li>
+      <li><a href="about:blank" target="_blank">link#</a></li>
+      <li><a href="about:blank" target="_blank">link#</a></li>
+      <li><a href="about:blank" target="_blank">link#</a></li>
+    </ul>
+    
+    <p><b>FUCK. <i>YESSSSSSS</i></b>
+    <br>+the transition <em>in</em> is the hover:before, transition <em>out</em> is the :before. weird but w/e.</p>
+    
+    <p>one last thign: <i>420 slant it</i></p>
+    <ul id="b">
+      <li><a href="about:blank" target="_blank">link#</a></li>
+      <li><a href="about:blank" target="_blank">link#</a></li>
+      <li><a href="about:blank" target="_blank">link#</a></li>
+      <li><a href="about:blank" target="_blank">link#</a></li>
+      <li><a href="about:blank" target="_blank">link#</a></li>
+    </ul>
+    
+    <p>…hm. ok seems like clip-paths are Not the answer for--*what if percentages* hold on---<br>
+    aaaand no luck. BUT, but but but: if you just like. make the transition fast. no one will notice</p>
+    
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
