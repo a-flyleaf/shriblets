@@ -1,6 +1,7 @@
 #
 #- title: 
 #  date: ""
+#  url: ""
 #  desc: |-
 #    ///
 #  lang: [1,2]
@@ -131,3 +132,19 @@
     Made a 3D model, rambled about it.
   lang: [html,css]
   mobile: true
+
+- title: blockydob.blend
+  date: "2026-03"
+  url: blockydob
+  desc: |-
+    Made another 3D model, rambled about it again. Rambled about it a <em>lot</em>.
+  lang: [html,css]
+  mobile: true
+
+- title: vn
+  date: "2026-07-04"
+  desc: |-
+    A mockup for what a web-based visual novel might look like. <!--will likely be mentioned in a blogpost, link it l8r-->
+  lang: [html,css]
+  mobile: true
+  story: [hl]

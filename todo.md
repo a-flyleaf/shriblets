@@ -18,11 +18,4 @@ NOTE: actual.html is an include that exists in case I want to change the "actual
 
 # 2026-02-17
 link /stash somewhere
-
-# 2026-03-18 blockydob
-a link roundup wouldn’t hurt!! inspirations & guides, mostly already linked but a couple (blender docs, see elsewhere in the note files & discord) that aren’t
-## 3/30
-+add the pawb showoff from March 30
-
-# 2026-07-04
-- thumbnails for ^blockydob & new vn test
+^[8/02] actually? *eh* nah I'll let it be a semi-hidden bonus. people can find it if/when I link the stashed page(s) directly elsewhere
