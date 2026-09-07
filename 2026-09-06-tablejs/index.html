@@ -93,6 +93,8 @@ data:
 		.note{font-size:.85em;}
 		#endnote{font-size:.85em;} #endnote sup{margin-right:.5em;}
 		
+		#no-match{display:none; font-style:italic; opacity:.5; font-size:.85em; border:1px solid; padding:.25em .5em; margin-bottom:.5em;}
+		
 		@media (prefers-color-scheme:dark){
 			body{background:#202020; color:#efefef;} a{color:inherit;}
 		}
@@ -103,9 +105,9 @@ data:
 	{{page.impt|markdownify|replace:"<p>","<div id='impt'>"|replace:"</p>","</div>"}}
 	
 	<div id="tablethings">
-		<input type="text" id="searchInput" placeholder="wow a searchbar">
+		<input type="text" id="search-input" placeholder="wow a searchbar">
 		
-		<table><thead><tr>
+		<table id="data-table"><thead><tr>
 			<th>site/url<sup>[1]</sup></th>
 			<th>file created<sup>[2]</sup></th>
 			<th>last edited<sup>[2]</sup></th>
@@ -116,6 +118,7 @@ data:
 			<td class="mono">{{d.edited|date:"%F"}}</td>
 			<td class="note">{{d.note|markdownify|remove:"<p>"|remove:"</p>"|rstrip}}</td>
 		</tr>{%endfor%}</tbody></table>
+		<div id="no-match">can’t find that</div>
 		
 		<p id="endnote"><sup>[1]</sup><code>datacheck</code> if unspecified<br>
 		<sup>[2]</sup>based on my local files</p>
