@@ -1,6 +1,9 @@
-/*could've put this in the actual page but. this seems safer, to avoid breaking HTML things
+/*could've put this in the actual page but. this seems safer, to avoid breaking HTML things. idk how most of it works ngl*/
 
-shamelessly ripping off <https://www.geeksforgeeks.org/javascript/how-to-create-a-filter-table-with-javascript/> but with hyphenated `id`s. not 100% sure how this works tbh*/
+/*
+	THE SEARCH PART
+	shamelessly ripping off <https://www.geeksforgeeks.org/javascript/how-to-create-a-filter-table-with-javascript/> but with hyphenated `id`s
+*/
 let input = document.getElementById('search-input');
 let table = document.getElementById('data-table');
 let rows = table.getElementsByTagName('tr');
@@ -40,3 +43,22 @@ input.addEventListener('input', function () {
 		noMatchMessage.style.display = 'none';
 	}/*endif no match found*/
 });
+
+/*
+	THE SORT PART
+	<https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript#49041392>
+	uses wildly different syntax than the above wow
+	*/
+
+const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+	v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+	)(getCellValue(asc ? a : b,idx), getCellValue(asc ? b : a,idx));
+
+// "do the work"
+document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
+	const table = th.closest('table');
+	Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
+		.sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
+		.forEach(tr => table.appendChild(tr) );
+})));
