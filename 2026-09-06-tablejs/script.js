@@ -48,6 +48,8 @@ input.addEventListener('input', function () {
 	THE SORT PART
 	<https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript#49041392>
 	uses wildly different syntax than the above wow
+	
+	+<https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript/53880407#53880407> tbody fix
 	*/
 
 const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
@@ -55,10 +57,25 @@ const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
 	v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
 	)(getCellValue(asc ? a : b,idx), getCellValue(asc ? b : a,idx));
 
+//homebrew addition: once a click has happened anywhere on the page, make the `th`s have `cursor:pointer;`. riffed from the ygbtdm gallery code + the StackOverflow
+window.onload = function() {
+	console.log("page loaded",event);
+	let thh = document.getElementsByTagName('th');
+//	thh.style.cursor = 'pointer';
+// . . . <https://www.w3schools.com/js/js_htmldom_css.asp>???
+//	document.getElementsByTagName('th').style.cursor = 'pointer';
+// <https://www.w3schools.com/jsref/met_element_getelementsbytagname.asp> take 3
+	for (let i = 0; i < thh.length; i++) {
+		thh[i].style.cursor = "pointer"; //AYYYY
+	}
+};
+//end custom addition
+
 // "do the work"
 document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
 	const table = th.closest('table');
-	Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
+	const tbody = table.querySelector('tbody');
+	Array.from(tbody.querySelectorAll('tr'))
 		.sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
-		.forEach(tr => table.appendChild(tr) );
+		.forEach(tr => tbody.appendChild(tr) );
 })));
