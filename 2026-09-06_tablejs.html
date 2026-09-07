@@ -1,0 +1,50 @@
+---
+layout: none
+title: tablejs.html
+desc: |-
+  just trying to make my definitely-not-spreadsheet HTML tables like. Interactive. someday I will stop using google sheets altogether but I ain't quite there yet....
+  
+  links referenced: [W3schools](https://www.geeksforgeeks.org/javascript/create-a-sortable-and-filterable-table-using-javascript/); GeeksforGeeks [2026](https://www.geeksforgeeks.org/javascript/create-a-sortable-and-filterable-table-using-javascript/) + [2025](https://www.geeksforgeeks.org/javascript/how-to-create-a-filter-table-with-javascript/)
+  
+  sample data is. well. data pages. waow....
+
+data:
+  - site-nc: wolvwiki
+#   url: datacheck
+    edited: 2025-12-30
+  - site-main: blog/slugs
+    edited: 2024-08-24
+  - site: art-2026
+    edited: 2026-08-20
+---
+<!doctype html><html lang="en">
+<head>
+	<title>{{page.title}}</title>
+	<style>
+		body{background:#efefef;}
+		table{border-collapse:collapse;}
+		th,td{border:1px solid #808080; padding:.125em .25em; text-align:left;}
+		sup{font-size:.75em; font-weight:normal;}
+		
+		@media (prefers-color-scheme:dark){
+			body{background:#202020; color:#efefef;} a{color:inherit;}
+		}
+	</style>
+</head><body>
+	<h1>{{page.title}}</h1>
+	{{page.desc|markdownify}}
+	
+	<table><thead><tr>
+		<th>site/url<sup>[1]</sup></th>
+		<th>last edited<sup>[2]</sup></th>
+	</tr></thead><tbody>{%for d in page.data%}<tr>{%capture sitenm%}{{d.site}}{{d.site-nc}}{{d.site-main}}{%endcapture%}
+		<td><a href="https://a-flyleaf.{%if d.site-nc%}neocities.org{%else%}github.io{%endif%}/{{sitenm}}/{%if d.url%}{{d.url}}{%else%}datacheck{%endif%}">{%if d.site-nc%}[neocities] {%endif%}{%if d.site-main%}a-flyleaf.github.io{%endif%}/<b>{{sitenm}}</b>{%unless d.site-main%}{%if d.url%}/{{d.url}}{%else%}/datacheck{%endif%}{%endunless%}</a></td>
+		<td>{{d.edited|date:"%F"}}</td>
+	</tr>{%endfor%}</tbody></table>
+	
+	<p><sup>[1]</sup> <code>datacheck</code> if unspecified<br>
+	<sup>[2]</sup> based on my local files</p>
+	
+	<hr>
+	← <a href="{%include url.html%}"><i>back to shriblets index</i></a>
+</body></html>
