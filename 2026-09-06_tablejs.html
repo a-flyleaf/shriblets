@@ -8,48 +8,90 @@ desc: |-
   
   sample data is. well. data pages. waow....
 impt: >-
-  <strong style="text-transform:uppercase;">Important</strong>: Most of these pages are **very, very big**. Some contain **a ton of images**.Open on mobile and/or slow connections at your own risk.
+  <strong style="text-transform:uppercase;">Important</strong>: Most of these pages are **very, very big**. Some contain **a ton of images**. Open on mobile and/or slow connections at your own risk.
 
 data:
   - site-nc: wolvwiki
+    created: 2025-10-22
     edited: 2025-12-30
+    note: >-
+      Quickref for commonly-referenced wolvdata, plus all the woof stats at a glance.
+  
   - site-main: blog/slugs
+    created: 2023-12-24
     edited: 2024-08-24
+    note: >-
+      "dirt simple page, because filenames ≠ actual urls and it’s probably only a matter of time before I get that messed up"
+  
   - site: art-2026
+    created: 2026-08-18
     edited: 2026-08-20
+    note: >-
+      The only one of these pages I intended to be publicly-presentable from the start.
+  
   - site: artfight
     url: etc/datatest
+    created: 2022-08-03
     edited: 2022-08-04
+    note: >-
+      Liable to get moved someday.
+  
   - site: deviantart
+    created: 2025-02-09
     edited: 2026-02-11
+    note: >-
+      Skimming this is roughly equivalent to getting flashbanged by &gt;10 years of my typing habits. Slightly mortifying, but nothing that wasn't already public.
+  
   - site: dragonotes
     url: codetests/datacheck
+    created: 2026-07-31
     edited: 2026-08-18
+    note: >-
+      "it’s like if a spreadsheet was an HTML page." This was absolutely created before 2026, but I moved a bunch of files around recently and apparently the creation date got overwritten along the way?? Weird....
+  
   - site: dragonotes
     url: codetests/dragonwall
+    created: 2022-08-18
     edited: 2025-02-05
+    note: >-
+      Deprecated. Initial version of what turned into the full-site datacheck above, while the lil dragon boxes have found use on [the dragons index](https://a-flyleaf.github.io/dragonotes/dragons/).
+  
   - site: tfe
     url: comic/datacheck
+    created: 2024-11-29
     edited: 2026-02-24
+    note: >-
+      still not public as of writing lol. All the (comic-)pages & descriptions on one (web)page.
+  
   - site: toyshelf
+    created: 2026-08-24
     edited: 2026-09-02
+    note: >-
+      The most recent of these things. Will almost definitely not be the last.
 ---
 <!doctype html><html lang="en">
 <head>
+	<meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{page.title}}</title>
 	<style>
 		*{box-sizing:border-box;}
 		body{background:#efefef;}
 		a{color:inherit; text-decoration-color:rgba(128,128,128,.5); text-decoration-thickness:.125em;} a:hover,a:focus,a:active{text-decoration:none;}
-		sup{font-size:.75em; font-weight:normal;}
+		sup{font-size:.75em; font-weight:normal; line-height:1; margin:0 .125em;}
 		
 		h1{margin:0;}
 		p{margin:0;} p+p{margin-top:.5em;}
 		#impt{border:2px solid; display:inline-block; padding:.5em .75em; margin:1em 0;}
 		
-		table{border-collapse:collapse;}
-		th,td{border:1px solid #808080; padding:.125em .25em; text-align:left;}
-		.link{padding-bottom:.25em;}
+		#tablethings{font-family:sans-serif; line-height:1.5; margin:1em 0;}
+		table{border-collapse:collapse; margin-bottom:.5em;}
+		thead{background:rgba(128,128,128,.5); font-size:.85em;}
+		th{min-width:7em;}
+		th,td{border:1px solid #808080; padding:.125rem .25rem; text-align:left; vertical-align:top;}
+		.link{padding-bottom:.25em; min-width:17.5em;}
+		.mono{font-family:monospace; padding-top:.25em;}
+		.note{font-size:.85em;}
+		#endnote{font-size:.85em;} #endnote sup{margin-right:.5em;}
 		
 		@media (prefers-color-scheme:dark){
 			body{background:#202020; color:#efefef;} a{color:inherit;}
@@ -60,16 +102,24 @@ data:
 	{{page.desc|markdownify}}
 	{{page.impt|markdownify|replace:"<p>","<div id='impt'>"|replace:"</p>","</div>"}}
 	
-	<table><thead><tr>
-		<th>site/url<sup>[1]</sup></th>
-		<th>last edited<sup>[2]</sup></th>
-	</tr></thead><tbody>{%for d in page.data%}<tr>{%capture sitenm%}{{d.site}}{{d.site-nc}}{{d.site-main}}{%endcapture%}
-		<td class="link"><a href="https://a-flyleaf.{%if d.site-nc%}neocities.org{%else%}github.io{%endif%}/{{sitenm}}{%unless d.site-main%}{%if d.url%}/{{d.url}}{%else%}/datacheck{%endif%}{%endunless%}">{%if d.site-nc%}[neocities] {%endif%}{%if d.site-main%}a-flyleaf.github.io{%endif%}/<b>{{sitenm}}</b>{%unless d.site-main%}{%if d.url%}/{{d.url}}{%else%}/datacheck{%endif%}{%endunless%}</a></td>
-		<td>{{d.edited|date:"%F"}}</td>
-	</tr>{%endfor%}</tbody></table>
-	
-	<p><sup>[1]</sup> <code>datacheck</code> if unspecified<br>
-	<sup>[2]</sup> based on my local files</p>
+	<div id="tablethings">
+		<!--JS search thign goes here-->
+		
+		<table><thead><tr>
+			<th>site/url<sup>[1]</sup></th>
+			<th>file created<sup>[2]</sup></th>
+			<th>last edited<sup>[2]</sup></th>
+			<th>note</th>
+		</tr></thead><tbody>{%for d in page.data%}<tr>{%capture sitenm%}{{d.site}}{{d.site-nc}}{{d.site-main}}{%endcapture%}
+			<td class="link"><a href="https://a-flyleaf.{%if d.site-nc%}neocities.org{%else%}github.io{%endif%}/{{sitenm}}{%unless d.site-main%}{%if d.url%}/{{d.url}}{%else%}/datacheck{%endif%}{%endunless%}">{%if d.site-nc%}[neocities] {%endif%}{%if d.site-main%}a-flyleaf.github.io{%endif%}/<b>{{sitenm}}</b>{%unless d.site-main%}{%if d.url%}/{{d.url}}{%else%}/datacheck{%endif%}{%endunless%}</a></td>
+			<td class="mono">{{d.created|date:"%F"}}</td>
+			<td class="mono">{{d.edited|date:"%F"}}</td>
+			<td class="note">{{d.note|markdownify|remove:"<p>"|remove:"</p>"|rstrip}}</td>
+		</tr>{%endfor%}</tbody></table>
+		
+		<p id="endnote"><sup>[1]</sup><code>datacheck</code> if unspecified<br>
+		<sup>[2]</sup>based on my local files</p>
+	</div>
 	
 	<hr>
 	← <a href="{%include url.html%}"><i>back to shriblets index</i></a>
