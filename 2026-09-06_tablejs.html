@@ -4,7 +4,7 @@ title: tablejs.html
 desc: |-
   just trying to make my definitely-not-spreadsheet HTML tables like. Interactive. someday I will stop using google sheets altogether but I ain't quite there yet....
   
-  links referenced: [W3schools](https://www.geeksforgeeks.org/javascript/create-a-sortable-and-filterable-table-using-javascript/); GeeksforGeeks [2026](https://www.geeksforgeeks.org/javascript/create-a-sortable-and-filterable-table-using-javascript/) + [2025](https://www.geeksforgeeks.org/javascript/how-to-create-a-filter-table-with-javascript/)
+  links referenced: [W3schools](https://www.geeksforgeeks.org/javascript/create-a-sortable-and-filterable-table-using-javascript/); GeeksforGeeks [2026](https://www.geeksforgeeks.org/javascript/create-a-sortable-and-filterable-table-using-javascript/) + [2025](https://www.geeksforgeeks.org/javascript/how-to-create-a-filter-table-with-javascript/) (latter is simpler)
   
   sample data is. well. data pages. waow....
 impt: >-
@@ -103,7 +103,7 @@ data:
 	{{page.impt|markdownify|replace:"<p>","<div id='impt'>"|replace:"</p>","</div>"}}
 	
 	<div id="tablethings">
-		<!--JS search thign goes here-->
+		<input type="text" id="searchInput" placeholder="wow a searchbar">
 		
 		<table><thead><tr>
 			<th>site/url<sup>[1]</sup></th>
@@ -123,4 +123,6 @@ data:
 	
 	<hr>
 	← <a href="{%include url.html%}"><i>back to shriblets index</i></a>
+	
+	<script src="script.js"></script>
 </body></html>
