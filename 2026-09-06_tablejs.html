@@ -7,24 +7,49 @@ desc: |-
   links referenced: [W3schools](https://www.geeksforgeeks.org/javascript/create-a-sortable-and-filterable-table-using-javascript/); GeeksforGeeks [2026](https://www.geeksforgeeks.org/javascript/create-a-sortable-and-filterable-table-using-javascript/) + [2025](https://www.geeksforgeeks.org/javascript/how-to-create-a-filter-table-with-javascript/)
   
   sample data is. well. data pages. waow....
+impt: >-
+  <strong style="text-transform:uppercase;">Important</strong>: Most of these pages are **very, very big**. Some contain **a ton of images**.Open on mobile and/or slow connections at your own risk.
 
 data:
   - site-nc: wolvwiki
-#   url: datacheck
     edited: 2025-12-30
   - site-main: blog/slugs
     edited: 2024-08-24
   - site: art-2026
     edited: 2026-08-20
+  - site: artfight
+    url: etc/datatest
+    edited: 2022-08-04
+  - site: deviantart
+    edited: 2026-02-11
+  - site: dragonotes
+    url: codetests/datacheck
+    edited: 2026-08-18
+  - site: dragonotes
+    url: codetests/dragonwall
+    edited: 2025-02-05
+  - site: tfe
+    url: comic/datacheck
+    edited: 2026-02-24
+  - site: toyshelf
+    edited: 2026-09-02
 ---
 <!doctype html><html lang="en">
 <head>
 	<title>{{page.title}}</title>
 	<style>
+		*{box-sizing:border-box;}
 		body{background:#efefef;}
+		a{color:inherit; text-decoration-color:rgba(128,128,128,.5); text-decoration-thickness:.125em;} a:hover,a:focus,a:active{text-decoration:none;}
+		sup{font-size:.75em; font-weight:normal;}
+		
+		h1{margin:0;}
+		p{margin:0;} p+p{margin-top:.5em;}
+		#impt{border:2px solid; display:inline-block; padding:.5em .75em; margin:1em 0;}
+		
 		table{border-collapse:collapse;}
 		th,td{border:1px solid #808080; padding:.125em .25em; text-align:left;}
-		sup{font-size:.75em; font-weight:normal;}
+		.link{padding-bottom:.25em;}
 		
 		@media (prefers-color-scheme:dark){
 			body{background:#202020; color:#efefef;} a{color:inherit;}
@@ -33,12 +58,13 @@ data:
 </head><body>
 	<h1>{{page.title}}</h1>
 	{{page.desc|markdownify}}
+	{{page.impt|markdownify|replace:"<p>","<div id='impt'>"|replace:"</p>","</div>"}}
 	
 	<table><thead><tr>
 		<th>site/url<sup>[1]</sup></th>
 		<th>last edited<sup>[2]</sup></th>
 	</tr></thead><tbody>{%for d in page.data%}<tr>{%capture sitenm%}{{d.site}}{{d.site-nc}}{{d.site-main}}{%endcapture%}
-		<td><a href="https://a-flyleaf.{%if d.site-nc%}neocities.org{%else%}github.io{%endif%}/{{sitenm}}/{%if d.url%}{{d.url}}{%else%}datacheck{%endif%}">{%if d.site-nc%}[neocities] {%endif%}{%if d.site-main%}a-flyleaf.github.io{%endif%}/<b>{{sitenm}}</b>{%unless d.site-main%}{%if d.url%}/{{d.url}}{%else%}/datacheck{%endif%}{%endunless%}</a></td>
+		<td class="link"><a href="https://a-flyleaf.{%if d.site-nc%}neocities.org{%else%}github.io{%endif%}/{{sitenm}}{%unless d.site-main%}{%if d.url%}/{{d.url}}{%else%}/datacheck{%endif%}{%endunless%}">{%if d.site-nc%}[neocities] {%endif%}{%if d.site-main%}a-flyleaf.github.io{%endif%}/<b>{{sitenm}}</b>{%unless d.site-main%}{%if d.url%}/{{d.url}}{%else%}/datacheck{%endif%}{%endunless%}</a></td>
 		<td>{{d.edited|date:"%F"}}</td>
 	</tr>{%endfor%}</tbody></table>
 	
