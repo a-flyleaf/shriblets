@@ -63,7 +63,7 @@ grid:
 	
 	h1{text-align:center; color:#101010; padding:2em 0;}
 	
-	/*grid basis loosely modified from those omorisite moodboards*/ #grid{list-style-type:none; margin:0 auto; max-width:640px; max-height:640px; display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(3,1fr); column-gap:1px; row-gap:1px;}
+	/*grid basis loosely modified from those omorisite moodboards*/ #grid{list-style-type:none; margin:0 auto; max-width:606px; max-height:606px; display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(3,1fr); column-gap:1px; row-gap:1px;}
 	#grid img{object-fit:cover; width:100%; display:block; height:100%;}
 	li{overflow:hidden;}
 	
@@ -91,9 +91,15 @@ grid:
 	#b6{grid-area:3/1;}
 	#b8{grid-area:2/3;}
 	
+	@supports (width:100vh){
+		body{padding:0;}
+		#grid{max-height:100vh; max-width:100vw; column-gap:0; row-gap:0;}
+		#grid img{height:34vh;}
+	}
+	
 </style>
 </head><body>
-<h1>{{page.title}}</h1>
+<h1 class="x">{{page.title}}</h1>
 <ul id="grid">{%for g in page.grid%}
 	<li id="b{{forloop.index}}">{%if g.url%}<a href="{{g.url}}" target="_blank"><img src="{%include actual.html%}{{g.img}}.png" alt="{{g.img}}. ({{g.alt|markdownify|remove:'<p>'|remove:'</p>'}})"></a>{%else%}{{g.code}}{%endif%}</li>
 {%endfor%}</ul>
