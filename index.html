@@ -30,7 +30,7 @@ layout: none
 			#note{margin-top:1.25em; color:#9f9f9f;} #note a{color:inherit; text-decoration-color:#808080;} #note a:focus,#note a:hover,#note a:active{color:#fff;}
 			
 			article{background:#404040; border:1px solid #808080;margin:1rem 0;}
-			figure{line-height:0;}
+			figure{line-height:0; font-size:0;}
 			img{max-width:100%; height:auto;} figure a:focus,figure a:hover,figure a:active{opacity:.5;}
 			.info{padding:.5em 1em; line-height:1.5em;}
 			h2{display:inline;}
@@ -85,7 +85,7 @@ layout: none
 					<figure><a href="{%include url.html%}/{{sd}}-{{st}}"><img src="{%include url.html%}/img/{{sd}}-{{st}}.jpg" alt=""/></a></figure>
 					<div class="info">
 						<h2><a href="{%include url.html%}/{{sd}}-{{st}}">{{s.title}}</a></h2> <span class="date">{{s.date}}</span>
-						<p>{{s.desc}}</p>
+						{{s.desc|markdownify}}
 						<aside><ul>
 							<li>lang ={%for l in s.lang%} #{{l}}{%endfor%};</li>
 							<li>isResponsive = {{s.mobile}};</li>

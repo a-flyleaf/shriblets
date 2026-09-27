@@ -144,7 +144,15 @@
 - title: vn
   date: "2026-07-04"
   desc: |-
-    A mockup for what a web-based visual novel might look like. <!--will likely be mentioned in a blogpost, link it l8r-->
+    A mockup for what a web-based visual novel might look like. Additional thoughts [on the blog](https://a-flyleaf.github.io/blog/julaugust#vn).
   lang: [html,css]
   mobile: true
   story: [hl]
+
+- title: brame
+  date: "2026-09-27"
+  url: brame
+  desc: |-
+    A moodboard with credit linked directly from the images. Will dominate the screen if your browser supports CSS grid.
+  lang: [html,css]
+  mobile: true
