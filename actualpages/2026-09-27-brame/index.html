@@ -1,0 +1,24 @@
+---
+layout: none
+permalink: 2026-09-27-brame
+
+grid:
+  - url: "https://a-flyleaf.github.io/art-2026/brame"
+    img: "brame"
+    alt: "brame."
+  - 
+---
+<!doctype html><html lang="en">
+<head>
+	<title>parts of a brame.</title>
+	<style>
+		/*grid basis loosely modified from those ancient OMORI moodboards*/ #grid{list-style-type:none; margin:0 auto; max-width:640px; max-height:640px; display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(3,1fr); column-gap:10px; row-gap:10px;}
+		#grid img{object-fit:cover; width:100%; display:block; height:100%;}
+		li{overflow:hidden;}
+	</style>
+</head><body>
+<h1>{{page.title}}</h1>
+<ul id="grid">{%for g in page.grid%}
+	<li id="b{{forloop.index}}">{%if g.url%}<a href="{{g.url}}" target="_blank"><img src="{%include actual.html%}{{g.img}}.png" alt="{{g.alt}}"></a>{%else%}{{g.code}}{%endif%}</li>
+{%endfor%}</ul>
+</body></html>
