@@ -1,24 +1,83 @@
 ---
 layout: none
 permalink: 2026-09-27-brame
+title: "parts of a brame."
 
 grid:
   - url: "https://a-flyleaf.github.io/art-2026/brame"
     img: "brame"
-    alt: "brame."
-  - 
+    alt: >-
+      An asymmetrical deerlike creature.
+  
+  - url: "https://en.wikipedia.org/wiki/File:DeerBotFlyReaumur.jpg"
+    img: "botfly"
+    alt: >-
+      A skinned deer head.
+  
+  - url: "https://rubymydear.bandcamp.com/track/an-mone"
+    img: "album"
+    alt: >-
+      An album titled /Brame/.
+  
+  - url: "https://www.youtube.com/watch?v=OJTbbQN-ATA"
+    img: "boisvert"
+    alt: >-
+      An eye in the void.
+  
+  - url: "https://commons.wikimedia.org/wiki/Category:Mantodea_anatomy"
+    img: "mantodea"
+    alt: >-
+      Anatomical diagrams of a praying mantis limb.
+  
+  - url: "https://bubblebaath.tumblr.com/post/174097772155/group-pic"
+    img: "twitchy"
+    alt: >-
+      A glitchy deer character.
+  
+  - url: "https://rubymydear.bandcamp.com/album/balloon"
+    img: "balloon"
+    alt: >-
+      An antler from an album cover.
+  
+  - url: "https://pinatajournal.wiki/wiki/File:Taffly_Concept.png"
+    img: "diptera"
+    alt: >-
+      A fly-like critter from a video game.
+  
+  - url: "https://a-flyleaf.github.io/art-2026/brame"
+    img: "dorceless"
+    alt: >-
+      A sunken hollow where a face should be.
 ---
 <!doctype html><html lang="en">
-<head>
-	<title>parts of a brame.</title>
-	<style>
-		/*grid basis loosely modified from those ancient OMORI moodboards*/ #grid{list-style-type:none; margin:0 auto; max-width:640px; max-height:640px; display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(3,1fr); column-gap:10px; row-gap:10px;}
-		#grid img{object-fit:cover; width:100%; display:block; height:100%;}
-		li{overflow:hidden;}
-	</style>
+<head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{page.title}}</title>
+<style>
+	*{box-sizing:border-box; font-size:100%; margin:0; padding:0;}
+	.x{position:absolute; left:-999px; width:1px; height:1px; top:auto; overflow:hidden;}
+	img{max-width:100%; height:auto;}
+	/*DELETE IF UNUSED*/summary{cursor:pointer;}
+	a:focus,summary:focus{outline:/*DEFINE*/;}
+	
+	/*riffed from art-2026/brame*/
+	body{background:#000; color:#fff; font-family:'courier new',courier,monospace; padding:1em; background-image:url(actualpages/2026-09-27-brame/static.png); background-attachment:fixed;}
+	::selection{background:#000; color:#404040;}
+	
+	h1{text-align:center; color:#101010; padding:2em 0;}
+	
+	/*grid basis loosely modified from those omorisite moodboards*/ #grid{list-style-type:none; margin:0 auto; max-width:640px; max-height:640px; display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(3,1fr); column-gap:1px; row-gap:1px;}
+	#grid img{object-fit:cover; width:100%; display:block; height:100%;}
+	li{overflow:hidden;}
+	
+	#b1{grid-area:2/2;}
+	#b2{grid-area:1/1;}
+	
+	#grid a{opacity:.5;}
+	#grid a:hover,#grid a:active,#grid a:focus{opacity:1;}
+</style>
 </head><body>
 <h1>{{page.title}}</h1>
 <ul id="grid">{%for g in page.grid%}
-	<li id="b{{forloop.index}}">{%if g.url%}<a href="{{g.url}}" target="_blank"><img src="{%include actual.html%}{{g.img}}.png" alt="{{g.alt}}"></a>{%else%}{{g.code}}{%endif%}</li>
+	<li id="b{{forloop.index}}">{%if g.url%}<a href="{{g.url}}" target="_blank"><img src="{%include actual.html%}{{g.img}}.png" alt="{{g.img}}. ({{g.alt|markdownify|remove:'<p>'|remove:'</p>'}})"></a>{%else%}{{g.code}}{%endif%}</li>
 {%endfor%}</ul>
 </body></html>
