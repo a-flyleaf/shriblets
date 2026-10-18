@@ -1,10 +1,5 @@
 # 2026-02-12
-- google fonts begone
-	- lato is on a-flyleaf already; noto sans could be added
-	- LATO:
-		/stash/cmyk/index-wip (also fix the {{site.url}}s)
-		/2019-03-06 songwall
-		/2021-067-charapage
+- google fonts begone: noto sans
 - scrounge other repos for pages to move/link here
 	- dwrp stuff included if you're feeling adventurous
 
