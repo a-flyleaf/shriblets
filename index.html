@@ -85,7 +85,7 @@ layout: none
 					<figure><a href="{%include url.html%}/{{sd}}-{{st}}"><img src="{%include url.html%}/img/{{sd}}-{{st}}.jpg" alt=""/></a></figure>
 					<div class="info">
 						<h2><a href="{%include url.html%}/{{sd}}-{{st}}">{{s.title}}</a></h2> <span class="date">{{s.date}}</span>
-						{{s.desc|markdownify}}
+						{%capture incurl%}{%include url.html%}{%endcapture%}{{s.desc|markdownify|replace:"INC_URL",incurl}}
 						<aside><ul>
 							<li>lang ={%for l in s.lang%} #{{l}}{%endfor%};</li>
 							<li>isResponsive = {{s.mobile}};</li>

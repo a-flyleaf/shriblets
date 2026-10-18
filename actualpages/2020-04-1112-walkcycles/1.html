@@ -1,0 +1,48 @@
+---
+layout: none
+permalink: 2020-04-1112-walkcycles_1.html
+---
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>walkcycles</title>
+	<style>
+		*{margin:0; padding:0; box-sizing:border-box; word-wrap:break-word;}
+		body{overflow:hidden; background:#000;}
+		
+		#frame{background:url(actualpages/2020-04-1112-walkcycles/bg.png); width:640px; height:360px; overflow:hidden; position:absolute; left:0; right:0; margin-left:auto; margin-right:auto; margin-top:25vh; background-repeat:repeat;} /*https://stackoverflow.com/questions/1776915/how-to-center-absolutely-positioned-element-in-div*/
+		::selection{0;}
+		#r,#v{position:absolute; display:none;}
+		
+		/*name duration iteration-count timing-function delay*/
+		#r{height:82px; width:40px; background:url(actualpages/2020-04-1112-walkcycles/r.png); margin-top:178px; animation:rstomp 2s steps(4) infinite,move 20s infinite linear;}
+		#v{height:124px; width:46px; background:url(actualpages/2020-04-1112-walkcycles/v.png); margin-top:136px; animation:vwalk 1s steps(4) infinite,move 20s infinite linear; margin-left:160px;}
+		
+		#walk{height:139px; width:96px; background:url(actualpages/2020-04-1112-walkcycles/walk.png); margin-top:125px; animation:move2 7s infinite linear,sprite 1s steps(8) infinite,step 1s infinite; position:absolute;}
+		
+		@keyframes move{
+			0%{left:640px;}
+			100%{left:-640px;}
+		}
+		
+		/*https://blog.teamtreehouse.com/css-sprite-sheet-animations-steps*/
+		@keyframes rstomp{
+			100%{background-position:-160px;}
+		}
+		@keyframes vwalk{100%{background-position:-184px;}}
+		
+		@keyframes sprite{100%{background-position:-768px;}} /*full length of sprite sheet!!*/
+		
+		@keyframes move2{0%{left:640px;}100%{left:-100px; /*doesn't need to be the opposite, just enough to keep sprite offscreen*/}}
+	</style>
+</head>
+<body>
+<div id="frame">
+	<div id="r"></div>
+	<div id="v"></div>
+	<div id="walk"></div>
+</div>
+</body>
+</html>

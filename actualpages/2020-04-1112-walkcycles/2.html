@@ -1,0 +1,33 @@
+---
+layout: none
+permalink: 2020-04-1112-walkcycles_2.html
+---
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>walkcycles</title>
+	<style>
+		*{margin:0; padding:0; box-sizing:border-box; word-wrap:break-word;}
+		body{overflow:hidden; background:#000;}
+		
+		#frame{background:#fff; width:640px; height:360px; overflow:hidden; position:absolute; left:0; right:0; margin-left:auto; margin-right:auto; margin-top:25vh;} /*https://stackoverflow.com/questions/1776915/how-to-center-absolutely-positioned-element-in-div*/
+		::selection{0;}
+		
+		/*name duration iteration-count timing-function delay*/
+		.walk{height:139px; width:194px; background:url(actualpages/2020-04-1112-walkcycles/walkcycle.gif); margin-top:125px; animation:move 1.4s/*based on gif duration*/ steps(4) infinite; position:absolute; border:1px solid blue;}
+		
+		/*https://blog.teamtreehouse.com/css-sprite-sheet-animations-steps*/
+		@keyframes sprite{100%{background-position:-96px;}}
+		
+		@keyframes move{0%{right:446px; /*area-walkwidth*/}100%{right:-349px; /*area-walkwidth-(walkwidth/2)*/}}
+	</style>
+</head>
+<body>
+<div id="frame">
+	<div class="walk"></div>
+	this is getting somewhere, need to make sure the gif loops properly ON ITS OWN (ex. if there were two in a row, would the people line up>?) and /then/ use steps to move the div just in time)<br/>gif is 14frames, 10fps, 194px wide. made "walk" a class because maybe there should be 2 in a row?
+</div>
+</body>
+</html>

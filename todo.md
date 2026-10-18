@@ -11,10 +11,6 @@ NOTE: actual.html is an include that exists in case I want to change the "actual
 	- 2021 rabbithole css
 - 2021 split is deliberately exempt bc it's fucking weird
 
-
-# 2026-02-13
-- backups > a-flyleaf > alternate walkcycle shriblets from 2020-04-12 (uses a gif)
-
 # 2026-02-17
 link /stash somewhere
 ^[8/02] actually? *eh* nah I'll let it be a semi-hidden bonus. people can find it if/when I link the stashed page(s) directly elsewhere
