@@ -55,7 +55,7 @@ posts:
 				<header><a class="noa" href="#">
 					<picture>
 						<source media="(min-width:40em)" srcset="https://placehold.co/256.jpg">
-						<img src="https://placehold.co/128.jpg" alt="avatar of @lucienne" id="avi"><!--use an actual image description here & the banner. if no image is set then use a transparent placeholder to keep the size consistent-->
+						<img src="https://placehold.co/128.jpg" alt="avatar of @lucienne" id="avi" class="bd-rd"><!--use an actual image description here & the banner. if no image is set then use a transparent placeholder to keep the size consistent-->
 					</picture>
 					<h1>{{page.user-nm}}</h1>
 					<span class="ch-sec">@{{page.user-at}}</span>
@@ -81,9 +81,9 @@ posts:
 						<div class="usertxt">{{c.txt}}{%if page.debug==1%}<span class="debug">({{c.txt.size}})</span>{%endif%}</div>{%if c.media%}
 						<picture>
 							<source media="(min-width:75em)" srcset="https://placehold.co/720x540.jpg">
-							<img src="https://placehold.co/640x480.jpg" alt="picture by @{{by-at}}" class="media">
+							<img src="https://placehold.co/640x480.jpg" alt="picture by @{{by-at}}" class="media bd-rd">
 						</picture>{%endif%}<!--/if c.media-->{%if c.qrt%}
-						<blockquote>
+						<blockquote class="bd-rd">
 							<header>
 								<picture>
 									<source media="(min-width:75em)" srcset="https://placehold.co/64.jpg">
@@ -94,7 +94,7 @@ posts:
 							<main><div class="usertxt">{{c.qrt.txt}}{%if page.debug==1%}<span class="debug">({{c.qrt.txt.size}})</span>{%endif%}</div>{%if c.qrt.media%}
 							<picture>
 								<source media="(min-width:75em)" srcset="https://placehold.co/720x540.jpg">
-								<img src="https://placehold.co/640x480.jpg" alt="picture by @bromther" class="media">
+								<img src="https://placehold.co/640x480.jpg" alt="picture by @bromther" class="media bd-rd">
 							</picture>{%endif%}<!--/if c.qrt.media--></main>
 						</blockquote>{%endif%}<!--/if c.qrt-->
 					</main>
