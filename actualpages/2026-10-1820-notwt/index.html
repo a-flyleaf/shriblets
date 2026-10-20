@@ -4,21 +4,47 @@ permalink: 2026-10-1820-notwt
 
 debug: 1
 #     ^boolean; if 1 then userdesc & ntwts will show the character count in a highlighted span
-fakeurl: "#"
 
-# not worrying about image urls rn, but those should be front matter also
+fakeurl: "#"
+fakedate: 2026-10-20
+# the year doesn't matter (will be replaced with string below), is just here so the strftime works
+fakeyear: "20XX"
+
+# not worrying about image urls rn, but those should be front matter also. as should alt text!!
 user-nm: "DOWN ON MY LUC 🦾🙈👎"
 user-at: "lucienne"
 user-desc: "fuck w me"
 user-followers: 6969
 user-following: 420
+
+# "typ" is optional, HTML only looks for "re" or "pin"
+posts:
+  - typ: pin
+    dt: 2026-09-06
+    txt: "if you cant handle me at my worst you absolutely cannot handle me at my best. i do not get better. this is all there is"
+  - typ: re
+    by-nm: "oh you know"
+    by-at: "judicials"
+    dt: 2026-09-06
+    txt: "my god im so lonely 😔 so i open the window 🪟"
+    media:
+      - img-url: "PLACEHOLDER"
+        img-alt: "ALSO UNUSED"
+    qrt:
+      by-nm: "🦖"
+      by-at: "bromther"
+      dt: 2026-09-16
+      txt: "Share something beautiful and true. (a 🧵, 6/??)"
+      media:
+        - img-url: "PLACEHOLDER"
+          img-alt: "ALSO UNUSED"
 ---
 <!DOCTYPE html>
 <html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Archive :: {{page.user-nm}} (@{{page.user-at}}) | chattr</title>
 	<link rel="stylesheet" type="text/css" href="{%include actual.html%}css.css">
 </head><body>
-  <div class="ar" id="a-hd"><div class="wrap">archive header</div></div><hr class="x"><hr class="x">
+  <div class="ar" id="a-hd"><div class="wrap">archive header | captured on {{page.fakedate|date:"%d %b"}} {{page.fakeyear}}</div></div><hr class="x"><hr class="x">
   <div id="chattr"><a id="cht" class="noa ch-sec" href="{{page.fakeurl}}"><b>c</b>hattr</a>
     <div id="ch-wrap">
 			<div id="banner"><picture>
@@ -42,43 +68,43 @@ user-following: 420
 				</aside>
 			</div><!--/#side--><hr class="x"><main id="feed">
 				<ul id="nav" class="nolist cnt flex"><li><h2>chitters</h2></li><li><a href="{{page.fakeurl}}">media</a></li><li><a href="{{page.fakeurl}}">likes</a></li></ul><!--intentionally not semantic bc it's fake-->
-				<section><!--FORLOOP GOES HERE--><article>
-					<p class="who ch-sec">{{page.user-nm}} rechitter'd</p><!--else "chitter by {name}", opacity 0-->
+				<section>{%for c in page.posts%}<!--by-nm & by-at default to user, unless c.by exists-->{%capture by-nm%}{%if c.by-nm%}{{c.by-nm}}{%else%}{{page.user-nm}}{%endif%}{%endcapture%}<!---->{%capture by-at%}{%if c.by-at%}{{c.by-at}}{%else%}{{page.user-at}}{%endif%}{%endcapture%}<!--endcaptures--><article>{%if c.typ=="re"%}
+					<p class="who ch-sec">{{page.user-nm}} rechitter'd</p>{%elsif c.typ=="pin"%}<p class="who ch-sec">Pinned chitter</p>{%else%}<p class="who ch-sec x">chitter by {{page.user-nm}}</p>{%endif%}
 					<header>
 						<picture>
 							<source media="(min-width:75em)" srcset="https://placehold.co/64.jpg">
-							<img src="https://placehold.co/32.jpg" alt="avatar of @judicials" class="avi">
+							<img src="https://placehold.co/32.jpg" alt="avatar of @{{by-at}}" class="avi">
 						</picture>
-						<h3><b>oh you know</b> @judicials - XXXX XX 202X</h3><!--use a timeago with timestamp on hover? would be great if this can be entirely auto-calculated, if difference from pagedate then MMM DD YYYY else timeago-->
+						<h3><b>{{by-nm}}</b> @{{by-at}} - {{c.dt|date:"%b %d"}}, {{page.fakeyear}}</h3><!--use a timeago with timestamp on hover? would be great if this can be entirely auto-calculated, if difference from pagedate then MMM DD YYYY else timeago-->
 					</header>
 					<main>
-						<div class="usertxt">my god im so lonely 😔 so i open the window 🪟</div><!--IF MEDIA-->
+						<div class="usertxt">{{c.txt}}{%if page.debug==1%}<span class="debug">({{c.txt.size}})</span>{%endif%}</div>{%if c.media%}
 						<picture>
 							<source media="(min-width:75em)" srcset="https://placehold.co/720x540.jpg">
-							<img src="https://placehold.co/640x480.jpg" alt="picture by @judicials" class="media">
-						</picture><!--/ENDIF--><!--IF QRT-->
+							<img src="https://placehold.co/640x480.jpg" alt="picture by @{{by-at}}" class="media">
+						</picture>{%endif%}<!--/if c.media-->{%if c.qrt%}
 						<blockquote>
 							<header>
 								<picture>
 									<source media="(min-width:75em)" srcset="https://placehold.co/64.jpg">
-									<img src="https://placehold.co/32.jpg" alt="avatar of @bromther" class="avi">
+									<img src="https://placehold.co/32.jpg" alt="avatar of @{{c.qrt.by-at}}" class="avi">
 								</picture>
-								<h4><span class="x">quote-rechitter by </span><b>🦖</b> @bromther - XXXX XX</h4>
+								<h4><span class="x">quote-rechitter by </span><b>{{c.qrt.by-nm}}</b> @{{c.qrt.by-at}} - {{c.qrt.dt|date:"%b %d"}}, {{page.fakeyear}}</h4>
 							</header>
-							<main><div class="usertxt">Share something beautiful and true. (a 🧵, 6/??)</div><!--IF MEDIA-->
+							<main><div class="usertxt">{{c.qrt.txt}}{%if page.debug==1%}<span class="debug">({{c.qrt.txt.size}})</span>{%endif%}</div>{%if c.qrt.media%}
 							<picture>
 								<source media="(min-width:75em)" srcset="https://placehold.co/720x540.jpg">
 								<img src="https://placehold.co/640x480.jpg" alt="picture by @bromther" class="media">
-							</picture><!--/ENDIF--></main>
-						</blockquote><!--/ENDIF-->
+							</picture>{%endif%}<!--/if c.qrt.media--></main>
+						</blockquote>{%endif%}<!--/if c.qrt-->
 					</main>
 					<ul class="nolist flex ch-sec re"><li><a href="{{page.fakeurl}}">pecks</a></li><li><a href="{{page.fakeurl}}">rechitters</a></li><li><a href="{{page.fakeurl}};">replies</a></li><li><a href="{{page.fakeurl}};">views</a></li></ul>
-				</article><!--/END FORLOOP-->
+				</article>{%endfor%}
 					<footer id="endload"><small>
 						<b>Error</b>: Failed to load content, swipe up to refresh
 					</small></footer>
 				</section>
-			</main><hr class="x">
+			</main>
     </div><!--/#ch-wrap-->
   </div><!--/#chattr-->
   <hr class="x"><hr class="x"><div class="ar" id="a-ft"><div class="wrap">archive footer</div></div>
