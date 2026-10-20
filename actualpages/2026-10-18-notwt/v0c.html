@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive of PAGENAME</title>
+  <style>
+    *{box-sizing:border-box; font-size:100%; margin:0; padding:0;}
+    .x{position:absolute; left:-999px; width:1px; height:1px; top:auto; overflow:hidden;}
+    header,main,nav,section,article,footer{display:block;}
+    img{max-width:100%; height:auto;}
+    a:focus,summary:focus{outline:/*DEFINE*/;}
+    
+    @media (prefers-color-scheme:dark){
+      body{background:#202020; color:#efefef;}
+      a{color:#80cfff;}
+    }
+    
+    .cnt{text-align:center;}
+    .noa{color:inherit; text-decoration:none;}
+    .nolist{list-style-type:none;}
+    .flex li,.flex li a{display:inline-block;} .flex li a{padding:.5em 1em; width:100%;}
+    
+    .ar{background:#808080;} /*keep this a class? slap it on the body for the full archive site. consistency thign*/
+    #a-hd{border-bottom:2px solid;} #a-ft{border-top:2px solid;}
+    
+    #chattr{font-family:helvetica,arial,sans-serif;}
+    #chattr a{text-decoration:none;}
+    #cht{display:block; text-align:center; padding:.125em 1rem; font-size:2em; border-bottom:1px solid;}
+    .ch-sec{color:#808080;} /*chattr secondary color; simple hierarchy for now*/
+    .ch-wrap{max-width:30em; margin:0 auto;}
+    
+    #avi{margin-top:-3rem; border:.5rem solid blue; border-radius:.25rem;}
+    h1{font-size:1.25em;}
+    #desc{margin:1em 1rem;}
+    #stats li{width:50%;}
+    #stats li a{padding:1em;}
+    
+    #nav{border-top:1px solid; border-bottom:1px solid;}
+    #nav li{width:33%;}
+    h2{border-top:3px solid; margin-top:-.25em; padding-top:.25em;}
+    
+    article{border-bottom:1px solid /*GRAY*/;}
+    .who{font-weight:bold; padding:.25em .5rem;}
+    article header{padding:.25em .5rem;}
+    .avi{border-radius:100%; vertical-align:middle;}
+    h3,h4{display:inline; font-weight:normal;} /*TRUNCATE IN CSS IF TINY SCREEN*/
+    
+    article main{padding:.25em .5rem;}
+    .media{border:1px solid; border-radius:.25rem; margin:1rem 0 .25rem;}
+    blockquote{border:1px solid; border-radius:.25rem; padding:.25rem 0 0;}
+    blockquote .media{margin-bottom:0;}
+    
+    .re{padding:0 .5rem;}
+    .re li a{color:inherit; font-weight:bold; padding:.25em 1em .25em 0;}
+    
+    @media only screen and (min-width:50em){ /*this is deliberately a little small so I can preview it better. change the srcset too!!*/
+      .ch-wrap{max-width:1280px;}
+      #chattr{overflow:auto;}
+      #side{width:30%;}
+      #feed{width:70%;}
+      #side,#feed{float:left; position:relative;}
+      
+      #side{text-align:left; padding:0 2rem;}
+      #avi{margin:-10.5rem -.5rem 0 /*the .5s are from the border; outline has no radius so this keeps it visually aligned with the text*/;}
+      #desc{margin:2em 0;}
+      #stats li{width:100%;} #stats li a{padding:0.25em 0;}
+      
+      header,.usertxt{font-size:1.25em;}
+      
+      section{padding-right:1rem; max-width:calc(720px + 2rem);}
+    }
+    
+  </style>
+</head><body>
+  <div class="ar" id="a-hd"><div class="wrap">archive header</div></div><hr class="x"><hr class="x">
+  <div id="chattr"><a id="cht" class="noa ch-sec"><b>c</b>hattr</a>
+    <div class="ch-wrap">
+    <div id="banner"><img src="https://placehold.co/1280x384.jpg" alt="banner of @lucienne"></div>
+    <div id="side" class="cnt">
+      <header id="header"><a class="noa" href="#header">
+        <picture>
+          <source media="(min-width:50em)" srcset="https://placehold.co/256.jpg">
+          <img src="https://placehold.co/128.jpg" alt="avatar of @lucienne" id="avi"><!--use an actual image description here & the banner. if no image is set then use a transparent placeholder to keep the size consistent-->
+        </picture>
+        <h1>DOWN ON MY LUC 🦾🙈👎</h1>
+        <span class="ch-sec">@lucienne</span>
+      </a></header><aside>
+        <div id="desc" class="usertxt">fuck w me</div><!--intentionally NOT markdown, same with not-tweet content-->
+        <ul class="nolist flex" id="stats">
+          <li><a href="ABOUT:BLANK" class="ch-sec"><b>6,969</b> followers</a></li><!--ugly whitespace fix
+          --><li><a href="ABOUT:BLANK" class="ch-sec"><b>420</b> following</a></li>
+        </ul>
+      </aside>
+    </div><!--/#side--><hr class="x"><main id="feed">
+      <ul id="nav" class="nolist cnt flex"><li><h2>chitters</h2></li><li><a href="ABOUT:BLANK">media</a></li><li><a href="ABOUT:BLANK">likes</a></li></ul><!--intentionally not semantic bc it's fake-->
+      <section><!--FORLOOP GOES HERE--><article>
+        <p class="who ch-sec">DOWN ON MY LUC 🦾🙈👎 rechitter'd</p><!--else "chitter by {name}", opacity 0-->
+        <header>
+          <picture>
+            <source media="(min-width:50em)" srcset="https://placehold.co/64.jpg">
+            <img src="https://placehold.co/32.jpg" alt="avatar of @judicials" class="avi">
+          </picture>
+          <h3><b>oh you know</b> @judicials - XXXX XX 202X</h3><!--use a timeago with timestamp on hover? would be great if this can be entirely auto-calculated, if difference from pagedate then MMM DD YYYY else timeago-->
+        </header>
+        <main>
+          <div class="usertxt">my god im so lonely 😔 so i open the window 🪟</div><!--IF MEDIA-->
+          <picture>
+            <source media="(min-width:50em)" srcset="https://placehold.co/720x540.jpg">
+            <img src="https://placehold.co/640x480.jpg" alt="picture by @judicials" class="media">
+          </picture><!--/ENDIF--><!--IF QRT-->
+          <blockquote>
+            <header>
+              <picture>
+                <source media="(min-width:50em)" srcset="https://placehold.co/64.jpg">
+                <img src="https://placehold.co/32.jpg" alt="avatar of @bromther" class="avi">
+              </picture>
+              <h4><span class="x">quote-rechitter by </span><b>🦖</b> @bromther - XXXX XX</h4>
+            </header>
+            <main><div class="usertxt">Share something beautiful and true. (a 🧵, 6/??)</div><!--IF MEDIA-->
+            <picture>
+              <source media="(min-width:50em)" srcset="https://placehold.co/720x540.jpg">
+              <img src="https://placehold.co/640x480.jpg" alt="picture by @bromther" class="media">
+            </picture><!--/ENDIF--></main>
+          </blockquote><!--/ENDIF-->
+        </main>
+        <ul class="nolist flex ch-sec re"><li><a href="ABOUT:BLANK">pecks</a></li><li><a href="ABOUT:BLANK">rechitters</a></li><li><a href="ABOUT:BLANK;">replies</a></li><li><a href="ABOUT:BLANK;">views</a></li></ul>
+      </article><!--/END FORLOOP--></section>
+    </main><hr class="x"><footer>
+    </footer>
+    </div><!--/.ch-wrap-->
+  </div><!--/#chattr-->
+  <hr class="x"><hr class="x"><div class="ar" id="a-ft"><div class="wrap">archive footer</div></div>
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
