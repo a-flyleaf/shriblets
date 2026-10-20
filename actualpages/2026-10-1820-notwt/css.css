@@ -3,11 +3,7 @@
 header,main,nav,section,article,footer{display:block;}
 img{max-width:100%; height:auto;}
 a:focus,summary:focus{outline:/*DEFINE*/;}
-
-@media (prefers-color-scheme:dark){
-	body{background:#202020; color:#efefef;}
-	a{color:#80cfff;}
-}
+.debug{background:yellow; color:#000;}
 
 .cnt{text-align:center;}
 .noa{color:inherit; text-decoration:none;}
@@ -17,13 +13,14 @@ a:focus,summary:focus{outline:/*DEFINE*/;}
 .ar{background:#808080;} /*keep this a class? slap it on the body for the full archive site. consistency thign*/
 #a-hd{border-bottom:2px solid;} #a-ft{border-top:2px solid;}
 
-#chattr{font-family:helvetica,arial,sans-serif;}
+#chattr{font-family:helvetica,arial,sans-serif; background:#efefef;}
 #chattr a{text-decoration:none;}
 #cht{display:block; text-align:center; padding:.125em 1rem; font-size:2em; border-bottom:1px solid;}
+#cht,#ch-wrap{background:#fff;}
 .ch-sec{color:#808080;} /*chattr secondary color; simple hierarchy for now*/
-.ch-wrap{max-width:30em; margin:0 auto;}
+#ch-wrap{max-width:40em; margin:0 auto;}
 
-#avi{margin-top:-3rem; border:.5rem solid blue; border-radius:.25rem;}
+#avi{margin-top:-3rem; border:.5rem solid #fff; border-radius:.25rem;}
 h1{font-size:1.25em;}
 #desc{margin:1em 1rem;}
 #stats li{width:50%;}
@@ -33,7 +30,7 @@ h1{font-size:1.25em;}
 #nav li{width:33%;}
 h2{border-top:3px solid; margin-top:-.25em; padding-top:.25em;}
 
-article{border-bottom:1px solid /*GRAY*/;}
+article{border-bottom:1px solid #808080;}
 .who{font-weight:bold; padding:.25em .5rem;}
 article header{padding:.25em .5rem;}
 .avi{border-radius:100%; vertical-align:middle;}
@@ -47,9 +44,16 @@ blockquote .media{margin-bottom:0;}
 .re{padding:0 .5rem;}
 .re li a{color:inherit; font-weight:bold; padding:.25em 1em .25em 0;}
 
-@media only screen and (min-width:50em){ /*this is deliberately a little small so I can preview it better. change the srcset too!!*/
-	.ch-wrap{max-width:1280px;}
-	#chattr{overflow:auto;}
+#endload{padding:1em .5rem 5em; text-align:center;} #endload small{font-size:.75em;}
+
+@media (prefers-color-scheme:dark){
+	body,#cht,#ch-wrap{background:#202020; color:#efefef;}
+	a{color:/*DEFINE*/;}
+	#chattr{background:#000;}
+	#avi{border-color:#202020;}
+}
+@media only screen and (min-width:40em){
+	#ch-wrap{max-width:1280px; overflow:auto;}
 	#side{width:30%;}
 	#feed{width:70%;}
 	#side,#feed{float:left; position:relative;}
@@ -59,7 +63,9 @@ blockquote .media{margin-bottom:0;}
 	#desc{margin:2em 0;}
 	#stats li{width:100%;} #stats li a{padding:0.25em 0;}
 	
-	header,.usertxt{font-size:1.25em;}
-	
 	section{padding-right:1rem; max-width:calc(720px + 2rem);}
+}
+
+@media only screen and (min-width:75em){
+	header,.usertxt{font-size:1.25em;}
 }
