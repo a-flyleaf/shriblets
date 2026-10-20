@@ -2,7 +2,7 @@
 layout: none
 permalink: 2026-10-1820-notwt
 
-debug: 1
+debug: 0
 #     ^boolean; if 1 then userdesc & ntwts will show the character count in a highlighted span
 
 fakeurl: "#"
@@ -38,6 +38,51 @@ posts:
       media:
         - img-url: "PLACEHOLDER"
           img-alt: "ALSO UNUSED"
+  - dt: 2026-06-24
+    txt: "lrt my anthem"
+    qrt:
+      by-nm: "post-ironic barcode"
+      by-at: "tuwut"
+      dt: 2026-02-01
+      txt: "\"im literally neurodivergent\" in a minor 🎵"
+      media:
+        - notfound
+  - typ: re
+    by-nm: "post-ironic barcode"
+    by-at: "tuwut"
+    dt: 2026-02-01
+    txt: "\"im literally neurodivergent\" in a minor 🎵"
+    media:
+      - notfound
+# there is probably a better way to handle this in like. site data. an Actual Database. but for the purposes of a one-off copypaste will do
+  - typ: re
+    by-nm: "post-ironic barcode"
+    by-at: "tuwut"
+    dt: 2026-02-01
+    txt: "\"im literally neurodivergent\" in a minor 🎵"
+    media:
+      - notfound
+  - typ: re
+    by-nm: "post-ironic barcode"
+    by-at: "tuwut"
+    dt: 2026-02-01
+    txt: "\"im literally neurodivergent\" in a minor 🎵"
+    media:
+      - notfound
+  - typ: re
+    by-nm: "post-ironic barcode"
+    by-at: "tuwut"
+    dt: 2026-02-01
+    txt: "\"im literally neurodivergent\" in a minor 🎵"
+    media:
+      - notfound
+  - typ: re
+    by-nm: "post-ironic barcode"
+    by-at: "tuwut"
+    dt: 2026-02-01
+    txt: "\"im literally neurodivergent\" in a minor 🎵"
+    media:
+      - notfound
 ---
 <!DOCTYPE html>
 <html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,11 +123,11 @@ posts:
 						<h3><b>{{by-nm}}</b> @{{by-at}} - {{c.dt|date:"%b %d"}}, {{page.fakeyear}}</h3><!--use a timeago with timestamp on hover? would be great if this can be entirely auto-calculated, if difference from pagedate then MMM DD YYYY else timeago-->
 					</header>
 					<main>
-						<div class="usertxt">{{c.txt}}{%if page.debug==1%}<span class="debug">({{c.txt.size}})</span>{%endif%}</div>{%if c.media%}
+						<div class="usertxt">{{c.txt}}{%if page.debug==1%}<span class="debug">({{c.txt.size}})</span>{%endif%}</div>{%if c.media%}{%for m in c.media%}{%if m=="notfound"%}<div class="media bd-rd"><span class="error">This media could not be loaded.</span></div>{%else%}
 						<picture>
 							<source media="(min-width:75em)" srcset="https://placehold.co/720x540.jpg">
 							<img src="https://placehold.co/640x480.jpg" alt="picture by @{{by-at}}" class="media bd-rd">
-						</picture>{%endif%}<!--/if c.media-->{%if c.qrt%}
+						</picture>{%endif%}<!--/if m.notfound-->{%endfor%}<!--/for c.media-->{%endif%}<!--/if c.media-->{%if c.qrt%}
 						<blockquote class="bd-rd">
 							<header>
 								<picture>
@@ -91,16 +136,16 @@ posts:
 								</picture>
 								<h4><span class="x">quote-rechitter by </span><b>{{c.qrt.by-nm}}</b> @{{c.qrt.by-at}} - {{c.qrt.dt|date:"%b %d"}}, {{page.fakeyear}}</h4>
 							</header>
-							<main><div class="usertxt">{{c.qrt.txt}}{%if page.debug==1%}<span class="debug">({{c.qrt.txt.size}})</span>{%endif%}</div>{%if c.qrt.media%}
+							<main><div class="usertxt">{{c.qrt.txt}}{%if page.debug==1%}<span class="debug">({{c.qrt.txt.size}})</span>{%endif%}</div>{%if c.qrt.media%}{%for m in c.qrt.media%}{%if m=="notfound"%}<div class="media bd-rd"><span class="error">This media could not be loaded.</span></div>{%else%}
 							<picture>
 								<source media="(min-width:75em)" srcset="https://placehold.co/720x540.jpg">
 								<img src="https://placehold.co/640x480.jpg" alt="picture by @bromther" class="media bd-rd">
-							</picture>{%endif%}<!--/if c.qrt.media--></main>
+							</picture>{%endif%}<!--/if m.notfound-->{%endfor%}<!--/for q.qrt.media-->{%endif%}<!--/if c.qrt.media--></main>
 						</blockquote>{%endif%}<!--/if c.qrt-->
 					</main>
-					<ul class="nolist flex ch-sec re"><li><a href="{{page.fakeurl}}">pecks</a></li><li><a href="{{page.fakeurl}}">rechitters</a></li><li><a href="{{page.fakeurl}};">replies</a></li><li><a href="{{page.fakeurl}};">views</a></li></ul>
+					<ul class="nolist flex ch-sec re"><li><a href="{{page.fakeurl}}">likes</a></li><li><a href="{{page.fakeurl}}">rechitters</a></li><li><a href="{{page.fakeurl}};">replies</a></li><li><a href="{{page.fakeurl}};">views</a></li></ul>
 				</article>{%endfor%}
-					<footer id="endload"><small>
+					<footer><small class="error">
 						<b>Error</b>: Failed to load content, swipe up to refresh
 					</small></footer>
 				</section>
