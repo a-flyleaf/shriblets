@@ -151,8 +151,15 @@
 
 - title: brame
   date: "2026-09-27"
-  url: brame
   desc: |-
     A moodboard with credit linked directly from the images. Will dominate the screen if your browser supports CSS grid.
   lang: [html,css]
   mobile: true
+
+- title: notwt
+  date: "2026-10-1820"
+  desc: |-
+    Rough layout for a knockoff-(archive of a-)twitter page. Based more on [Nitter](https://en.wikipedia.org/wiki/Nitter) than the actual website. Images via [Placehold.co](https://placehold.co/).
+  lang: [html,css]
+  mobile: true
+  story: [hl]
