@@ -28,11 +28,16 @@ layout: none
 			#desc{font-size:.85em; margin-bottom:.75em;}
 			blockquote::before{content:">"; padding-right:1em;} blockquote{margin-left:1.25em; text-indent:-1.15em; margin-bottom:1em;}
 			
+			.h2{margin:2em 0 -.5em;}
+			h2{display:inline;}
+			.elsif{display:inline;}
+			.elsif+.h2{display:inline;}
+			
 			article{background:#404040; border:1px solid #808080;margin:1rem 0;}
 			figure{line-height:0; font-size:0;}
 			img{max-width:100%; height:auto;} figure a:focus,figure a:hover,figure a:active{opacity:.5;}
 			.info{padding:.5em 1em; line-height:1.5em;}
-			h2{display:inline;}
+			h3{display:inline;}
 			.date{font-size:.85em;}
 			aside{font-size:.85em;} aside ul{list-style-type:none; margin-top:1em;}
 			
@@ -73,24 +78,28 @@ layout: none
 			<hr/>
 			<section>
 				<p class="comment">&lt;--screenshot | pagetitle, date, description | additional notes--&gt;</p>
-				<p class="comment">&lt;--"lang" denotes which coding language(s) were being actively played with--&gt;</p>
-				<p class="comment">&lt;--if isResponsive=false then mobileBrowsing=notIdeal; else mobileBrowsing=OK--&gt;</p>
+				<p class="comment">&lt;--`lang` denotes which coding language(s) were being actively played with--&gt;</p>
+				<p class="comment">&lt;--if isResponsive&nbsp;= false then mobileBrowsing&nbsp;= notIdeal; else mobileBrowsing&nbsp;= OK--&gt;</p>
+				
 				<!--CONTENT-->
-				{%for s in site.data.shriblets%}
-					{%capture sd%}{{s.date|remove:"+"}}{%endcapture%}
-					{%capture st%}{%if s.url%}{{s.url}}{%else%}{{s.title|remove:'.'}}{%endif%}{%endcapture%}
-				<article>
-					<figure><a href="{%include url.html%}/{{sd}}-{{st}}"><img src="{%include url.html%}/img/{{sd}}-{{st}}.jpg" alt=""/></a></figure>
-					<div class="info">
-						<h2><a href="{%include url.html%}/{{sd}}-{{st}}">{{s.title}}</a></h2> <span class="date">{{s.date}}</span>
-						{%capture incurl%}{%include url.html%}{%endcapture%}{{s.desc|markdownify|replace:"INC_URL",incurl}}
-						<aside><ul>
-							<li>lang ={%for l in s.lang%} #{{l}}{%endfor%};</li>
-							<li>isResponsive = {{s.mobile}};</li>
-						</ul></aside>
-					</div>
-				</article>
-				{%endfor%}
+				<!--capture years as string-->{%capture years%}{%for s in site.data.shriblets%}{{s.date|truncate:4,""}}{%unless forloop.last%},{%endunless%}{%endfor%}{%endcapture%}<!--make it an array-->{%assign yr=years|split:","|uniq%}
+				{%for y in yr%}<div class="comment h2">{%if forloop.first%}&lbrace;&percnt;for each shriblet&percnt;&rbrace;&lbrace;&percnt;if {%endif%}shriblet.year==<h2>{{y}}</h2>&percnt;&rbrace;</div>{%for s in site.data.shriblets%}
+					{%if s.date contains y%}
+						{%capture sd%}{{s.date|remove:"+"}}{%endcapture%}
+						{%capture st%}{%if s.url%}{{s.url}}{%else%}{{s.title|remove:'.'}}{%endif%}{%endcapture%}
+					<article>
+						<figure><a href="{%include url.html%}/{{sd}}-{{st}}"><img src="{%include url.html%}/img/{{sd}}-{{st}}.jpg" alt=""/></a></figure>
+						<div class="info">
+							<h3><a href="{%include url.html%}/{{sd}}-{{st}}">{{s.title}}</a></h3> <span class="date">{{s.date}}</span>
+							{%capture incurl%}{%include url.html%}{%endcapture%}{{s.desc|markdownify|replace:"INC_URL",incurl}}
+							<aside><ul>
+								<li>lang ={%for l in s.lang%} #{{l}}{%endfor%};</li>
+								<li>isResponsive = {{s.mobile}};</li>
+							</ul></aside>
+						</div>
+					</article>
+					{%endif%}
+				{%endfor%}<!--/s--><div class="comment elsif">{%if forloop.last%}&lbrace;&percnt;endif&percnt;&rbrace;&lbrace;&percnt;endfor&percnt;&rbrace;{%else%}&lbrace;&percnt;elsif {%endif%}</div>{%endfor%}<!--/yr-->
 				<!--/CONTENT-->
 			</section>
 		</main>
