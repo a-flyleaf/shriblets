@@ -157,7 +157,7 @@
   mobile: true
 
 - title: notwt
-  date: "2026-10-1820"
+  date: "2026-10-18+20"
   desc: |-
     Rough layout for a knockoff-(archive of a-)twitter page. Based more on [Nitter](https://en.wikipedia.org/wiki/Nitter) than the actual website. Images via [Placehold.co](https://placehold.co/).
   lang: [html,css]
