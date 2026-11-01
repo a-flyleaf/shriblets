@@ -13,7 +13,7 @@
 - title: heighthell
   date: "2018-08"
   desc: |-
-    Interactive character height chart, heavily inspired by <a href="http://mxedk.com/pokechamp/">a version with Pokémon player characters</a>, and one of my first experiments with Javascript. (Could not figure out how to make the characters stand separately on pageload without altering the draggable area, and the toggles are buggy.)
+    Interactive character height chart. Heavily inspired by [a version with Pokémon player characters](https://web.archive.org/web/20180324141406/http://mxedk.com/pokechamp/), and one of my first experiments with JavaScript. (Could not figure out how to make the characters stand separately on pageload without altering the draggable area, and the toggles are buggy.)
   lang: [js,jquery]
   mobile: false
   story: [all]
@@ -29,7 +29,7 @@
 - title: songwall
   date: "2019-03-06"
   desc: |-
-    Character song page; art and mobile layout are unfinished but code is functional.
+    Character song page. Art and mobile layout are incomplete, but code is functional.
   lang: [html,css]
   mobile: true
   story: [404]
@@ -75,14 +75,14 @@
 - title: art
   date: "2020-06-07"
   desc: |-
-    Something of a portfolio page. Unfinished-ish; layout looks best single-column but widescreen doesn’t break.
+    Something of a portfolio page. Not polished; layout looks best single-column but widescreen doesn’t break.
   lang: [html,css]
   mobile: true
 
 - title: split
   date: "2021-04-29"
   desc: |-
-    An <a href="https://a-flyleaf.github.io/blog/addition-update">exploration</a> of parallel dysfunction, in the format of divided HTML frames; based on <a href="https://anthology.rhizome.org/my-boyfriend-came-back-from-the-war"><i>My Boyfriend Came Back from the War</i></a>
+    An <a href="https://a-flyleaf.github.io/blog/addition-update">exploration</a> of parallel dysfunction, in the format of divided HTML frames. Based on <a href="https://anthology.rhizome.org/my-boyfriend-came-back-from-the-war"><i>My Boyfriend Came Back from the War</i></a>
   lang: [html,css]
   mobile: false
   story: [cmyk]
@@ -120,7 +120,7 @@
 - title: draggable
   date: "2022-04-16+17"
   desc: |-
-    Revisiting the 2018 height chart (see above), now with lots more people and entirely different base code. (Functionally much simpler, but characters don’t overlap on pageload.) Image rescaling might be weird on some browsers.
+    Revisiting [the 2018 height chart](#heighthell), now with lots more people and entirely different base code. (Functionally much simpler, but characters don’t overlap on pageload.) Image rescaling might be weird on some browsers.
   lang: [html-svg,js]
   mobile: questionable
   story: [all]

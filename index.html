@@ -87,7 +87,7 @@ layout: none
 					{%if s.date contains y%}
 						{%capture sd%}{{s.date|remove:"+"}}{%endcapture%}
 						{%capture st%}{%if s.url%}{{s.url}}{%else%}{{s.title|remove:'.'}}{%endif%}{%endcapture%}
-					<article>
+					<article id="{{sd.title}}">
 						<figure><a href="{%include url.html%}/{{sd}}-{{st}}"><img src="{%include url.html%}/img/{{sd}}-{{st}}.jpg" alt=""/></a></figure>
 						<div class="info">
 							<h3><a href="{%include url.html%}/{{sd}}-{{st}}">{{s.title}}</a></h3> <span class="date">{{s.date}}</span>
