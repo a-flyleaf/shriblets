@@ -93,7 +93,7 @@ layout: none
 							<h3><a href="{%include url.html%}/{{sd}}-{{st}}">{{s.title}}</a></h3> <span class="date">{{s.date}}</span>
 							{%capture incurl%}{%include url.html%}{%endcapture%}{{s.desc|markdownify|replace:"INC_URL",incurl}}
 							<aside><ul>
-								<li>lang ={%for l in s.lang%} #{{l}}{%endfor%};</li>
+								<li>lang = [{%for l in s.lang%}{{l}}{%unless forloop.last%}, {%endunless%}{%endfor%}];</li>
 								<li>isResponsive = {{s.mobile}};</li>
 							</ul></aside>
 						</div>
