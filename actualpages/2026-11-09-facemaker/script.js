@@ -10,8 +10,21 @@ window.onload = function() {
 		console.log("optionParts:");
 		console.log(optionParts);
 	
-	//loop: check all optionParts for which one is checked
 	for (let i = 0; i < optionParts.length; i++) {
-		console.log(optionParts.innerHTML);
-	}
-}
+		//check all optionParts for which one is checked
+			console.log(optionParts[i].innerHTML);
+		let checked = optionParts[i].querySelector("input:checked");
+			console.log("checked:");
+			console.log(checked);
+		//isolate the name without the number
+		let checkedNm = checked.name;
+			console.log("checked name:");
+			console.log(checkedNm);
+		
+		//grab the canvasParts where the checkedNm matches the div id
+		for (let i = 0; i < canvasParts.length; i++) {
+			let sameId = canvasParts[i].querySelector('[id^="checkedNm"]');
+			console.log(sameId);
+		}
+	} //end forloop
+} //end onload

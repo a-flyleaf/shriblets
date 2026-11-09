@@ -1,7 +1,10 @@
 *{box-sizing:border-box; font-size:100%; margin:0; padding:0;}
+img{max-width:100%; height:auto;}
 
 #nojs{border:2px solid #ff0000;} #nojs b{color:#ff0000;}
 
-#canvas{background:#00ff00;}
+#canvas{aspect-ratio:1 / 1; max-height:500px; max-width:500px; background:#00ff00;}
+#canvas>*{aspect-ratio:1 / 1; position:absolute; width:500px; max-width:100%;}
+#bgFull{background:yellow;} .bgfull01{background:orange;}
 
 ul{margin-left:1em;}
