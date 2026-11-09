@@ -1,0 +1,7 @@
+*{box-sizing:border-box; font-size:100%; margin:0; padding:0;}
+
+#nojs{border:2px solid #ff0000;} #nojs b{color:#ff0000;}
+
+#canvas{background:#00ff00;}
+
+ul{margin-left:1em;}
