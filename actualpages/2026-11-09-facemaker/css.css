@@ -5,6 +5,6 @@ img{max-width:100%; height:auto;}
 
 #canvas{aspect-ratio:1 / 1; max-height:500px; max-width:500px; background:#00ff00;}
 #canvas>*{aspect-ratio:1 / 1; position:absolute; width:500px; max-width:100%;}
-#bgFull{background:yellow;} .bgfull01{background:orange;}
+#bgFull{background:yellow;} .bgfull01{background:orange !important;}
 
 ul{margin-left:1em;}
