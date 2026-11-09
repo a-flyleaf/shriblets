@@ -12,3 +12,52 @@ NEXT ROUND:
 - instead of class-swapping, change the background image! less to define in CSS.
 - nuke(/move?) all the loop-in-a-loop code; it Works but a much, *much* shorter solution was suggested
 - AI tone correction: be more clear that I do not want the correct answer handed to me
+
+## redundant forloop
+```
+		for (let i = 0; i < canvasParts.length; i++) {
+			//list all canvasParts ids for bugtesting:
+				console.log("canvas div #"+canvasParts[i].id);
+			//isolate the canvasPart where the id matches
+			if (canvasParts[i].id == checkedNm) {
+				console.log("^found a match");
+				let sameId = canvasParts[i];
+				console.log(sameId);
+				sameId.classList.add(checked.value);
+				console.log("added class "+checked.value)
+			};
+			
+			/*take 2
+			let sameId = canvasParts[i].querySelector("#"+checkedNm);
+				console.log("same id?");
+				console.log(sameId);
+			
+			/*
+			let sameId = canvasParts[i].querySelector('[id^=checkedNm]');
+				console.log("canvas div with the same name as checked:");
+				console.log(sameId);
+		} //end redundant loop
+		*/
+		for (let i = 0; i < canvasParts.length; i++) {
+			//list all canvasParts ids for bugtesting:
+				console.log("canvas div #"+canvasParts[i].id);
+			//isolate the canvasPart where the id matches
+			if (canvasParts[i].id == checkedNm) {
+				console.log("^found a match");
+				let sameId = canvasParts[i];
+				console.log(sameId);
+				sameId.classList.add(checked.value);
+				console.log("added class "+checked.value)
+			};
+			
+			/*take 2
+			let sameId = canvasParts[i].querySelector("#"+checkedNm);
+				console.log("same id?");
+				console.log(sameId);
+			
+			/*
+			let sameId = canvasParts[i].querySelector('[id^=checkedNm]');
+				console.log("canvas div with the same name as checked:");
+				console.log(sameId);
+		} //end redundant loop
+```
