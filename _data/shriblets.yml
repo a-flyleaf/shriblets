@@ -149,6 +149,13 @@
   mobile: true
   story: [hl]
 
+- title: slade
+  date: "2026-07-13+14"
+  desc: |-
+    Intended for & initially published on [toyshelf](https://a-flyleaf.github.io/toyshelf). Wanted to save the draft and figured it made more sense here.
+  lang: [html,css]
+  mobile: true
+
 - title: brame
   date: "2026-09-27"
   desc: |-
