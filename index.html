@@ -83,7 +83,7 @@ layout: none
 				
 				<!--CONTENT-->
 				<!--capture years as string-->{%capture years%}{%for s in site.data.shriblets%}{{s.date|truncate:4,""}}{%unless forloop.last%},{%endunless%}{%endfor%}{%endcapture%}<!--make it an array-->{%assign yr=years|split:","|uniq%}
-				{%for y in yr%}<div class="comment h2">{%if forloop.first%}&lbrace;&percnt;for each shriblet&percnt;&rbrace;&lbrace;&percnt;if {%endif%}shriblet.year==<h2>{{y}}</h2>&percnt;&rbrace;</div>{%for s in site.data.shriblets%}
+				{%for y in yr%}<div class="comment h2">{%if forloop.first%}&lbrace;&percnt;for shriblet in site.data.shriblets&percnt;&rbrace;&lbrace;&percnt;if {%endif%}shriblet.year==<h2>{{y}}</h2>&percnt;&rbrace;</div>{%for s in site.data.shriblets%}
 					{%if s.date contains y%}
 						{%capture sd%}{{s.date|remove:"+"}}{%endcapture%}
 						{%capture st%}{%if s.url%}{{s.url}}{%else%}{{s.title|remove:'.'}}{%endif%}{%endcapture%}
