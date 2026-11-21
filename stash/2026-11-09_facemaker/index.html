@@ -1,6 +1,5 @@
 ---
 layout: none
-permalink: 2026-11-09-facemaker
 
 nojs: |-
   <b>You need to use JavaScript for this page to function as intended!</b> Otherwise the buttons and dropdowns won't do anything.
@@ -29,11 +28,11 @@ parts:
 -->
 <!doctype html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>facemaker v0</title>
-  <link rel="stylesheet" type="text/css" href="{%include actual.html%}css.css"/>
+  <link rel="stylesheet" type="text/css" href="css.css"/>
 </head><body>
   <div id="nojs">{{page.nojs|markdownify}}</div>
 	
-	<div id="canvas">{%for p in page.parts%}<div id="{{p.id}}" class="c-part"></div>{%endfor%}<img src="{%include actual.html%}test.png" alt=""></div>
+	<div id="canvas">{%for p in page.parts%}<div id="{{p.id}}" class="c-part"></div>{%endfor%}<img src="test.png" alt=""></div>
 	
 	<div id="options"><ul>{%for p in page.parts%}<li class="o-part">{{p.id}}{%if p.opt%}<!--https://shopify.dev/docs/api/liquid/tags/for-->{%assign opt=p.opt%}<ul>{%for count in (1..opt)%}{%capture num%}{{p.id|downcase}}{%if count<9%}0{%endif%}{{count}}{%endcapture%}<li class="opt"><label for="{{num}}"><input type="radio" value="{{num}}" name="{{p.id}}" id="{{num}}"{%if count==01%} checked{%endif%}>{{num}}</label></li>{%endfor%}</ul>{%endif%}</li>{%endfor%}</ul></div>
-<script type="text/javascript" src="{%include actual.html%}script.js"></script></body></html>
+<script type="text/javascript" src="script.js"></script></body></html>

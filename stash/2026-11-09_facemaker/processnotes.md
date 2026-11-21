@@ -61,3 +61,6 @@ NEXT ROUND:
 				console.log(sameId);
 		} //end redundant loop
 ```
+
+# 11/20
+man fuck it I forgo what I was doing. at any rate I'm punting this to the stash; we'll (re-)figure out image URLs and such if & when I revisit it >:Ic
