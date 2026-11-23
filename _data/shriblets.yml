@@ -149,10 +149,10 @@
   mobile: true
   story: [hl]
 
-- title: slade
+- title: sladepage
   date: "2026-07-13+14"
   desc: |-
-    Intended for & initially published on [toyshelf](https://a-flyleaf.github.io/toyshelf). Wanted to save the draft and figured it made more sense here.
+    Intended for & initially published on [toyshelf](https://a-flyleaf.github.io/toyshelf). Wanted to save the draft and figured it made more sense here. Images via [Placehold.co](https://placehold.co/).
   lang: [html,css]
   mobile: true
 
